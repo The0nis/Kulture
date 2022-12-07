@@ -1,40 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
-
 /* 
 *** CSS Variables ***
 */
-:root{
-/* Colors */
-  --clr-primary: #6600E8;
+:root {
+  /* Colors */
+  --clr-primary: #6600e8;
   --clr-secondary: #434343;
   --clr-bg-neutral: #434343;
   --cl-dark: #000;
-  --cl-light: #FFF;
+  --cl-light: #fff;
   --cl-btn-brd: rgba(28, 28, 28, 0.08);
-  --clr-f-light: #E2E2E2;
+  --clr-f-light: #e2e2e2;
   --clr-f-dark: #949494;
-  --clr-err: #EB5757;
-  --clr-info: #0077DC;
-  --clr-success: #56C568;
-  --clr-warning: #FFC400;
-  --clr-accent: #DDC8F9;
+  --clr-err: #eb5757;
+  --clr-info: #0077dc;
+  --clr-success: #56c568;
+  --clr-warning: #ffc400;
+  --clr-accent: #ddc8f9;
   /* Font */
-  --ft-b-sm: normal 1rem;
-  --ft-b-md: normal 1.25rem;
+  --ft-b-sm: normal 1rem; /* 16px/1.6rem */
+  --ft-b-md: normal 1.25rem; /* 20px/2rem*/
   --ft-b-lg: normal 1.5rem;
   --ft-btn-sm: 600 0.75rem;
   --ft-btn-lg: 600 1rem;
   --ft-sub-sm: 600 1.25rem;
   --ft-h1: bold 2.75rem;
   --ft-h2: bold 2.25rem;
-  --ft-h3: bold 1.75rem;
+  --ft-h3: bold 1.75rem; /* 20px/2rem*/
   --ft-h4: bold 1.5rem;
   /* Shadows */
-  --btn-shd-sm: 0px 10px 20px rgba(0,0,0,0.15);
-  --btn-shd-lg: 0px 20px 40px rgba(0,0,0,0.25);
-  --crd-shd-sm: 0px 15px 30px rgba(0,0,0,0.15);
-  --btn-shd-sm: 0px 30px 60px rgba(0,0,0,0.25);
+  --btn-shd-sm: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  --btn-shd-lg: 0px 20px 40px rgba(0, 0, 0, 0.25);
+  --crd-shd-sm: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  --btn-shd-sm: 0px 30px 60px rgba(0, 0, 0, 0.25);
 }
 
 html,
@@ -53,7 +52,12 @@ a {
   box-sizing: border-box;
 }
 
-h1,h2,h3,h4,h5,h6{
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Montserrat', sans-serif;
 }
 
