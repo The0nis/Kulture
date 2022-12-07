@@ -3,6 +3,7 @@ import Image from 'next/image';
 import Page from '../components/Page';
 import styles from '../styles/Home.module.scss';
 import { FiSearch } from 'react-icons/fi';
+import CarouselSlider from '../components/CarouselSlider/Index';
 
 export default function Home() {
   return (
@@ -22,6 +23,7 @@ export default function Home() {
           </div>
           <div className={styles.home__popularuploads}>
             <h2>Popular Uploads</h2>
+            <CarouselSlider />
           </div>
         </div>
       </Page>

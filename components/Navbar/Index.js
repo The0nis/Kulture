@@ -12,14 +12,13 @@ const Navbar = () => {
   //   Toggle Function
   const toggleMenu = () => {
     setToggle(!toggle);
-    console.log(toggle);
   };
 
-  //Effect to hide scroll when toggle
-  //   useEffect(() => {
-  //     const body = document.querySelector('body');
-  //     body.style.overflow = toggle ? 'hidden' : auto;
-  //   }, []);
+  //   Effect to hide scroll when toggle
+  useEffect(() => {
+    const body = document.querySelector('body');
+    body.style.overflow = toggle ? 'hidden' : auto;
+  }, []);
 
   return (
     <header className={styles.header_container}>
