@@ -37,11 +37,27 @@
   --btn-shd-sm: 0px 30px 60px rgba(0,0,0,0.25);
 }
 
+
+/* // Styling for the carousel goes here */
+
+.splide__track {
+  width: 90vw !important;
+}
+
+.splide__slide {
+ border-radius: .6pc;
+ box-shadow: var(--crd-shd-sm);
+}
+
+
+/* //style for carousel finishes here */
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: 'Source Sans Pro', sans-serif;
+  background-color: #000;
 }
 
 a {
