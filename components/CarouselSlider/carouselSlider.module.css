@@ -1,0 +1,48 @@
+.wrapper{
+    width: calc(100vw - 10vw);
+    height: auto;
+    margin: auto;
+    color: white;
+    position: relative;
+}
+
+.splider_wrapper{
+    /* width: 100vw; */
+    padding-bottom: 2rem;
+    display: flex;
+}
+
+.carousel_body{
+    width:100%;
+    margin: auto;
+}
+
+
+.header h5{
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+    padding-top: 1rem;
+}
+
+.carosel_content{
+    position: absolute;
+    top: 4rem;
+    margin-left: 1rem;
+}
+
+.carosel_content p{
+    font-size: 1.5rem;
+    font-weight: 700; 
+   
+}
+
+.carosel_content h5{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: -1.5rem;  
+}
+
+
+
+
