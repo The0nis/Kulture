@@ -17,8 +17,8 @@ const Navbar = () => {
   //   Effect to hide scroll when toggle
   useEffect(() => {
     const body = document.querySelector('body');
-    body.style.overflow = toggle ? 'hidden' : auto;
-  }, []);
+    body.style.overflow = toggle ? 'hidden' : 'auto';
+  }, [toggle]);
 
   return (
     <header className={styles.header_container}>
