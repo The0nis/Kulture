@@ -1,0 +1,189 @@
+.containerbeatcard {
+  background-color: black;
+  width: 25rem;
+  display: relative;
+}
+
+.genre_header {
+  display: flex;
+  padding-top: 2rem;
+}
+
+.list_wrapper {
+  margin-left: -3rem;
+}
+
+.genrebeat {
+  font-family: Source Sans Pro;
+  font-style: normal;
+  font-size: 16x;
+  display: flex;
+  color: grey;
+  align-items: baseline;
+  list-style-type: none;
+  margin-top: 0.2rem;
+}
+
+.genrebeat li {
+  margin-left: 1rem;
+}
+
+.genrebeat li a:hover {
+  color: white;
+}
+
+.selectus {
+  width: 2rem;
+  margin-left: 1rem;
+  margin-top: -0.6rem;
+}
+
+.selectus > select {
+  width: 109px;
+  height: 48px;
+  background: #e2e2e2;
+  border-radius: 8px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  outline: none;
+  border: none;
+}
+
+.spancircle {
+  font-size: 10px;
+  /* background-color: white; */
+}
+
+.containerbeatcard1 {
+  width: 361px;
+  height: 526px;
+  background: #434343;
+  border-radius: 8px;
+  margin-left: 16px;
+  margin-top: 46px;
+}
+
+.card_header {
+  display: flex;
+  color: #ffffff;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  font-size: .9rem;
+  font-family:'Source Sans Pro';
+  /* font-size: px; */
+}
+
+
+.imagebeatcard {
+  margin-left: 11px;
+  margin-top: 16px;
+  color: white;
+}
+
+.preview {
+  text-align: center;
+  margin-top: -3rem;
+  margin-right: -3rem;
+  color: white;
+  font-family: 'Source Sans Pro';
+}
+
+.imageovertext {
+  position: relative;
+  text-align: center;
+  color: white;
+  margin-top: 20px;
+}
+
+.bottomleft {
+  bottom: 30px;
+  margin-left: -80px;
+  position: relative;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  align-items: center;
+  letter-spacing: 0.001;
+}
+
+.iconwrapper {
+  position: relative;
+  margin-top: -50px;
+}
+
+.iconovertext {
+  margin-left: -250px;
+  margin-top: 2.1px;
+}
+
+.released {
+  color: grey;
+  font-family: 'Source Sans Pro';
+  margin-left: 26px;
+  font-size: 16px;
+}
+
+.footerwrapper {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+}
+
+.footerwrappertext {
+  font-family: 'Montserrat';
+  font-weight: 700;
+  font-size: 24px;
+  color: #ffffff;
+  margin-left: 26px;
+  margin-top: 20px;
+}
+
+.btn_footer {
+  color: white;
+  background-color: #6600e8;
+  border-radius: 8px;
+  width: 131px;
+  height: 52px;
+  border: none;
+  margin-top: 0.3rem;
+}
+
+.downicons {
+  display: flex;
+  margin-top: 5rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+  gap: 8rem;
+  justify-content: flex-start;
+}
+
+.footericontext1 {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+}
+
+.make_circle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.footericon1 {
+  width: 0.2rem;
+  height: 0.1rem;
+  margin-top: 0.3rem;
+  position: relative;
+}
+
+.footertext1 {
+  position: absolute;
+  color: white;
+  margin-top: -0.8rem;
+  margin-left: 2.5rem;
+}
