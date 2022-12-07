@@ -1,5 +1,6 @@
 import Page from '../components/Page';
 import '../styles/globals.scss';
+import '../styles/globals.css';
 import '@fontsource/open-sans';
 
 function MyApp({ Component, pageProps }) {

@@ -1,15 +1,22 @@
+/* slider wrapper */
 .wrapper{
     width: calc(100vw - 10vw);
     height: auto;
     margin: auto;
-    color: white;
+    background-color: var(--cl-dark);
+    color: var(--cl-light);
     position: relative;
 }
 
+
+/* carousel images overhead container */
 .splider_wrapper{
-    /* width: 100vw; */
     padding-bottom: 2rem;
     display: flex;
+}
+
+.splide_image{
+    border-radius: 1pc;
 }
 
 .carousel_body{
@@ -18,11 +25,11 @@
 }
 
 
-.header h5{
-    color: white;
-    font-weight: 800;
-    font-size: 2rem;
+.header h4{
+    font-weight: var(--ft-h4);
     padding-top: 1rem;
+    margin-left: 1rem;
+    text-shadow: 1px 1px 2px var(--cl-btn-brd), 0 0 25px var(--clr-info), 0 0 5px var(--clr-primary);
 }
 
 .carosel_content{
@@ -33,13 +40,14 @@
 
 .carosel_content p{
     font-size: 1.5rem;
-    font-weight: 700; 
+    font-weight: var(--ft-b-sm);
+    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
    
 }
 
 .carosel_content h5{
-    font-size: 1rem;
-    font-weight: 400;
+    font-weight: var(--ft-b-sm); 
+    font-weight: var(--ft-h5);
     margin-top: -1.5rem;  
 }
 

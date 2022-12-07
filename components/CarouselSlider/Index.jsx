@@ -56,7 +56,7 @@ function CarouselSlider() {
     <div className={style.wrapper}>
       <div className={style.carousel_body}>
         <div className={style.header}>
-          <h5>Popular Uploads</h5>
+          <h4>Popular Uploads</h4>
         </div>
         <Splide
             aria-label="My Favorite Images"
@@ -122,7 +122,7 @@ function CarouselSlider() {
         {data.map((item, idx) => (
          
             <SplideSlide key={idx} className={style.splider_image}>
-              <Image src={item.src} alt={item.alternate} />
+              <Image src={item.src} alt={item.alternate}  className={style.splide_image}/>
               <div className={style.carosel_content}>
                 <p>{item.caption}</p>
                 <h5>{item.producer}</h5>
