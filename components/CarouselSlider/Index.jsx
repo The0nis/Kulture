@@ -11,8 +11,6 @@ import six from '../CarouselSlider/assets/six.jpg';
 import Image from 'next/image';
 
 function CarouselSlider() {
-
-
   const data = [
     {
       src: one,
@@ -55,81 +53,73 @@ function CarouselSlider() {
   return (
     <div className={style.wrapper}>
       <div className={style.carousel_body}>
-        <div className={style.header}>
-          <h4>Popular Uploads</h4>
-        </div>
+        <div className={style.header}></div>
         <Splide
-            aria-label="My Favorite Images"
-            options={ {
-              perPage: 4,
-              height : '10rem',
-              rewind : true,
-              gap: '1rem',
-              autoplay     : true,
-              pauseOnHover : false,
-              resetProgress: false,
-              type         : 'loop',
-              cover       : true,
-              arrows: 'slider',
-              arrows: false,
-              start: 0,
-              focus       : 'center',
-              breakpoints: {
-                300: {
-                  perPage: 1.1,
-            
-                },
-                500: {
-                  perPage: 2,
-            
-                },
-                550: {
-                  perPage: 2,
-            
-                },
-                600: {
-                  perPage: 2,
-            
-                },
-                610: {
-                  perPage: 2,
-            
-                },
-                622: {
-                  perPage: 3,
-            
-                },
-                 640: {
-                  perPage: 4,
-            
-                },
-                767: {
-                  perPage: 2,
-              
-                },
-                1024: {
-                  perPage: 3,
-                 
-                },
+          aria-label="My Favorite Images"
+          options={{
+            perPage: 4,
+            height: '10rem',
+            rewind: true,
+            gap: '1rem',
+            autoplay: true,
+            pauseOnHover: false,
+            resetProgress: false,
+            type: 'loop',
+            cover: true,
+            arrows: 'slider',
+            arrows: false,
+            start: 0,
+            focus: 'center',
+            breakpoints: {
+              300: {
+                perPage: 1.1,
               },
-              focus: "center",
-              gap: '2em',
-              updateOnMove : true,
-              pagination: false,
-              } }
-              className={style.splider_wrapper}
-          >
-        {data.map((item, idx) => (
-         
+              500: {
+                perPage: 2,
+              },
+              550: {
+                perPage: 2,
+              },
+              600: {
+                perPage: 2,
+              },
+              610: {
+                perPage: 2,
+              },
+              622: {
+                perPage: 3,
+              },
+              640: {
+                perPage: 4,
+              },
+              767: {
+                perPage: 2,
+              },
+              1024: {
+                perPage: 3,
+              },
+            },
+            focus: 'center',
+            gap: '2em',
+            updateOnMove: true,
+            pagination: false,
+          }}
+          className={style.splider_wrapper}
+        >
+          {data.map((item, idx) => (
             <SplideSlide key={idx} className={style.splider_image}>
-              <Image src={item.src} alt={item.alternate}  className={style.splide_image}/>
+              <Image
+                src={item.src}
+                alt={item.alternate}
+                className={style.splide_image}
+              />
               <div className={style.carosel_content}>
                 <p>{item.caption}</p>
                 <h5>{item.producer}</h5>
               </div>
             </SplideSlide>
-        ))}
-           </Splide>
+          ))}
+        </Splide>
       </div>
     </div>
   );
