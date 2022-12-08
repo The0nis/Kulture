@@ -36,6 +36,7 @@
   width: 2rem;
   margin-left: 1rem;
   margin-top: -0.6rem;
+  
 }
 
 .selectus > select {
@@ -48,6 +49,7 @@
   flex-grow: 0;
   outline: none;
   border: none;
+  color: black;
 }
 
 .spancircle {
@@ -57,7 +59,7 @@
 
 .containerbeatcard1 {
   width: 361px;
-  height: 526px;
+  height: 565px;
   background: #434343;
   border-radius: 8px;
   margin-left: 16px;
@@ -70,11 +72,9 @@
   gap: 1.5rem;
   align-items: center;
   justify-content: center;
-  font-size: .9rem;
-  font-family:'Source Sans Pro';
-  /* font-size: px; */
+  font-size: 0.8rem;
+  font-family: 'Source Sans Pro';
 }
-
 
 .imagebeatcard {
   margin-left: 11px;
@@ -136,9 +136,9 @@
 .footerwrappertext {
   font-family: 'Montserrat';
   font-weight: 700;
-  font-size: 24px;
+  font-size: 15px;
   color: #ffffff;
-  margin-left: 26px;
+  margin-left: 25px;
   margin-top: 20px;
 }
 
@@ -154,7 +154,7 @@
 
 .downicons {
   display: flex;
-  margin-top: 5rem;
+  margin-top: 6.5rem;
   margin-left: 2rem;
   margin-bottom: 2rem;
   gap: 8rem;
@@ -185,5 +185,5 @@
   position: absolute;
   color: white;
   margin-top: -0.8rem;
-  margin-left: 2.5rem;
+  margin-left: 2rem;
 }
