@@ -36,6 +36,7 @@
   width: 2rem;
   margin-left: 1rem;
   margin-top: -0.6rem;
+  
 }
 
 .selectus > select {
@@ -48,6 +49,7 @@
   flex-grow: 0;
   outline: none;
   border: none;
+  color: black;
 }
 
 .spancircle {
@@ -183,5 +185,5 @@
   position: absolute;
   color: white;
   margin-top: -0.8rem;
-  margin-left: 2.0rem;
+  margin-left: 2rem;
 }
