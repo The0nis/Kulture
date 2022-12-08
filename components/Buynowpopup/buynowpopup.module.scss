@@ -1,13 +1,112 @@
-.containerbuynow{
-position: relative;
-width: 362px;
-height: 567px;
-background: #0A0A09;
+.containerbuynow {
+  position: relative;
+  width: 362px;
+  height: 567px;
+  background: #0a0a09;
+  border-radius: 8px;
+}
+
+.selectlicense {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 16.5px;
+}
+.headerbuy {
+  display: flex;
+  gap: 13rem;
+}
+
+.closebutton {
+  margin-top: 2rem;
+  color: grey;
+  
+}
+
+.gridlayout{
+display: flex;
+gap:0.05rem;
+
+}
+
+.gridbuynow{
+width: 200px;
+height: 92px;
+background: #434343;
 border-radius: 8px;
+margin-left: 0.6rem;
+margin-right: 0.6rem;
 }
 
-.headerbuy{
-    display: flex;
-
+.gridlayout1{
+margin-top:1rem;
+display: flex;
+gap:0.05rem;
 }
 
+.gridbuynow1{
+    width: 161px;
+    height: 92px;
+    background: #434343;
+    margin-left: 0.6rem; 
+    margin-top:2rem;
+    border-radius: 8px;
+    border-color: purple;
+}
+
+.wrappertextbuy{
+    margin-top: -1rem;
+    margin-left: 1rem;
+}
+
+.text1{
+letter-spacing: 0.005em;
+font-size:18px;
+}
+
+.text2{
+letter-spacing: 0.005em;
+font-size:15px;
+}
+
+.text3{
+    letter-spacing: 0.005em;
+    font-size:10px;
+}
+
+.terms{
+    font-size:1.2rem;
+    margin-left: 0.6rem;
+    margin-top: 3rem;
+    background: linear-gradient(155.77deg, #F5DE78 8.4%, #B5812D 46.49%, #F5DE78 84.48%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.total{
+ margin-top:2rem;
+ margin-left: 0.6rem;
+
+}
+.footer_text{
+margin-bottom: 16px;
+display: flex;
+gap:6rem;
+}
+
+.footer_text1{
+margin-left: 0.6rem;
+font-size:18px;
+}
+
+
+
+.footerbtn{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 145px;
+height: 52px;
+background: #6600E8;
+border-radius: 8px;
+border: none;
+}
