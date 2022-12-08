@@ -129,7 +129,7 @@ function BeatCard() {
         </div>
 
         <div className={style.imageovertext}>
-          <Image src={wintspread} alt="Snow" />
+          <Image src={wintspread2} alt="Snow" />
 
           <div className={style.iconwrapper}>
             <div className={style.iconovertext}>
