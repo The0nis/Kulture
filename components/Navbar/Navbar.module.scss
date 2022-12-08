@@ -21,8 +21,8 @@
     }
   }
 
-  &__hamburger {
-    z-index: 1000;
+  .navbar__hamburger {
+    cursor: pointer;
   }
 }
 
@@ -30,12 +30,15 @@
   position: relative;
 
   &__close {
-    // position: absolute;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 12px;
     top: 0px;
     right: 100px;
+
+    div {
+      cursor: pointer;
+    }
   }
 
   ul {

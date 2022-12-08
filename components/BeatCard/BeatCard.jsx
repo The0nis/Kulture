@@ -1,12 +1,12 @@
-import style from './beatCard.module.css';
-import miriam from '../assets/miriam.svg';
-import miriam2 from '../assets/miriam2.svg';
-import wintspread from '../assets/wintspread.svg';
-import wintspread2 from '../assets/wintspread2.svg';
-import videocircle from '../assets/videocircle.svg';
-import share from '../assets/share.svg';
-import save from '../assets/save.svg';
 import Image from 'next/image';
+import style from './beatCard.module.css';
+import miriam from '../../assets/miriam.svg';
+import miriam2 from '../../assets/miriam2.svg';
+import wintspread from '../../assets/wintspread.svg';
+import wintspread2 from '../../assets/wintspread2.svg';
+import videocircle from '../../assets/videocircle.svg';
+import share from '../../assets/share.svg';
+import save from '../../assets/save.svg';
 
 function BeatCard() {
   return (
@@ -83,7 +83,9 @@ function BeatCard() {
 
         <div className={style.footerwrapper}>
           <p className={style.footerwrappertext}>NGN 90,0000 </p>{' '}
-          <button className={style.btn_footer}>BUY NOW</button>
+          <button className={style.btn_footer} type="submit">
+            BUY NOW
+          </button>
         </div>
 
         <div className={style.downicons}>
@@ -110,7 +112,6 @@ function BeatCard() {
 
       {/* Second phase */}
 
-    
       <div className={style.containerbeatcard1}>
         <div className={style.card_header}>
           <div>
@@ -146,7 +147,9 @@ function BeatCard() {
 
         <div className={style.footerwrapper}>
           <p className={style.footerwrappertext}>NGN 90,0000 </p>{' '}
-          <button className={style.btn_footer}>BUY NOW</button>
+          <button className={style.btn_footer} type="submit">
+            BUY NOW
+          </button>
         </div>
 
         <div className={style.downicons}>
@@ -171,10 +174,9 @@ function BeatCard() {
         </div>
       </div>
 
-    {/* <div className={style.loadmore}>
+      {/* <div className={style.loadmore}>
       <p>load more...</p> 
         </div> */}
-
     </div>
   );
 }

@@ -1,14 +1,13 @@
-import React from 'react';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/splide/css';
-import style from './carouselSlider.module.css';
-import one from './assets/one.jpg';
-import two from './assets/two.jpg';
-import three from './assets/three.jpg';
-import four from './assets/four.jpg';
-import five from './assets/five.jpg';
-import six from '../CarouselSlider/assets/six.jpg';
 import Image from 'next/image';
+import style from './carouselSlider.module.css';
+import one from '../../assets/one.jpg';
+import two from '../../assets/two.jpg';
+import three from '../../assets/three.jpg';
+import four from '../../assets/four.jpg';
+import five from '../../assets/five.jpg';
+import six from '../../assets/six.jpg';
 
 function CarouselSlider() {
   const data = [
@@ -53,7 +52,7 @@ function CarouselSlider() {
   return (
     <div className={style.wrapper}>
       <div className={style.carousel_body}>
-        <div className={style.header}></div>
+        <div className={style.header}>{/* ... */}</div>
         <Splide
           aria-label="My Favorite Images"
           options={{
