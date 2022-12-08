@@ -3,7 +3,7 @@ import style from './beatCard.module.css';
 import miriam from '../../assets/miriam.svg';
 import miriam2 from '../../assets/miriam2.svg';
 import wintspread from '../../assets/wintspread.svg';
-// import wintspread2 from '../../assets/wintspread2.svg';
+import wintspread2 from '../../assets/wintspread2.svg';
 import videocircle from '../../assets/videocircle.svg';
 import share from '../../assets/share.svg';
 import save from '../../assets/save.svg';

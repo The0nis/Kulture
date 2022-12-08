@@ -39,8 +39,10 @@ function Navbar() {
         }`}
       >
         {/* React Icon */}
-        <div className={styles.navbar__close} onClick={toggleMenu}>
-          <CgCloseO size={20} color="fff" />
+        <div className={styles.navbar__close}>
+          <div onClick={toggleMenu}>
+            <CgCloseO size={20} color="fff" />
+          </div>
         </div>
         <ul>
           <li>Home</li>
