@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@fontsource/open-sans": "^4.5.13",
+    "@nivo/bar": "^0.80.0",
+    "@nivo/core": "^0.80.0",
     "@splidejs/react-splide": "^0.7.12",
     "@splidejs/splide": "^4.1.4",
     "eslint": "^8.29.0",

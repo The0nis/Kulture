@@ -4,7 +4,7 @@ import ModalWrap from '../ModalWrapper/ModalWrap';
 import { CgCloseO } from 'react-icons/cg';
 import { Formik } from 'formik';
 
-const SignupModal = () => {
+function SignupModal() {
   // TOGGLE MENU
   const [toggle, setToggle] = useState(false);
 
@@ -37,7 +37,7 @@ const SignupModal = () => {
 
   //GETTING FORM DATA
   const submitForm = (values) => {
-    console.log(values);
+    // console.log(values);
   };
 
   return (
@@ -49,7 +49,7 @@ const SignupModal = () => {
         <div className={style.text_wrap}>
           <h3>Signin</h3>
           <p>
-            Signin Enter details to signin, don't have an account,
+            Signin Enter details to signin, dont have an account,
             <br />
             Signup
           </p>
