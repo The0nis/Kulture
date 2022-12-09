@@ -21,9 +21,6 @@
   color: grey;
 }
 
-
-
-
 .gridlayout {
   display: flex;
   gap: 0.05rem;
@@ -117,4 +114,22 @@
   border-radius: 8px;
   border: none;
   margin-right: 0.09rem;
+}
+
+@media screen and  ( max-width: 200px ) {
+
+  .containerbuynow {
+    position: absolute;
+    width: 350px;
+    height: 550px;
+    
+  }
+
+
+  .footerbtn{
+    width: 140px;
+    height: 50px;
+    background: gold;
+  }
+
 }
