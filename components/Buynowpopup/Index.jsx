@@ -10,6 +10,8 @@ function Buynowpopup() {
           <div className={style.selectlicense}>
             <h4>Select License</h4>
           </div>
+
+          {/* I used React icons for the */}
           <div className={style.closebutton}>
             <CgCloseO size={20} />
           </div>
@@ -75,15 +77,15 @@ function Buynowpopup() {
           </div>
         </div>
 
-        <div className={style.gridbuynow1}>
-          <div className={style.wrappertextbuy}>
-            <article className={style.text1}>
+        <div className={style.gridbuynow123}>
+          <div className={style.wrappertextbuy123}>
+            <article className={style.text123}>
               <p>Basic WAV LEASE</p>
             </article>
-            <article className={style.text2}>
+            <article className={style.text231}>
               <p>NGN 15,000</p>
             </article>
-            <article className={style.text3}>
+            <article className={style.text321}>
               <p>MP3 AND WAV</p>
             </article>
           </div>

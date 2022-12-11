@@ -43,23 +43,54 @@
 
 .gridbuynow1 {
   width: 161px;
-  height: 92px;
+  height: 95px;
   background: #434343;
   margin-left: 0.6rem;
-  margin-top: 2rem;
+  margin-top: 1.5rem;
   border-radius: 8px;
   border-color: purple;
 }
 
 .wrappertextbuy {
-  margin-top: -1rem;
+  margin-top: -0.55rem;
   margin-left: 1rem;
 }
 
+.gridbuynow123{
+  width: 161px;
+  height: 95px;
+  background: #434343;
+  margin-left: 0.6rem;
+  border-radius: 8px;
+}
+
+.wrappertextbuy123{
+  margin-left: 0.6rem;
+  margin-top: -0.05rem;
+
+}
+
+.text123{
+  font-size:16px;
+  margin-bottom: 1rem;
+}
+
+.text231{
+  font-size: 15px;
+  margin-bottom: 1rem;
+}
+
+.text321{
+  font-size: 10px;
+  margin-bottom: 1rem;
+}
+
+
 .text1 {
   letter-spacing: 0.005em;
-  font-size: 18px;
+  font-size: 16px;
 }
+
 
 .text2 {
   letter-spacing: 0.005em;
@@ -97,7 +128,7 @@
 
 .footer_text1 {
   margin-left: 0.6rem;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 .footerbtn1 {
@@ -116,20 +147,16 @@
   margin-right: 0.09rem;
 }
 
-@media screen and  ( max-width: 200px ) {
-
+@media screen and (max-width: 200px) {
   .containerbuynow {
     position: absolute;
     width: 350px;
     height: 550px;
-    
   }
 
-
-  .footerbtn{
+  .footerbtn {
     width: 140px;
     height: 50px;
     background: gold;
   }
-
 }
