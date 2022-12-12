@@ -7,12 +7,12 @@ function Footer() {
       <div className={style.footer_first}>
         <div>
           <p>
-            <Link href="#">Terms of Policy</Link>
+            <Link href="#/">Terms of Policy</Link>
           </p>
         </div>
         <div>
           <p>
-            <Link href="#">Contacts</Link>
+            <Link href="#/">Contacts</Link>
           </p>
         </div>
       </div>
@@ -20,12 +20,12 @@ function Footer() {
       <div className={style.footer_second}>
         <div>
           <p>
-            <Link href="#">Privacy Policy</Link>
+            <Link href="#/">Privacy Policy</Link>
           </p>
         </div>
         <div>
           <p>
-            <Link href="#">Copyright@2022</Link>
+            <Link href="#/">Copyright@2022</Link>
           </p>
         </div>
       </div>

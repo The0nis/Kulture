@@ -1,3 +1,4 @@
+/* eslint-disable node/no-missing-import */
 import { FiSearch } from 'react-icons/fi';
 import Page from '../components/Page';
 import styles from '../styles/Home.module.scss';

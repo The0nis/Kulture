@@ -1,3 +1,4 @@
+/* eslint-disable node/no-missing-import */
 import Head from 'next/head';
 import Footer from './Footer/Index';
 import Navbar from './Navbar/Index';

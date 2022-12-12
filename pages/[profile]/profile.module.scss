@@ -1,0 +1,133 @@
+.profile {
+  margin: 24px 16px 32px 16px;
+
+  h1 {
+    font-weight: 700;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    letter-spacing: -0.0025em;
+    color: var(--clr-f-light);
+    margin-top: 3.5rem;
+  }
+
+  &__hero {
+    background-image: url('/profilehero.png');
+    padding: 16px 16px 24px 16px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+
+    .hero_top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 10px;
+      .image {
+        width: 153px;
+        position: relative;
+        img {
+        }
+
+        button {
+          position: absolute;
+          bottom: 30px;
+          left: 1rem;
+
+          outline: none;
+          border: none;
+          padding: 6px;
+          background: var(--clr-f-light);
+          border-radius: 8px;
+
+          font-weight: 600;
+          font-size: 0.75rem;
+          line-height: 15px;
+          letter-spacing: 0.0175em;
+
+          display: flex;
+          align-items: center;
+          column-gap: 2px;
+        }
+      }
+    }
+
+    .hero_btn {
+      padding: 16px 32px;
+      width: fit-content;
+      outline: none;
+      border: none;
+      background: #6600e8;
+      border-radius: 8px;
+      margin: auto;
+      margin-top: 30px;
+
+      //Button text
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 20px;
+      letter-spacing: 0.0175em;
+      color: var(--cl-light);
+    }
+  }
+
+  &__username {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    h2,
+    h3 {
+      font-family: 'Source Sans Pro';
+      font-style: normal;
+      font-weight: 400;
+      color: var(--cl-light);
+      background-color: var(--cl-dark);
+      padding: 8px;
+      border-radius: 8px;
+      width: fit-content;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      line-height: 25px;
+      letter-spacing: 0.005em;
+    }
+
+    h3 {
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 20px;
+    }
+  }
+}
+
+.intro {
+  color: var(--clr-f-light);
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    column-gap: 34px;
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+  }
+
+  &__icons {
+    display: flex;
+    column-gap: 28px;
+
+    .facebook {
+      border: 1px solid var(--clr-f-light);
+      border-radius: 5px;
+      display: flex;
+      padding-top: 2px;
+    }
+  }
+}
