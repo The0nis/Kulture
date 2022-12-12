@@ -1,19 +1,19 @@
 .wrap{
-    width: 40rem;
+    width: 35rem;
     background-color: #434343;
 }
 
 .header{
     color: var(--cl-light);
     font-size: 1.8rem;
-    padding-top: 1rem;
+    padding-top: .1rem;
     padding-left: 4rem;
     margin-bottom: -2rem;
 }
 
 .bars{
-    width: 90%;
-    height: 25rem;
+    width: 95%;
+    height: 20rem;
     padding-left: 1rem;
     padding-bottom: 2rem;
 }
