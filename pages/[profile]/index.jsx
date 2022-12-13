@@ -11,7 +11,7 @@ import Page from '../../components/Page';
 import styles from './profile.module.scss';
 import avatarProfile from '../../assets/Avatar_profile.svg';
 import camera from '../../assets/camera.svg';
-// import SaleChart from '../../components/SalesChart/Index';
+import SaleChart from '../../components/SalesChart/Index';
 
 function Profile() {
   return (
@@ -58,8 +58,12 @@ function Profile() {
           </div>
         </div>
         <div className={styles.sales}>
-          <Sales />
-          {/* <SaleChart /> */}
+          <div>
+            <Sales />
+          </div>
+          <div>
+            <SaleChart />
+          </div>
         </div>
       </div>
     </Page>

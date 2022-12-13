@@ -72,13 +72,13 @@ function SaleChart() {
           data={data}
           keys={['fries', 'donut']}
           indexBy="country"
-          margin={{ top: 50, right: 10, bottom: 50, left: 100 }}
+          margin={{ top: 20, right: 0, bottom: 40, left: 10 }}
           padding={0.57}
           theme={{
             axis: {
               ticks: {
                 text: {
-                  fontSize: 18,
+                  fontSize: 16,
                   fill: 'white',
                 },
               },
@@ -134,7 +134,7 @@ function SaleChart() {
           }}
           axisLeft={{
             tickSize: 0,
-            tickPadding: 20,
+            tickPadding: -20,
             tickRotation: 0,
             legend: '',
             legendPosition: 'middle',
