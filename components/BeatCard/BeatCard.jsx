@@ -1,5 +1,6 @@
 import Image from 'next/image';
-import style from './beatCard.module.css';
+import Link from 'next/link';
+import style from './beatCard.module.scss';
 import miriam from '../../assets/miriam.svg';
 import miriam2 from '../../assets/miriam2.svg';
 import wintspread from '../../assets/wintspread.svg';
@@ -13,27 +14,28 @@ function BeatCard() {
     <div className={style.containerbeatcard}>
       <div className={style.genre_header}>
         <div className={style.list_wrapper}>
-          <ul className={style.genrebeat}>
-            <li>
-              <a href>All</a>{' '}
-            </li>
-            <li>
-              <a href>Afro pop</a>{' '}
-            </li>
-            <li>
-              {' '}
-              <a href>R & B</a>{' '}
-            </li>
-            <li>
-              {' '}
-              <a href>world</a>{' '}
-            </li>
-          </ul>
+          <Link href="#/">All</Link>
+          <Link href="#/">Afro pop</Link>
+          <Link href="#/">R&B</Link>
+          <Link href="#/">world</Link>
+          <div className={style.selectus}>
+            <select name="" id="" placeholder="Filter">
+              <option>Filter</option>
+              <option>Afro pop</option>
+              <option>Gospel</option>
+              <option>Fuji</option>
+              <option>Juju</option>
+              <option>Hip hop</option>
+              <option>Blues</option>
+              <option>Reggae</option>
+              <option>Apala</option>
+            </select>
+          </div>
         </div>
 
         {/* I used select instead of datalist  */}
 
-        <div className={style.selectus}>
+        {/* <div className={style.selectus}>
           <select name="" id="" placeholder="Filter">
             <option>Filter</option>
             <option>Afro pop</option>
@@ -45,7 +47,7 @@ function BeatCard() {
             <option>Reggae</option>
             <option>Apala</option>
           </select>
-        </div>
+        </div> */}
       </div>
 
       <div className={style.containerbeatcard1}>

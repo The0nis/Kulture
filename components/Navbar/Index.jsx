@@ -7,7 +7,7 @@ import logo from '../../assets/logo.svg';
 
 function Navbar() {
   // TOGGLE MENU
-  const [toggle, setToggle] = useState(true);
+  const [toggle, setToggle] = useState(false);
 
   //   Toggle Function
   const toggleMenu = () => {
