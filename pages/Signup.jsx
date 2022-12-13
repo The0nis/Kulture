@@ -1,12 +1,10 @@
-import React from 'react'
-import SignupModal from '../components/Modals/SignupModal/Index'
-
-const Signup = () => {
+import Signup from "../components/Signup/Index"
+const Signingup = () => {
   return (
     <div>
-        <SignupModal/>
+      <Signup />
     </div>
   )
 }
 
-export default Signup
+export default Signingup
