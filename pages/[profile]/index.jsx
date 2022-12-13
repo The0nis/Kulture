@@ -6,10 +6,12 @@ import dribble from '../../assets/dribbble.svg';
 import facebook from '../../assets/facebook.svg';
 import instagram from '../../assets/instagram.svg';
 
+import Sales from '../../components/Sales/Index';
 import Page from '../../components/Page';
 import styles from './profile.module.scss';
 import avatarProfile from '../../assets/Avatar_profile.svg';
 import camera from '../../assets/camera.svg';
+// import SaleChart from '../../components/SalesChart/Index';
 
 function Profile() {
   return (
@@ -54,6 +56,10 @@ function Profile() {
               <Image src={instagram} alt="instagram" />
             </div>
           </div>
+        </div>
+        <div className={styles.sales}>
+          <Sales />
+          {/* <SaleChart /> */}
         </div>
       </div>
     </Page>
