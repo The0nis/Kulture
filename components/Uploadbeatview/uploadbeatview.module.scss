@@ -6,7 +6,6 @@
 .uploadcontainer,
 .uploadcontainer1,
 .uploadcontainer2 {
-  width: 22.563rem;
   height: 14.188rem;
   margin-top: 1.25rem;
   display: flex;
@@ -39,6 +38,11 @@
   border: none;
 }
 
+.btn_container {
+  display: flex;
+  justify-content: center;
+}
+
 @media screen and (min-width: 750px) {
   .maincontainer {
     display: flex;
@@ -49,7 +53,6 @@
   .btn_container {
     display: flex;
     justify-content: center;
- 
   }
 
   .uploadbeatext {
