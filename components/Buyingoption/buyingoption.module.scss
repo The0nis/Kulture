@@ -1,18 +1,18 @@
 .wrapperbuyingoptiontext {
   margin-left: 1rem;
   margin-top: 1.5rem;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .wrapper_box {
   display: flex;
 }
 .button_option {
-  size: 9px;
+  size: 0.563rem;
   margin-left: 1rem;
-  border-radius: 50px;
-  height: 16px;
-  border: 2px solid white;
+  border-radius: 3.125rem;
+  height: 1rem;
+  border: 0.125rem solid white;
   // border-width: thick;
 }
 
@@ -27,9 +27,9 @@
   position: absolute;
   width: 12rem;
   height: 3rem;
-  left: 18px;
+  left: 1.125rem;
   background: #6600e8;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: none;
 }
 
@@ -38,10 +38,9 @@
   font-size: 1.2rem;
   width: 15rem;
   height: 3rem;
-  left: 18px;
+  left: 1.125rem;
   background: black;
-  border-radius: 8px;
-  // border:none;
+  border-radius: 0.5rem;
   border-color: blue;
 }
 
