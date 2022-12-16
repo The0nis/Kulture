@@ -20,7 +20,7 @@ export default function Home() {
                 <FiSearch size={20} color="#fff" />
               </div>
             </div>
-            <button>UPLOAD YOUR BEATS</button>
+            <button type="button">UPLOAD YOUR BEATS</button>
           </div>
           {/* Popular Uploads Slider */}
           <div className={styles.home__popularuploads}>
