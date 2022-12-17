@@ -1,0 +1,72 @@
+.cloudtext {
+  color: #ffffff;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  text-align: center;
+  letter-spacing: -0.0025em;
+}
+
+.cloudcontainer {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 5.438rem;
+  display: flex;
+  flex-direction: column;
+  background: #434343;
+  border: 0.188rem dashed #ffffff;
+  border-radius: 0.625rem;
+  height: 16.813rem;
+  align-items: center;
+}
+
+.cloud_image {
+  margin-top: 2.938rem;
+}
+
+.cloudtext1 {
+  color: #ffffff;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  text-align: center;
+  letter-spacing: 0.0015em;
+}
+
+.cloudtext2 {
+  color: #ffffff;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.875rem;
+  line-height: 1.125rem;
+  text-align: center;
+  letter-spacing: 0.0015em;
+}
+
+.upload_btn {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2.5rem;
+}
+
+.back_btn {
+  width: 6.25rem;
+  height: 2.5rem;
+  background: black;
+  border-radius: 0.625rem;
+  border-color: blue;
+}
+
+.next_btn {
+  width: 6.25rem;
+  height: 2.5rem;
+  background: #6600e8;
+  border-radius: 0.625rem;
+  border: none;
+}

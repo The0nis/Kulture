@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: false,
+  reactStrictMode: true,
 }
 
-module.exports = nextConfig
+{
+  test: /\.(sass|less|css)$/,
+  use: ["style-loader", "css-loader", 'sass-loader'],
+}
+
+// Module.exports = nextConfig

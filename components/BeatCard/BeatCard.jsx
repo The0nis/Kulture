@@ -33,21 +33,6 @@ function BeatCard() {
           </div>
         </div>
 
-        {/* I used select instead of datalist  */}
-
-        {/* <div className={style.selectus}>
-          <select name="" id="" placeholder="Filter">
-            <option>Filter</option>
-            <option>Afro pop</option>
-            <option>Gospel</option>
-            <option>Fuji</option>
-            <option>Juju</option>
-            <option>Hip hop</option>
-            <option>Blues</option>
-            <option>Reggae</option>
-            <option>Apala</option>
-          </select>
-        </div> */}
       </div>
 
       <div className={style.containerbeatcard1}>
@@ -67,6 +52,7 @@ function BeatCard() {
           </div>
         </div>
 
+      
         <div className={style.imageovertext}>
           <Image src={wintspread} alt="Snow" />
 
