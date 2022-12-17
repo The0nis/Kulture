@@ -5,7 +5,6 @@ import * as Yup from 'yup';
 import style from './Signup.module.css';
 import Link from 'next/link';
 import { MdStarRate } from 'react-icons/md';
-import logo from '../../assets/logo.svg'
 import PasswordStrengthBar from 'react-password-strength-bar';
 
 const Signup = () => {
