@@ -9,7 +9,7 @@ import Page from '../Page';
 
 const UploadBeat = () => {
   let [percentRange, setProgress] = useState(0);
-  
+
   const [entryProducer, setEntryProducer] = useState('');
   const [nameOfBeat, setNameOfBeat] = useState('');
   const [genreInput, setGenreInput] = useState('');
@@ -21,7 +21,6 @@ const UploadBeat = () => {
   const [genreVisited, setGenreVisited] = useState(0);
   const [fileVisited, setFileVisited] = useState(0);
   const [priceVisited, setPriceVisited] = useState(0);
-
 
   const validationSchema = Yup.object().shape({
     producer: Yup.string().required('producer name is required'),
@@ -89,11 +88,10 @@ const UploadBeat = () => {
           5000
         );
       }
+    } else {
+      setProgress(percentRange > 0 ? percentRange - 20 : 0);
+      setVisited(0);
     }
-    else {
-    setProgress(percentRange > 0 ? percentRange - 20 : 0);
-    setVisited(0);
-  }
   };
   const handleOnChangeProducer = (event) => {
     setEntryProducer(event.target.value);
@@ -131,7 +129,7 @@ const UploadBeat = () => {
 
   const handleChangeGenre = (event) => {
     setGenreInput(event.target.value);
-    if (genreInput != '') {
+    if (genreInput[genreInput.length] != 0) {
       setGenreVisited(1);
       if (genreVisited == 0) {
         return setTimeout(
@@ -179,147 +177,157 @@ const UploadBeat = () => {
               </div>
             </div>
           </div>
-
-          <div className={style.section_b}>
-            <div className={style.b_img} style={{backgroundImage: `url(${file})`, backgroundSize: 'cover', backgroundReapet: 'no-repeat' }}>
-              {/* image fuctionality goes here */}
-              <div className={style.image_btn}>
-                <button type="submit">
-                  <Image src={camera} alt={camera} /> Upload image
-                </button>
+          
+          <div className={style.body_wrapper}>
+            <div className={style.section_b}>
+              <div
+                className={style.b_img}
+                style={{
+                  backgroundImage: `url(${file})`,
+                  backgroundSize: 'cover',
+                  backgroundReapet: 'no-repeat',
+                }}
+              >
+                {/* image fuctionality goes here */}
+                <div className={style.image_btn}>
+                  <button type="submit">
+                    <Image src={camera} alt={camera} /> Upload image
+                  </button>
+                </div>
+                <div className={style.image_input}>
+                  <input type="file" onChange={handleChange} accept="image/*" />
+                </div>
+                {/* <img src={file} /> */}
               </div>
-              <div className={style.image_input}>
-                <input type="file" onChange={handleChange} accept="image/*" />
+              <div>
+                <p>Max. File Size: 500 MB</p>
               </div>
-              {/* <img src={file} /> */}
             </div>
-            <div>
-              <p>Max. File Size: 500 MB</p>
-            </div>
-          </div>
 
-          <div className={style.register_form}>
-            <form onSubmit={formik.handleSubmit} className={style.forms}>
-              <div className={style.form_sectiona}>
-                <div className={style.form_group}>
-                  <label htmlFor="producer">Producer(s)</label>
-                  <div className={style.input_wrap || style.inputsec}>
-                    <input
-                      name="producer"
-                      type="text"
-                      className={`${
-                        style.form_control +
-                        (formik.errors.producer && formik.touched.producer
-                          ? style.is_invalid
-                          : '')
-                      }`}
-                      onChange={formik.handleChange}
-                      onKeyDown={handleOnChangeProducer}
-                      value={formik.values.producer}
-                    />
-                  </div>
-
-                  <div className={style.invalid_feedback}>
-                    {formik.errors.producer && formik.touched.producer
-                      ? formik.errors.producer
-                      : null}
-                  </div>
-
+            <div className={style.register_form}>
+              <form onSubmit={formik.handleSubmit} className={style.forms}>
+                <div className={style.form_sectiona}>
                   <div className={style.form_group}>
-                    <label htmlFor="nameofbeat">Name of Beat</label>
+                    <label htmlFor="producer">Producer(s)</label>
                     <div className={style.input_wrap || style.inputsec}>
                       <input
-                        name="nameofbeat"
+                        name="producer"
                         type="text"
                         className={`${
                           style.form_control +
-                          (formik.errors.nameofbeat && formik.touched.nameofbeat
+                          (formik.errors.producer && formik.touched.producer
                             ? style.is_invalid
                             : '')
                         }`}
                         onChange={formik.handleChange}
-                        onKeyDown={handleOnChangeBeat}
-                        value={formik.values.nameofbeat}
+                        onKeyDown={handleOnChangeProducer}
+                        value={formik.values.producer}
                       />
                     </div>
 
                     <div className={style.invalid_feedback}>
-                      {formik.errors.nameofbeat && formik.touched.nameofbeat
-                        ? formik.errors.nameofbeat
+                      {formik.errors.producer && formik.touched.producer
+                        ? formik.errors.producer
                         : null}
                     </div>
-                  </div>
 
-                  <div className={style.form_group}>
-                    <label htmlFor="genre">Genre</label>
-                    <div className={style.input_wrap || style.inputsec}>
-                      <select
-                        name="genre"
-                        defaultValue={genreInput}
-                        onChange={handleChangeGenre}
-                        className={`${
-                          style.form_control +
-                          (formik.errors.genre && formik.touched.genre
-                            ? style.is_invalid
-                            : '')
-                        }`}
-                        style={{ display: 'block' }}
-                      >
-                        {nameOptions.map((option, idx) => (
-                          <option value={option.value} key={idx}>
-                            {option.label}
-                          </option>
-                        ))}
-                      </select>
+                    <div className={style.form_group}>
+                      <label htmlFor="nameofbeat">Name of Beat</label>
+                      <div className={style.input_wrap || style.inputsec}>
+                        <input
+                          name="nameofbeat"
+                          type="text"
+                          className={`${
+                            style.form_control +
+                            (formik.errors.nameofbeat &&
+                            formik.touched.nameofbeat
+                              ? style.is_invalid
+                              : '')
+                          }`}
+                          onChange={formik.handleChange}
+                          onKeyDown={handleOnChangeBeat}
+                          value={formik.values.nameofbeat}
+                        />
+                      </div>
+
+                      <div className={style.invalid_feedback}>
+                        {formik.errors.nameofbeat && formik.touched.nameofbeat
+                          ? formik.errors.nameofbeat
+                          : null}
+                      </div>
                     </div>
 
-                    <div className={style.invalid_feedback}>
-                      {formik.errors.genre && formik.touched.genre
-                        ? formik.errors.genre
-                        : null}
-                    </div>
-                  </div>
+                    <div className={style.form_group}>
+                      <label htmlFor="genre">Genre</label>
+                      <div className={style.input_wrap || style.inputsec}>
+                        <select
+                          name="genre"
+                          defaultValue={genreInput}
+                          onChange={handleChangeGenre}
+                          className={`${
+                            style.form_control +
+                            (formik.errors.genre && formik.touched.genre
+                              ? style.is_invalid
+                              : '')
+                          }`}
+                          style={{ display: 'block' }}
+                        >
+                          {nameOptions.map((option, idx) => (
+                            <option value={option.value} key={idx}>
+                              {option.label}
+                            </option>
+                          ))}
+                        </select>
+                      </div>
 
-                  <div className={style.form_group}>
-                    <label htmlFor="price">Price</label>
-                    <div className={style.input_wrap || style.inputsec}>
-                      <input
-                        name="price"
-                        type="number"
-                        className={`${
-                          style.form_control +
-                          (formik.errors.price && formik.touched.price
-                            ? style.is_invalid
-                            : '')
-                        }`}
-                        onChange={formik.handleChange}
-                        onKeyDown={handleOnChangePrice}
-                        value={formik.values.price}
-                      />
+                      <div className={style.invalid_feedback}>
+                        {formik.errors.genre && formik.touched.genre
+                          ? formik.errors.genre
+                          : null}
+                      </div>
                     </div>
 
-                    <div className={style.invalid_feedback}>
-                      {formik.errors.price && formik.touched.price
-                        ? formik.errors.price
-                        : null}
+                    <div className={style.form_group}>
+                      <label htmlFor="price">Price</label>
+                      <div className={style.input_wrap || style.inputsec}>
+                        <input
+                          name="price"
+                          type="number"
+                          className={`${
+                            style.form_control +
+                            (formik.errors.price && formik.touched.price
+                              ? style.is_invalid
+                              : '')
+                          }`}
+                          onChange={formik.handleChange}
+                          onKeyDown={handleOnChangePrice}
+                          value={formik.values.price}
+                        />
+                      </div>
+
+                      <div className={style.invalid_feedback}>
+                        {formik.errors.price && formik.touched.price
+                          ? formik.errors.price
+                          : null}
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
 
-              <div className={style.btn_group}>
-                <button
-                  type="button"
-                  className={style.back_btn}
-                  onClick={formik.handleReset}
-                >
-                  Back
-                </button>
-                <button type="submit" className={style.btn}>
-                  Submit
-                </button>
-              </div>
-            </form>
+                <div className={style.btn_group}>
+                  <button
+                    type="button"
+                    className={style.back_btn}
+                    onClick={formik.handleReset}
+                  >
+                    Back
+                  </button>
+                  <button type="submit" className={style.btn}>
+                    Submit
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
