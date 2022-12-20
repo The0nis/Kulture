@@ -1,0 +1,16 @@
+.review {
+  margin-top: 46px;
+  padding: 0 1rem;
+
+  &__beat {
+    h1 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 40px;
+      letter-spacing: 0.0015em;
+      margin-bottom: 46px;
+      color: var(--cl-light);
+    }
+  }
+}

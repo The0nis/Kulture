@@ -132,8 +132,20 @@
   }
 }
 
-
-.sales{
+.sales {
   display: flex;
   flex-direction: column;
+}
+
+.beatcard {
+  .btn {
+    font-size: 1rem;
+    line-height: 20px;
+    color: var(--clr-primary);
+    background: none;
+    border: none;
+    margin: auto;
+    margin-top: 24px;
+    display: block;
+  }
 }

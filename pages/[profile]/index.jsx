@@ -10,6 +10,7 @@ import styles from './profile.module.scss';
 import avatarProfile from '../../assets/Avatar_profile.svg';
 import camera from '../../assets/camera.svg';
 import SaleChart from '../../components/SalesChart/Index';
+import BeatCard from '../../components/BeatCard/BeatCard';
 
 function Profile() {
   return (
@@ -62,6 +63,12 @@ function Profile() {
           <div>
             <SaleChart />
           </div>
+        </div>
+        <div className={styles.beatcard}>
+          <BeatCard />
+          <button type="button" className={styles.btn}>
+            load more...
+          </button>
         </div>
       </div>
     </Page>
