@@ -1,5 +1,5 @@
 import React from 'react'
-import SaleChart from '../components/BarChart/Index'
+import SaleChart from '../components/SalesChart/Index'
 
 const SaleChartComponent = () => {
   return (
