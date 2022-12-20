@@ -8,4 +8,4 @@
 //   use: ["style-loader", "css-loader", 'sass-loader'],
 // }
 
-// module.exports = nextConfig
+// Module.exports = nextConfig

@@ -1,11 +1,9 @@
 /* eslint-disable node/no-missing-import */
 import Image from 'next/image';
-
 import location from '../../assets/location.svg';
 import dribble from '../../assets/dribbble.svg';
 import facebook from '../../assets/facebook.svg';
 import instagram from '../../assets/instagram.svg';
-
 import Sales from '../../components/Sales/Index';
 import Page from '../../components/Page';
 import styles from './profile.module.scss';

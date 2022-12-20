@@ -1,15 +1,15 @@
 .containerbuynow {
   position: relative;
-  width: 362px;
-  height: 567px;
+  width: 22.625rem;
+  height: 35.438rem;
   background: #0a0a09;
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .selectlicense {
   margin-top: 0.5rem;
   margin-left: 0.5rem;
-  font-size: 16.5px;
+  font-size: 1.031rem;
 }
 .headerbuy {
   display: flex;
@@ -27,10 +27,10 @@
 }
 
 .gridbuynow {
-  width: 200px;
-  height: 92px;
+  width: 12.5rem;
+  height: 5.75rem;
   background: #434343;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   margin-left: 0.6rem;
   margin-right: 0.6rem;
 }
@@ -42,12 +42,12 @@
 }
 
 .gridbuynow1 {
-  width: 161px;
-  height: 95px;
+  width: 10.063rem;
+  height: 5.938rem;
   background: #434343;
   margin-left: 0.6rem;
   margin-top: 1.5rem;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border-color: purple;
 }
 
@@ -57,11 +57,11 @@
 }
 
 .gridbuynow123{
-  width: 161px;
-  height: 95px;
+  width: 10.063rem;
+  height: 5.938rem;
   background: #434343;
   margin-left: 0.6rem;
-  border-radius: 8px;
+  border-radius:0.5 rem;
 }
 
 .wrappertextbuy123{
@@ -71,35 +71,35 @@
 }
 
 .text123{
-  font-size:16px;
+  font-size:1rem;
   margin-bottom: 1rem;
 }
 
 .text231{
-  font-size: 15px;
+  font-size: 0.938rem;
   margin-bottom: 1rem;
 }
 
 .text321{
-  font-size: 10px;
+  font-size: 0.625rem;
   margin-bottom: 1rem;
 }
 
 
 .text1 {
   letter-spacing: 0.005em;
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 
 .text2 {
   letter-spacing: 0.005em;
-  font-size: 15px;
+  font-size: 0.938rem;
 }
 
 .text3 {
   letter-spacing: 0.005em;
-  font-size: 10px;
+  font-size: 0.625rem;
 }
 
 .terms {
@@ -121,14 +121,14 @@
   margin-left: 0.6rem;
 }
 .footer_text {
-  margin-bottom: 16px;
+  margin-bottom: 1rem;
   display: flex;
   gap: 6rem;
 }
 
 .footer_text1 {
   margin-left: 0.6rem;
-  font-size: 13px;
+  font-size: 0.813rem;
 }
 
 .footerbtn1 {
@@ -139,10 +139,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 145px;
-  height: 52px;
+  width: 9.063rem;
+  height: 3.25rem;
   background: #6600e8;
-  border-radius: 8px;
+  border-radius: 0.5rem;
   border: none;
   margin-right: 0.09rem;
 }
@@ -150,13 +150,13 @@
 @media screen and (max-width: 200px) {
   .containerbuynow {
     position: absolute;
-    width: 350px;
-    height: 550px;
+    width: 21.875rem;
+    height: 34.375rem;
   }
 
   .footerbtn {
-    width: 140px;
-    height: 50px;
+    width: 8.75rem;
+    height: 3.125rem;
     background: gold;
   }
 }
