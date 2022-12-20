@@ -78,6 +78,59 @@
     input[type='range'] {
       background: var(--clr-secondary);
       -webkit-appearance: none;
+      appearance: none;
+      border-radius: 10px;
+      position: relative;
+      width: 100%;
+      height: 11px;
+      outline: none;
+    }
+
+    /* progress bar - safari */
+    input::-webkit-slider-runnable-track {
+      background: var(--bar-bg);
+      border-radius: 10px;
+      position: relative;
+      width: 100%;
+      height: 11px;
+      outline: none;
+    }
+
+    /* progress bar - firefox */
+    input::-moz-range-track {
+      background: var(--bar-bg);
+      border-radius: 10px;
+      position: relative;
+      width: 100%;
+      height: 11px;
+      outline: none;
+    }
+
+    .input::-moz-focus-outer {
+      border: 0;
+    }
+
+    /* progress bar - chrome and safari */
+    input::before {
+      content: '';
+      height: 11px;
+      width: var(--seek-before-width);
+      height: 1.25rem;
+      background-color: var(--clr-accent);
+      border-radius: 10px;
+      position: absolute;
+      top: -4px;
+      left: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    /* progress bar - firefox */
+    input::-moz-range-progress {
+      background-color: var(--seek-before-color);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      height: 11px;
     }
 
     input[type='range']::-webkit-slider-runnable-track {
@@ -88,7 +141,7 @@
     }
 
     input[type='range']::-webkit-slider-thumb {
-      -webkit-appearance: none;
+      visibility: hidden;
     }
   }
 }
