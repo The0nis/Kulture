@@ -1,18 +1,19 @@
+import { OptionData } from './OptionData';
 import styles from './buyingoption.module.scss';
 
 function BuyOptionBox() {
-  return (
+  return OptionData.map((option) => (
     <div className={styles.radiobox}>
       <label>
         <input type="radio" name="radio" checked />
         <div className={`${styles.radiobox__item} ${styles.box}`}>
-          <h2>Basic WAV LEASE</h2>
-          <h3>NGN 15,000</h3>
-          <p>MP3 AND WAV</p>
+          <h3>{option.name}</h3>
+          <h4>NGN {option.price}</h4>
+          <p>{option.format}</p>
         </div>
       </label>
     </div>
-  );
+  ));
 }
 
 export default BuyOptionBox;

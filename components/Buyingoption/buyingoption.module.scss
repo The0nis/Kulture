@@ -52,6 +52,7 @@
 //RADIO SELECT
 
 .radiobox {
+  display: flex;
   input[type='radio'] {
     display: none;
 
@@ -71,21 +72,21 @@
   }
 
   &__item {
-    h2,
     h3,
+    h4,
     p {
       color: var(--cl-light);
       text-align: start;
       margin-bottom: 0.5rem;
     }
 
-    h2 {
+    h3 {
       font-size: 1.25rem;
       line-height: 25px;
       letter-spacing: 0.005em;
     }
 
-    h3 {
+    h4 {
       font-size: 1rem;
       line-height: 20px;
     }
@@ -100,6 +101,7 @@
   }
 
   .box {
+    // width: 159px;
     padding: 8px;
     border-radius: 8px;
     background: #434343;
