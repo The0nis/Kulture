@@ -4,6 +4,8 @@ import Page from '../components/Page';
 import styles from '../styles/Home.module.scss';
 import CarouselSlider from '../components/CarouselSlider/Index';
 import BeatCard from '../components/BeatCard/BeatCard';
+import TrendingSearch from '../components/Trendingsearch/Index';
+import PopularProducers from '../components/PopularProducer/Index';
 
 export default function Home() {
   return (
@@ -22,14 +24,32 @@ export default function Home() {
             </div>
             <button type="button">UPLOAD YOUR BEATS</button>
           </div>
-          {/* Popular Uploads Slider */}
-          <div className={styles.home__popularuploads}>
-            <h2>Popular Uploads</h2>
-            <CarouselSlider />
+
+          <div className={styles.home__bodywrap}>
+            {/* Popular Uploads Slider */}
+            <div className={styles.home__popularuploads}>
+              <h2>Popular Uploads</h2>
+              <CarouselSlider />
+            </div>
+          <div className={styles.home__wrapper}>
+            <div className={styles.home__wrapperone}>
+              {/* Feed */}
+              <div className={styles.home__feed}>
+                <TrendingSearch />
+              </div>
+              {/* Popular Producers */}
+              <div className={styles.home__popularproducers}>
+                <PopularProducers />
+              </div>
+            </div>
+
+            <div className={styles.home__wrappertwo}>
+              {/* Beat Card */}
+              <div className={styles.home__beatcard}>
+                <BeatCard />
+              </div>
+            </div>
           </div>
-          {/* Beat Card */}
-          <div className={styles.home__beatcard}>
-            <BeatCard />
           </div>
         </div>
       </Page>
