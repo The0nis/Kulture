@@ -31,25 +31,28 @@ export default function Home() {
               <h2>Popular Uploads</h2>
               <CarouselSlider />
             </div>
-          <div className={styles.home__wrapper}>
-            <div className={styles.home__wrapperone}>
-              {/* Feed */}
-              <div className={styles.home__feed}>
-                <TrendingSearch />
-              </div>
-              {/* Popular Producers */}
-              <div className={styles.home__popularproducers}>
-                <PopularProducers />
-              </div>
+            <div className={styles.home__feedtext}>
+              <h2>Feed</h2>
             </div>
+            <div className={styles.home__wrapper}>
+              <div className={styles.home__wrapperone}>
+                {/* Feed */}
+                <div className={styles.home__feed}>
+                  <TrendingSearch />
+                </div>
+                {/* Popular Producers */}
+                <div className={styles.home__popularproducers}>
+                  <PopularProducers />
+                </div>
+              </div>
 
-            <div className={styles.home__wrappertwo}>
-              {/* Beat Card */}
-              <div className={styles.home__beatcard}>
-                <BeatCard />
+              <div className={styles.home__wrappertwo}>
+                {/* Beat Card */}
+                <div className={styles.home__beatcard}>
+                  <BeatCard />
+                </div>
               </div>
             </div>
-          </div>
           </div>
         </div>
       </Page>

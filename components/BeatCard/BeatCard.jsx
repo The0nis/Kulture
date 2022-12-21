@@ -32,9 +32,10 @@ function BeatCard() {
             </select>
           </div>
         </div>
-
       </div>
 
+      {/* First Card....Notes its hard coded */}
+      {/* Will create a dummy list and map through later */}
       <div className={style.containerbeatcard1}>
         <div className={style.card_header}>
           <div>
@@ -52,56 +53,69 @@ function BeatCard() {
           </div>
         </div>
 
-      
-        <div className={style.imageovertext}>
-          <Image src={wintspread} alt="Snow" />
-
-          <div className={style.iconwrapper}>
-            <div className={style.iconovertext}>
+        <div className={style.card_wrap}>
+          <div className={style.wrap_image}>
+            <div className={style.image_snow}>
+              <Image src={wintspread} alt="Snow" className={style.snow} />
+            </div>
+            <div className={style.hideme}>
               <Image src={videocircle} alt="videocircle" />
             </div>
-
-            <div className={style.bottomleft}>Wintspread</div>
           </div>
-        </div>
-
-        <p className={style.released}>
-          released on the 23 November 2022 <br></br> beat by Mariam @ohuly
-        </p>
-
-        <div className={style.footerwrapper}>
-          <p className={style.footerwrappertext}>NGN 90,0000 </p>{' '}
-          <button className={style.btn_footer} type="submit">
-            BUY NOW
-          </button>
-        </div>
-
-        <div className={style.downicons}>
-          <div className={style.footericontext1}>
-            <div className={style.footericon1}>
-              <Image src={share} alt="image" className={style.foot} />
+          <div className={style.producer_content}>
+            <div className={style.producer_label}>
+              <div className={style.hidenow}>
+                <Image src={videocircle} alt="videocircle" />
+              </div>{' '}
+              <div>
+                <h4>Wintspeed</h4>
+              </div>
+            </div>
+            <div className={style.beat_text}>
+              <p>
+                Beat by Miriam @ohuly
+                <br />
+                released on 23 November 2022
+              </p>
             </div>
 
-            <div className={style.footertext1}>
-              <p>share</p>
-            </div>
-          </div>
-
-          <div className={style.footericontext1}>
-            <div className={style.footericon1}>
-              <Image src={save} alt="image" className={style.foot} />
-            </div>
-            <div className={style.footertext1}>
-              <p>save for later</p>
+            <div className={style.footerwrapper}>
+              <p className={style.footerwrappertext}>NGN 90,0000 </p>{' '}
+              <button className={style.btn_footer} type="submit">
+                BUY NOW
+              </button>
             </div>
           </div>
-        </div>
+          </div>
+
+          <div className={style.downicons}>
+            <div className={style.footericontext1}>
+              <div className={style.footericon1}>
+                <Image src={share} alt="image" className={style.foot} />
+              </div>
+
+              <div className={style.footertext1}>
+                <p>share</p>
+              </div>
+            </div>
+
+            <div className={style.footericontext1}>
+              <div className={style.footericon1}>
+                <Image src={save} alt="image" className={style.foot} />
+              </div>
+              <div className={style.footertext1}>
+                <p>save for later</p>
+              </div>
+            </div>
+          </div>
       </div>
+      {/* -----------------------------------------------------------------------------
+      --------------------------------------------------------------------------------- */}
 
-      {/* Second phase */}
-
+      
+      {/* Second Card....Notes its hard coded */}
       <div className={style.containerbeatcard1}>
-      <div className={style.card_header}>
+        <div className={style.card_header}>
           <div>
             <Image src={miriam2} alt="image" className={style.imagebeatcard} />
           </div>
@@ -117,49 +131,61 @@ function BeatCard() {
           </div>
         </div>
 
-        <div className={style.imageovertext}>
-          <Image src={wintspread2} alt="Snow" />
-
-          <div className={style.iconwrapper}>
-            <div className={style.iconovertext}>
+        <div className={style.card_wrap}>
+          <div className={style.wrap_image}>
+            <div className={style.image_snow}>
+              <Image src={wintspread2} alt="Snow" className={style.snow} />
+            </div>
+            <div className={style.hideme}>
               <Image src={videocircle} alt="videocircle" />
             </div>
-
-            <div className={style.bottomleft}>Wintspread</div>
           </div>
-        </div>
-
-        <p className={style.released}>
-          released on the 23 November 2022 <br></br> beat by Mariam @ohuly
-        </p>
-
-        <div className={style.footerwrapper}>
-          <p className={style.footerwrappertext}>NGN 90,0000 </p>{' '}
-          <button className={style.btn_footer} type="submit">
-            BUY NOW
-          </button>
-        </div>
-
-        <div className={style.downicons}>
-          <div className={style.footericontext1}>
-            <div className={style.footericon1}>
-              <Image src={share} alt="image" className={style.foot} />
+          <div className={style.producer_content}>
+            <div className={style.producer_label}>
+              <div className={style.hidenow}>
+                <Image src={videocircle} alt="videocircle" />
+              </div>{' '}
+              <div>
+                <h4>Wintspeed</h4>
+              </div>
+            </div>
+            <div className={style.beat_text}>
+              <p>
+                Beat by Miriam @ohuly
+                <br />
+                released on 23 November 2022
+              </p>
             </div>
 
-            <div className={style.footertext1}>
-              <p>share</p>
-            </div>
-          </div>
-
-          <div className={style.footericontext1}>
-            <div className={style.footericon1}>
-              <Image src={save} alt="image" className={style.foot} />
-            </div>
-            <div className={style.footertext1}>
-              <p>save for later</p>
+            <div className={style.footerwrapper}>
+              <p className={style.footerwrappertext}>NGN 90,0000 </p>{' '}
+              <button className={style.btn_footer} type="submit">
+                BUY NOW
+              </button>
             </div>
           </div>
-        </div>
+          </div>
+
+          <div className={style.downicons}>
+            <div className={style.footericontext1}>
+              <div className={style.footericon1}>
+                <Image src={share} alt="image" className={style.foot} />
+              </div>
+
+              <div className={style.footertext1}>
+                <p>share</p>
+              </div>
+            </div>
+
+            <div className={style.footericontext1}>
+              <div className={style.footericon1}>
+                <Image src={save} alt="image" className={style.foot} />
+              </div>
+              <div className={style.footertext1}>
+                <p>save for later</p>
+              </div>
+            </div>
+          </div>
       </div>
 
       {/* <div className={style.loadmore}>

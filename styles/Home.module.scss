@@ -86,8 +86,16 @@
     }
   }
 
+  &__feedtext{
+    // margin-bottom: 1rem;
+    display: none;
+  }
+
   &__popularuploads {
     margin-top: 60px;
+    h2{
+      margin-bottom: 1rem;
+    }
   }
 
   &__wrapperone {
@@ -116,6 +124,37 @@
       flex-direction: column;
     
      }
+     &__feedtext{
+      margin-bottom: 1rem;
+      display: block;
+    }
   
 }
+}
+
+@media (min-width: 64rem) {
+  .home{
+    &__bodywrap{
+      width: 80%;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      
+    }
+
+    &__wrapper{
+     width: 100%;
+      justify-content: space-around;
+    }
+    
+    &__wrappertwo {
+      flex: 1.5;
+    
+     }
+     &__wrapperone {
+      flex: 1.5;
+    
+     }
+  }
+  
 }

@@ -1,3 +1,4 @@
+
 .containerbeatcard {
   width: 100%;
 }
@@ -64,15 +65,17 @@
 .containerbeatcard1 {
   background: #434343;
   border-radius: 0.5rem;
-  margin-top: 46px;
+  margin-top: 1rem;
+  width: 100%;
+  margin-right: 1rem;
 }
 
 .card_header {
   display: flex;
-  color: #ffffff;
-  gap: .5rem;
+  justify-items: flex-start;
   align-items: center;
-  justify-content: center;
+  color: white !important;
+  gap: .8rem;
   font-size: 0.8rem;
   font-weight: 100;
   font-family: 'Source Sans Pro';
@@ -82,62 +85,58 @@
   margin-left: 0.688rem;
   margin-top: 1rem;
   color: white;
+  width: 70%;
 }
 
-.preview {
-  text-align: center;
+.car_wrap{
+  display: flex;
+  margin: 0 1rem;
+  justify-content: flex-start;
+}
+
+.wrap_image{
+  width: 100%;
+}
+
+.hideme{
+  display: none;
+}
+.image_snow{
+  overflow: hidden;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  // margin-top: 1rem;
+  position: relative;
+}
+.snow{
+ min-width: 100%;
+ position: relative;
+ object-fit:cover;
+}
+
+.producer_content{
+  color: white;
+  position: relative;
+  margin-left: 1.5rem;
+
+}
+
+.producer_label{
+  position: absolute;
+  display: flex;
+  gap: 1rem;
   margin-top: -3rem;
-  margin-right: -3rem;
-  color: white;
-  font-family: 'Source Sans Pro';
 }
 
-.imageovertext {
-  position: relative;
-  text-align: center;
-  color: white;
-  margin-top: -.5rem;
-
-  img {
-    width: 90%;
-  }
-}
-
-.bottomleft {
-  bottom: 1.875rem;
-  margin-left: -5rem;
-  position: relative;
-  font-family: 'Source Sans Pro';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 1.5rem;
-  line-height: 1.875rem;
-  align-items: center;
-  letter-spacing: 0.001;
-}
-
-.iconwrapper {
-  position: relative;
-  margin-top: -5rem;
-  margin-left: 2rem;
-}
-
-.iconovertext {
-  margin-left: -15.625rem;
-  margin-top: 0.131rem;
-}
-
-.released {
-  color: grey;
-  font-family: 'Source Sans Pro';
-  margin-left: 1.625rem;
-  font-size: 1rem;
+.beat_text{
+  color: #949494;
+  line-height: 2rem;
 }
 
 .footerwrapper {
   position: absolute;
   display: flex;
-  gap: 1.25rem;
+  gap: 1rem;
   margin-top: .5rem;
 }
 
@@ -146,7 +145,6 @@
   font-weight: 700;
   font-size: 0.938rem;
   color: #ffffff;
-  margin-left: 1.563rem;
   margin-top: 1.25rem;
 }
 
@@ -196,3 +194,81 @@
   margin-left: 2rem;
   font-weight: 100;
 }
+
+
+@media (min-width: 48rem) {
+  .card_wrap{
+    display: flex;
+    margin-top: 1rem;
+  }
+  .hidenow{
+    display: none;
+  }
+  
+  .wrap_image{
+    display: flex;
+    width: 8rem;
+  }
+  
+  .hideme{
+    display: block;
+    margin-left: -5rem;
+    margin-top: 3rem;
+    z-index: 5;
+  }
+
+
+  .image_snowhide{
+    width: 10rem;
+  }
+  .image_snow{
+    width: 80%;
+    overflow: hidden;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    // margin-top: 1rem;
+    position: relative;
+  }
+  .snow{
+  height: 8rem;
+   
+  }
+  
+  .producer_content{
+    margin-left: 0rem;
+  
+  }
+  
+  .producer_label{
+    position: relative;
+    margin-top: 0rem;
+  }
+  
+  .beat_text{
+    color: #949494;
+    line-height: 2rem;
+  }
+
+  .downicons {
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .footerwrapper{
+    gap: .2rem;
+  }
+  .footerwrappertext {
+    font-weight: normal;
+    font-size: .6rem;
+  }
+
+  .btn_footer {
+    width: 5rem;
+  }
+  
+}
+
+@media (min-width:64rem) {
+  
+}
+
