@@ -41,14 +41,14 @@ function BeatCard() {
             <Image src={miriam} alt="image" className={style.imagebeatcard} />
           </div>
           <div>
-            <h4> Miriam </h4>
+            <p> Miriam </p>
           </div>
           <div>
-            <h4>@ohuly </h4>
+            <p>@ohuly </p>
           </div>
           <div className={style.make_circle}></div>
           <div>
-            <h4> 2 Hours Ago</h4>
+            <p> 2 Hours Ago</p>
           </div>
         </div>
 
@@ -101,19 +101,19 @@ function BeatCard() {
       {/* Second phase */}
 
       <div className={style.containerbeatcard1}>
-        <div className={style.card_header}>
+      <div className={style.card_header}>
           <div>
             <Image src={miriam2} alt="image" className={style.imagebeatcard} />
           </div>
           <div>
-            <h4> Miriam </h4>
+            <p> Miriam </p>
           </div>
           <div>
-            <h4>@ohuly </h4>
+            <p>@ohuly </p>
           </div>
           <div className={style.make_circle}></div>
           <div>
-            <h4> 2 Hours Ago</h4>
+            <p> 2 Hours Ago</p>
           </div>
         </div>
 

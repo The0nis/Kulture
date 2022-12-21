@@ -62,7 +62,6 @@
 }
 
 .containerbeatcard1 {
-  height: 35.313rem;
   background: #434343;
   border-radius: 0.5rem;
   margin-top: 46px;
@@ -71,10 +70,11 @@
 .card_header {
   display: flex;
   color: #ffffff;
-  gap: 1.5rem;
+  gap: .5rem;
   align-items: center;
   justify-content: center;
   font-size: 0.8rem;
+  font-weight: 100;
   font-family: 'Source Sans Pro';
 }
 
@@ -96,7 +96,7 @@
   position: relative;
   text-align: center;
   color: white;
-  margin-top: 1.25rem;
+  margin-top: -.5rem;
 
   img {
     width: 90%;
@@ -118,7 +118,8 @@
 
 .iconwrapper {
   position: relative;
-  margin-top: -3.125rem;
+  margin-top: -5rem;
+  margin-left: 2rem;
 }
 
 .iconovertext {
@@ -137,6 +138,7 @@
   position: absolute;
   display: flex;
   gap: 1.25rem;
+  margin-top: .5rem;
 }
 
 .footerwrappertext {
@@ -153,17 +155,17 @@
   background-color: #6600e8;
   border-radius: 0.5rem;
   width: 8.188rem;
-  height: 3.25rem;
+  height: 3rem;
   border: none;
   margin-top: 0.3rem;
 }
 
 .downicons {
   display: flex;
-  margin-top: 6.5rem;
-  margin-left: 2rem;
+  margin-top: 4.5rem;
+  margin-left: 1rem;
   margin-bottom: 2rem;
-  gap: 8rem;
+  gap: 6rem;
   justify-content: flex-start;
 }
 
@@ -171,6 +173,7 @@
   display: flex;
   align-items: baseline;
   gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .make_circle {
@@ -190,6 +193,6 @@
 .footertext1 {
   position: absolute;
   color: white;
-  margin-top: -0.8rem;
   margin-left: 2rem;
+  font-weight: 100;
 }

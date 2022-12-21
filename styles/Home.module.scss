@@ -89,4 +89,27 @@
   &__popularuploads {
     margin-top: 60px;
   }
+
+  &__wrapperone {
+    display: none;
+  }
+
+
+}
+
+
+@media (min-width: 48rem) {
+  .home{
+    &__wrapper{
+      display: flex;
+      flex-direction: row;
+    }
+
+    &__wrapperone {
+      display: flex;
+      flex-direction: column;
+    
+     }
+  
+}
 }
