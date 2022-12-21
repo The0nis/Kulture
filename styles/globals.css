@@ -47,6 +47,13 @@
   box-shadow: var(--crd-shd-sm);
 }
 
+@media (min-width: 48rem) {
+  .splide__track {
+    width: 80% !important;
+  }
+  
+}
+
 /* //style for carousel finishes here */
 
 html,
