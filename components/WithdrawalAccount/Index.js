@@ -76,8 +76,8 @@ function WithdrawalAccount() {
         </div>
 
         <div className={style.withdrawalmetadataover1}>
-          <div className={style.emmy}>
-            <label className={style.withdrawal_label}>OTP</label> <br></br>
+          <div className={style.withdrawalinput_label_con}>
+            <label className={style.withdrawal_label1}>OTP</label> <br></br>
             <div className={style.inputbtn}>
               <input className={style.withdrawal_input1} type="text"></input>
               <div className={style.withdrawalsendotp}>

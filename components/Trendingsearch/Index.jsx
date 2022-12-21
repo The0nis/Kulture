@@ -4,7 +4,7 @@ import React from 'react';
 
 function trendingsearch() {
   return (
-    <div>
+    <div className={style.trendingsearchcontainer}>
       <div className={style.searchcontainer}>
         <p className={style.Search_text}>Trending Search</p>
       </div>

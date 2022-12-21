@@ -137,6 +137,13 @@
   font-weight: 600;
 }
 
+.withdrawal_label1 {
+  color: black;
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+}
+
 .withdrawal_input {
   background-color: white;
   color: black;
@@ -189,4 +196,41 @@
 }
 
 @media screen and (min-width: 800px) {
+  .withdrawalmetadataover {
+    display: flex;
+    margin-top: 2rem;
+  }
+  .withdrawal_input {
+    margin-top: 2rem;
+    margin-left: -3.5rem;
+  }
+
+  .withdrawalinput_label_con {
+    // position: relative;
+    display: flex;
+    margin-top: -4rem;
+    margin-left: 5rem;
+    // gap:5rem;
+  }
+
+  .withdrawal_label1 {
+    margin-top: -1.5rem;
+    margin-left: 23rem;
+  }
+
+  .withdrawalsendotp {
+    gap: 2rem;
+  }
+
+  .withdrawal_input1 {
+    margin-top: 0.5rem;
+  }
+
+  .otp_btn {
+    margin-top: 0.5rem;
+  }
+
+  .inputbtn {
+    margin-left: -1.8rem;
+  }
 }
