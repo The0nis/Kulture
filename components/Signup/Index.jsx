@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useFormik } from 'formik';
+import logo from '../../assets/logo.svg'
 import * as Yup from 'yup';
 import style from './Signup.module.css';
 import Link from 'next/link';
