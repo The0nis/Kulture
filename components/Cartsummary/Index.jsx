@@ -22,16 +22,16 @@ function Cartsummary() {
           <div className={style.summarytext2}>
             <p>Discount</p>
           </div>
-          <div className={style.summarytext4}>
+          <div className={style.summarytext3}>
             <p>NGN0.0</p>
           </div>
         </div>
 
         <div className={style.numberwrapper2}>
-          <div className={style.summarytext5}>
+          <div className={style.summarytext2}>
             <p>Discount</p>
           </div>
-          <div className={style.summarytext6}>
+          <div className={style.summarytext3}>
             <p>NGN0.0</p>
           </div>
         </div>
@@ -49,13 +49,13 @@ function Cartsummary() {
             <button className={style.btncheckout1}>CHECKOUT</button>
           </div>
           {/* The ending of the button div */}
-          <span className={style.summarytext9}>
+          {/* <span className={style.summarytext9}>
             you are checking out as @andybanny, <br></br>
             not you?{' '}
           </span>{' '}
           <a href="#" className={style.summarytext8}>
             logout
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

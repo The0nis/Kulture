@@ -7,8 +7,8 @@ function Buynowpopup() {
     <div>
       <div className={style.containerbuynow}>
         <div className={style.headerbuy}>
-          <div className={style.selectlicense}>
-            <h4>Select License</h4>
+          <div className={style.reviewlicense}>
+            <h4>Review License</h4>
           </div>
 
           {/* I used React icons for the */}
@@ -17,7 +17,8 @@ function Buynowpopup() {
           </div>
         </div>
 
-        <div className={style.gridlayout}>
+        {/* grid layout codes */}
+        {/* <div className={style.gridlayout}>
           <div className={style.gridbuynow}>
             <div className={style.wrappertextbuy}>
               <article className={style.text1}>
@@ -89,7 +90,7 @@ function Buynowpopup() {
               <p>MP3 AND WAV</p>
             </article>
           </div>
-        </div>
+        </div> */}
 
         <div className={style.terms}>
           <p>Terms of Usage</p>

@@ -18,7 +18,9 @@ function UploadCompleted() {
       </div>
 
       <div className={style.uploadcompleted_text1}>
-        <p className={style.uploadcompleted_text3}>Awaiting review from Admin</p>
+        <p className={style.uploadcompleted_text3}>
+          Awaiting review from Admin
+        </p>
       </div>
     </div>
   );
