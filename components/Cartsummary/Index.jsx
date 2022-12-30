@@ -1,14 +1,11 @@
 import style from './cartsummary.module.scss';
-import React from 'react';
 
 function Cartsummary() {
   return (
     <div>
       {/* The overall container */}
       <div className={style.summarywrap}>
-        <div className={style.summarytext1}>
-          <h4>Cart summary</h4>
-        </div>
+        <h2>Cart summary</h2>
         <div className={style.numberwrapper}>
           <div className={style.summarytext2}>
             <p>Total Gross</p>
@@ -38,15 +35,17 @@ function Cartsummary() {
 
         <div className={style.summarytextwrapper}>
           <span className={style.summarytext7}>
-            you are checking out as @andybanny, <br></br>
+            you are checking out as @andybanny, <br />
             not you?{' '}
           </span>{' '}
-          <a href="#" className={style.summarytext8}>
+          <a href="#/" className={style.summarytext8}>
             logout
           </a>
           {/* The starting of the button div */}
           <div className={style.btncheckout}>
-            <button className={style.btncheckout1}>CHECKOUT</button>
+            <button type="button" className={style.btncheckout1}>
+              CHECKOUT
+            </button>
           </div>
           {/* The ending of the button div */}
           {/* <span className={style.summarytext9}>
