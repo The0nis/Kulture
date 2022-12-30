@@ -51,7 +51,6 @@
   .splide__track {
     width: 80% !important;
   }
-  
 }
 
 /* //style for carousel finishes here */
@@ -80,6 +79,11 @@ h4,
 h5,
 h6 {
   font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
