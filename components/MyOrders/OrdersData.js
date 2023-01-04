@@ -2,8 +2,8 @@ export const OrdersData = [
   {
     name: 'Zepline starch beat',
     or: '086666766',
-    username: '@mafikozolo',
-    Name: 'Kelvin Mark',
+    moniker: '@mafikozolo',
+    username: 'Kelvin Mark',
     license: 'Premium License',
     date: '24-12-2022',
     price: 200000,
@@ -20,8 +20,8 @@ export const OrdersData = [
   {
     name: 'Zepline starch beat',
     or: '086666766',
-    username: '@mafikozolo',
-    Name: 'Kelvin Mark',
+    moniker: '@mafikozolo',
+    username: 'Kelvin Mark',
     license: 'Premium License',
     date: '24-12-2022',
     price: 200000,
