@@ -2,7 +2,7 @@ import React from 'react';
 import style from './uploadbeatview.module.scss';
 import Image from 'next/image';
 import musicapp from '../../assets/musicapp.svg';
-import music from '../../assets/music.svg';
+import music from '../../assets/Music.svg';
 import musicfolder from '../../assets/musicfolder.svg';
 
 function Uploadbeatview() {
