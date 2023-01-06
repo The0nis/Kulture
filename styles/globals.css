@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Source+Sans+Pro:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* 
+*** CSS Variables ***
+*/
+:root {
+  /* Colors */
+  --clr-primary: #6600e8;
+  --clr-secondary: #434343;
+  --clr-bg-neutral: #434343;
+  --cl-dark: #000;
+  --cl-light: #fff;
+  --cl-btn-brd: rgba(28, 28, 28, 0.08);
+  --clr-f-light: #e2e2e2;
+  --clr-f-dark: #949494;
+  --clr-err: #eb5757;
+  --clr-info: #0077dc;
+  --clr-success: #56c568;
+  --clr-warning: #ffc400;
+  --clr-accent: #ddc8f9;
+  /* Font */
+  --ft-b-sm: normal 1rem; /* 16px/1.6rem */
+  --ft-b-md: normal 1.25rem; /* 20px/2rem*/
+  --ft-b-lg: normal 1.5rem;
+  --ft-btn-sm: 600 0.75rem;
+  --ft-btn-lg: 600 1rem;
+  --ft-sub-sm: 600 1.25rem;
+  --ft-h1: bold 2.75rem;
+  --ft-h2: bold 2.25rem;
+  --ft-h3: bold 1.75rem; /* 20px/2rem*/
+  --ft-h4: bold 1.5rem;
+  /* Shadows */
+  --btn-shd-sm: 0px 10px 20px rgba(0, 0, 0, 0.15);
+  --btn-shd-lg: 0px 20px 40px rgba(0, 0, 0, 0.25);
+  --crd-shd-sm: 0px 15px 30px rgba(0, 0, 0, 0.15);
+  --btn-shd-sm: 0px 30px 60px rgba(0, 0, 0, 0.25);
+}
+
+/* // Styling for the carousel goes here */
+
+.splide__track {
+  width: 90vw !important;
+}
+
+.splide__slide {
+  border-radius: 0.6pc;
+  box-shadow: var(--crd-shd-sm);
+}
+
+@media (min-width: 48rem) {
+  .splide__track {
+    width: 80% !important;
+  }
+}
+
+/* //style for carousel finishes here */
+
+html,
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color: #000;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}

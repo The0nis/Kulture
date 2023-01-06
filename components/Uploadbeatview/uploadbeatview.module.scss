@@ -1,0 +1,77 @@
+.uploadbeatext {
+  color: white;
+  margin-left: 2rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.uploadcontainer,
+.uploadcontainer1,
+.uploadcontainer2 {
+  height: 14.188rem;
+  margin-top: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  background: #434343;
+  border-radius: 0.625rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.uploadtext,
+.uploadtext1,
+.uploadtext2 {
+  font-family: 'Source Sans Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 1.875rem;
+  letter-spacing: 0.0015em;
+  color: #ffffff;
+}
+
+.uploadbeatbtn {
+  position: absolute;
+  width: 8.875rem;
+  height: 3.125rem;
+  margin-top: 2.5rem;
+  background: #6600e8;
+  border-radius: 0.625rem;
+  border: none;
+}
+
+.btn_container {
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (min-width: 750px) {
+  .maincontainer {
+    display: flex;
+    gap: 1.5rem;
+    margin: auto;
+    margin-bottom: 5rem;
+  }
+
+  .btn_container {
+    display: flex;
+    justify-content: center;
+  
+  }
+
+  .uploadbeatext {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .uploadcontainer,
+  .uploadcontainer1,
+  .uploadcontainer2 {
+    margin: auto;
+    width: 18.688rem;
+    height: 18rem;
+  }
+}

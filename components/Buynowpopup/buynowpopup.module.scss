@@ -1,0 +1,163 @@
+.containerbuynow {
+  position: relative;
+  width: 22.625rem;
+  height: 35.438rem;
+  background: #0a0a09;
+  border-radius: 0.5rem;
+}
+
+.reviewlicense {
+  margin-top: 0.5rem;
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+}
+.headerbuy {
+  display: flex;
+  gap: 13rem;
+}
+
+.closebutton {
+  margin-top: 0.5rem;
+  color: grey;
+}
+
+//grid layout css code
+
+// .gridlayout {
+//   display: flex;
+//   gap: 0.05rem;
+// }
+
+// .gridbuynow {
+//   width: 12.5rem;
+//   height: 5.75rem;
+//   background: #434343;
+//   border-radius: 0.5rem;
+//   margin-left: 0.6rem;
+//   margin-right: 0.6rem;
+// }
+
+// .gridlayout1 {
+//   margin-top: 1rem;
+//   display: flex;
+//   gap: 0.05rem;
+// }
+
+// .gridbuynow1 {
+//   width: 10.063rem;
+//   height: 5.938rem;
+//   background: #434343;
+//   margin-left: 0.6rem;
+//   margin-top: 1.5rem;
+//   border-radius: 0.5rem;
+//   border-color: purple;
+// }
+
+// .wrappertextbuy {
+//   margin-top: -0.55rem;
+//   margin-left: 1rem;
+// }
+
+// .gridbuynow123{
+//   width: 10.063rem;
+//   height: 5.938rem;
+//   background: #434343;
+//   margin-left: 0.6rem;
+//   border-radius:0.5 rem;
+// }
+
+// .wrappertextbuy123{
+//   margin-left: 0.6rem;
+//   margin-top: -0.05rem;
+
+// }
+
+// .text123{
+//   font-size:1rem;
+//   margin-bottom: 1rem;
+// }
+
+// .text231{
+//   font-size: 0.938rem;
+//   margin-bottom: 1rem;
+// }
+
+// .text321{
+//   font-size: 0.625rem;
+//   margin-bottom: 1rem;
+// }
+
+// .text1 {
+//   letter-spacing: 0.005em;
+//   font-size: 1rem;
+// }
+
+// .text2 {
+//   letter-spacing: 0.005em;
+//   font-size: 0.938rem;
+// }
+
+// .text3 {
+//   letter-spacing: 0.005em;
+//   font-size: 0.625rem;
+// }
+
+.terms {
+  font-size: 1.2rem;
+  margin-left: 0.6rem;
+  margin-top: 3rem;
+  background: linear-gradient(
+    155.77deg,
+    #f5de78 8.4%,
+    #b5812d 46.49%,
+    #f5de78 84.48%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.total {
+  margin-top: 2rem;
+  margin-left: 0.6rem;
+}
+.footer_text {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 5rem;
+}
+
+.footer_text1 {
+  margin-left: 0.6rem;
+  font-size: 1.1rem;
+  margin-top: 1rem;
+}
+
+.footerbtn1 {
+  margin-right: 1rem;
+}
+
+.footerbtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 9.063rem;
+  height: 3.25rem;
+  background: #6600e8;
+  border-radius: 0.5rem;
+  border: none;
+  margin-right: 0.09rem;
+}
+
+@media screen and (max-width: 200px) {
+  .containerbuynow {
+    position: absolute;
+    width: 21.875rem;
+    height: 34.375rem;
+  }
+
+  .footerbtn {
+    width: 8.75rem;
+    height: 3.125rem;
+    background: gold;
+  }
+}

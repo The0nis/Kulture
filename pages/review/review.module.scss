@@ -1,0 +1,92 @@
+.review {
+  margin: 60px 0 60px;
+  padding: 0 1rem;
+
+  &__beat {
+    h1 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 2rem;
+      line-height: 40px;
+      letter-spacing: 0.0015em;
+      margin-bottom: 46px;
+      color: var(--cl-light);
+    }
+  }
+
+  &__buyoptions {
+    h2 {
+      font-weight: 700;
+      font-size: 1.875rem;
+      line-height: 38px;
+      letter-spacing: -0.0025em;
+      color: var(--cl-light);
+      margin: 40px 0 23px;
+    }
+
+    .terms {
+      font-size: 1.25rem;
+      line-height: 25px;
+      letter-spacing: 0.005em;
+      background: linear-gradient(
+        155.77deg,
+        #f5de78 8.4%,
+        #b5812d 46.49%,
+        #f5de78 84.48%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      margin: 32px 0 23px;
+    }
+  }
+
+  &__boxes {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 0.75rem;
+  }
+
+  &__cost {
+    h2 {
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--clr-f-light);
+    }
+
+    p {
+      font-size: 1.5rem;
+      line-height: 30px;
+      letter-spacing: 0.005em;
+      color: var(--clr-f-light);
+      margin-bottom: 37px;
+    }
+    .add_btn,
+    .continue_btn {
+      padding: 15px 24px;
+      width: 15.688rem;
+      height: 60px;
+      border-radius: 8px;
+      outline: none;
+      border: none;
+      color: var(--cl-light);
+      font-size: 1.3rem;
+      cursor: pointer;
+    }
+
+    .add_btn {
+      background: var(--clr-primary);
+      margin-bottom: 30px;
+    }
+
+    .continue_btn {
+      border: 2px solid #6600e8;
+      background-color: transparent;
+      line-height: 30px;
+      display: flex;
+      align-items: center;
+      letter-spacing: 0.005em;
+    }
+  }
+}

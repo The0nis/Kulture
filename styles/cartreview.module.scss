@@ -1,0 +1,30 @@
+.cartreview {
+  margin-top: 30px;
+  margin-bottom: 3.063rem;
+  h1 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    font-size: 2.25rem;
+    line-height: 44px;
+    letter-spacing: -0.0025em;
+    color: var(--cl-light);
+    margin-bottom: 24px;
+  }
+}
+
+.cartsummary {
+  margin-bottom: 118px;
+}
+
+.recentlyviewed {
+  margin-bottom: 40px;
+  h2 {
+    font-family: 'Source Sans Pro';
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 30px;
+    letter-spacing: 0.0015em;
+    margin-bottom: 24px;
+    color: var(--clr-f-light);
+  }
+}

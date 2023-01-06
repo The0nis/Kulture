@@ -1,0 +1,148 @@
+.reviewbeat {
+  &__top {
+    display: flex;
+    column-gap: 0.906rem;
+  }
+
+  &__topleft {
+    h2,
+    h3 {
+      font-weight: 600;
+      line-height: 25px;
+      letter-spacing: 0.0015em;
+      color: var(--cl-light);
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      margin-bottom: 9px;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 20px;
+      letter-spacing: 0.005em;
+      color: var(--clr-f-dark);
+    }
+  }
+
+  &__bottom {
+    position: relative;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--clr-secondary);
+  }
+}
+
+// Audio Player component styles
+.audioplayer {
+  padding: 0.625rem 1rem;
+  margin-top: 40.5px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  column-gap: 1.125rem;
+
+  &__play,
+  &__pause,
+  &__range,
+  &__volume {
+    display: flex;
+  }
+
+  &__play,
+  &__pause {
+    background-color: var(--clr-f-light);
+    padding: 0.6rem;
+    border-radius: 50px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__duration {
+    font-size: 1.25rem;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+
+    color: var(--cl-light);
+  }
+
+  &__range {
+    input[type='range'] {
+      background: var(--clr-secondary);
+      -webkit-appearance: none;
+      appearance: none;
+      // background: #ffe3d4;
+      border-radius: 10px;
+      position: relative;
+      width: 100%;
+      height: 11px;
+      outline: none;
+    }
+
+    /* progress bar - safari */
+    input::-webkit-slider-runnable-track {
+      background: var(--bar-bg);
+      border-radius: 10px;
+      position: relative;
+      width: 100%;
+      height: 11px;
+      outline: none;
+    }
+
+    /* progress bar - firefox */
+    input::-moz-range-track {
+      background: var(--bar-bg);
+      border-radius: 10px;
+      position: relative;
+      width: 100%;
+      height: 11px;
+      outline: none;
+    }
+
+    .input::-moz-focus-outer {
+      border: 0;
+    }
+
+    /* progress bar - chrome and safari */
+    input::before {
+      content: '';
+      height: 11px;
+      width: var(--seek-before-width);
+      height: 1.25rem;
+      background-color: var(--clr-accent);
+      border-radius: 10px;
+      position: absolute;
+      top: -4px;
+      left: 0;
+      z-index: 2;
+      cursor: pointer;
+    }
+
+    /* progress bar - firefox */
+    input::-moz-range-progress {
+      background-color: var(--seek-before-color);
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      height: 11px;
+    }
+
+    input[type='range']::-webkit-slider-runnable-track {
+      width: 11.5rem;
+      height: 1.25rem;
+      background: #949494;
+      border-radius: 10px;
+    }
+
+    input[type='range']::-webkit-slider-thumb {
+      visibility: hidden;
+    }
+  }
+}
