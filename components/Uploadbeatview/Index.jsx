@@ -39,7 +39,7 @@ function Uploadbeatview() {
         </div>
       </div>
       {/* Button codes  */}
-      {/* This button is showing under the footer */}
+      {/* This button is showing under the footer after merging */}
 
       <div className={style.btn_container}>
         <button className={style.uploadbeatbtn}>NEXT</button>
