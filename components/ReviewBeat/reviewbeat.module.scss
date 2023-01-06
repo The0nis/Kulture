@@ -145,4 +145,21 @@
       visibility: hidden;
     }
   }
+
+  &__volume {
+    position: relative;
+    input {
+      transform: rotate(270deg);
+      right: -1.7rem;
+      top: -3.1rem;
+      position: absolute;
+      width: 5rem;
+    }
+    input[type='range']::-webkit-slider-runnable-track {
+      width: 0.5rem;
+      height: 1rem;
+      background: #949494;
+      border-radius: 10px;
+    }
+  }
 }
