@@ -1,13 +1,13 @@
 
     .wrapper{
-        width: 85vw;
+        width: 80%;
         color: var(--cl-light);
         display: flex;
         justify-content: center;
         gap: 5rem;
         margin: auto;
         font-size: var(--ft-b-sm);
-        
+        margin-bottom: 1rem; 
     }
 
     .footer_first, .footer_second{

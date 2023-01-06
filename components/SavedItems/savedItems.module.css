@@ -95,6 +95,32 @@
     background-color: var(--clr-f-light);
   }
 
+  .pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -1.2rem;
+  }
+  
+  .pagination a {
+    padding: 0.5em;
+  }
+
+  .pagination button{
+    margin: 0 .5rem;
+    padding: .4rem .5rem;
+    color: var(--clr-f-light);
+    background-color: var(--clr-primary);
+    border: none;
+    border-radius: 2px;
+    margin-bottom: 1rem;
+  }
+
+  .pagination button:focus{
+    color: var(--clr-primary);
+    background-color: var(--clr-f-light);
+  }
+
   
   @media (min-width: 48rem) {
     .items_wrapper{
