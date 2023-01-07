@@ -1,8 +1,6 @@
 .uploadbeatext {
   color: white;
   margin-left: 2rem;
-  margin-top: 0.5rem;
-  margin-bottom: 2rem;
 }
 
 .uploadcontainer,
@@ -31,6 +29,7 @@
 }
 
 .uploadbeatbtn {
+  position: absolute;
   width: 8.875rem;
   height: 3.125rem;
   margin-top: 2.5rem;
@@ -49,7 +48,6 @@
     display: flex;
     gap: 1.5rem;
     margin: auto;
-    margin-bottom: 5rem;
   }
 
   .btn_container {

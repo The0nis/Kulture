@@ -1,14 +1,13 @@
 import React from 'react';
 import style from './uploadbeatview.module.scss';
 import Image from 'next/image';
-import musicapp from '../../assets/musicapp.svg';
-import music from '../../assets/music.svg';
+import musicapp from '../../assets/Musicapp.svg';
+import music from '../../assets/Music.svg';
 import musicfolder from '../../assets/musicfolder.svg';
-import Page from '../Page';
 
 function Uploadbeatview() {
   return (
-    <Page>
+    <div>
       <div>
         <p className={style.uploadbeatext}>Please select your upload type:</p>
       </div>
@@ -38,13 +37,11 @@ function Uploadbeatview() {
           <p className={style.uploadtext2}>LP (Long Plays)</p>
         </div>
       </div>
-      {/* Button codes  */}
-      {/* This button is showing under the footer after merging */}
-
+      {/* Button codes */}
       <div className={style.btn_container}>
         <button className={style.uploadbeatbtn}>NEXT</button>
       </div>
-    </Page>
+    </div>
   );
 }
 

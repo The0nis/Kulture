@@ -1,14 +1,12 @@
 import style from './uploadbeatcloud.module.scss';
 import Image from 'next/image';
 import cloud from '../../assets/cloud.svg';
-import Page from '../Page';
 
 
 
 function Uploadbeatcloud() {
   return (
     <div> 
-        <Page>
         <div className={style.cloudtextdiv}>
           <p className={style.cloudtext}>Upload your beats to Kulture</p> 
         </div>
@@ -36,7 +34,9 @@ function Uploadbeatcloud() {
 
 
 
-            </Page>
+
+
+
 
     </div>
   )
