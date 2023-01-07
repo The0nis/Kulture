@@ -73,3 +73,18 @@
   border: none;
   color: white;
 }
+
+.input_field{
+  opacity: 0;
+}
+
+.b_img{
+  width: 150px;
+  border-radius: 5px;
+  height: 134px;
+  position: relative;
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  justify-content: center;
+}
