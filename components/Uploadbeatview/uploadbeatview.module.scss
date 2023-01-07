@@ -36,20 +36,25 @@
   color: #ffffff;
 }
 
+.btn_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 .uploadbeatbtn {
-  // position: absolute;
   width: 8.875rem;
   height: 3.125rem;
   margin-top: 2.5rem;
   background: #6600e8;
   border-radius: 0.625rem;
   border: none;
+  color: white;
 }
 
-.btn_container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
+.uploadbeatbtn:hover {
+  color: #6600e8;
+  background: white;
 }
 
 @media screen and (min-width: 750px) {

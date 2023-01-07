@@ -65,6 +65,11 @@
   color: white;
 }
 
+.back_btn:hover {
+  background-color: #ffffff;
+  color: blue;
+}
+
 .next_btn {
   width: 6.25rem;
   height: 2.5rem;
@@ -72,4 +77,9 @@
   border-radius: 0.625rem;
   border: none;
   color: white;
+}
+
+.next_btn:hover {
+  background:white;
+  color: #6600e8; 
 }
