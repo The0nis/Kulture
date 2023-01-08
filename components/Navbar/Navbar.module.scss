@@ -5,7 +5,7 @@
 .header {
   padding: 0 1.75rem;
   display: flex;
-  // position: fixed;
+  position: fixed;
   width: 100%;
   margin-top: 1rem;
   z-index: 999;
@@ -25,18 +25,72 @@
 
   .navbar__hamburger {
     cursor: pointer;
+    // margin-left: 1rem;
   }
+}
+.scrolled {
+  background-color: black;
+  height: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  margin-top:0;
 }
 
 .navbar {
   position: relative;
 
+  &__submenu{
+    font-size: 1rem;
+    line-height: 10px;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    li{
+      margin-bottom: -1rem;
+      line-height: 10px;
+    }
+  }
+
+  &__profile{
+    width: 1rem;
+    height: 1rem;
+
+  }
+
+  &__upload{
+    position: relative;
+    span{
+      position:absolute;
+      margin-top: -.244rem;
+
+    }
+   
+  }
+
+  &__signed{
+    li{
+    color: var(--clr-accent) !important;
+    position: relative;
+    span{
+      position:absolute;
+      margin-top: -.244rem;
+
+    }
+    ul{
+      margin-top: 1rem;
+    }
+  }
+  
+}
+
+
   &__close {
     display: flex;
     justify-content: flex-end;
-    padding: 12px;
-    top: 0px;
-    right: 100px;
+    // padding: 12px;
+    position: relative;
+    top: 20px;
+    right: 50px;
 
     div {
       cursor: pointer;
@@ -48,8 +102,8 @@
       list-style-type: none;
       color: var(--cl-light);
       font-size: 1rem;
-      line-height: 20px;
-      margin-bottom: 2rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
 
       button {
         font-size: 0.75;
@@ -75,6 +129,12 @@
   display: block;
   position: absolute;
   height: 100vh;
-  z-index: 100;
+  z-index: 2000;
   padding-left: 24px;
-}
+  margin-top: -.5rem;
+  }
+
+  .arrow{
+    font-size: 2rem;
+  }
+
