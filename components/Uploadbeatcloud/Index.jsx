@@ -36,7 +36,7 @@ function Uploadbeatcloud() {
           <div className={style.cloudcontainer}>
             {/* if the image have not been selected display this */}
             {!valid && (
-              <div>
+              <div className={style.wrap}>
                 <div className={style.cloud_image}>
                   <Image src={cloud} alt="musicapp" />
                 </div>
@@ -65,12 +65,9 @@ function Uploadbeatcloud() {
               ></div>
             )}
           </div>
-          <input
-            type="file"
-            onChange={handleChange}
-            accept="image/*"
-            className={style.input_field}
-          />
+          <div className={style.input_field}>
+            <input type="file" onChange={handleChange} accept="image/*" />
+          </div>
         </label>
 
         <div className={style.upload_btn}>
