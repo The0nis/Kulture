@@ -24,6 +24,8 @@
 
 .cloud_image {
   margin-top: 2.938rem;
+  cursor: pointer;
+  align-items: center;
 }
 
 .cloudtext1 {
@@ -63,6 +65,7 @@
   border-radius: 0.625rem;
   border-color: blue;
   color: white;
+  cursor: pointer;
 }
 
 .back_btn:hover {
@@ -77,9 +80,10 @@
   border-radius: 0.625rem;
   border: none;
   color: white;
+  cursor: pointer;
 }
 
 .next_btn:hover {
-  background:white;
-  color: #6600e8; 
+  background: white;
+  color: #6600e8;
 }
