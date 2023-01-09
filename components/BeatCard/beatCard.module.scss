@@ -17,6 +17,9 @@
     color: #949494;
   }
 }
+.list_wrapper a:not(:first-child) {
+  display: none;
+}
 
 .genrebeat {
   font-family: Source Sans Pro;
@@ -73,6 +76,11 @@
   display: flex;
   justify-items: flex-start;
   align-items: center;
+  color: white !important;
+  gap: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 100;
+  font-family: "Source Sans Pro";
   gap: 0.8rem;
   color: white;
 
@@ -142,6 +150,8 @@
 }
 
 .beat_text {
+  color: #949494;
+  line-height: 2rem;
   p {
     font-family: 'Source Sans Pro';
     font-size: 1.25rem;
@@ -153,13 +163,15 @@
 
 .footerwrapper {
   display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
   align-items: center;
   column-gap: 1rem;
   margin-top: 80px;
 }
 
 .footerwrappertext {
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
   font-weight: 700;
   font-size: 0.938rem;
   color: #ffffff;
@@ -267,6 +279,8 @@
   }
 
   .beat_text {
+    color: #949494;
+    line-height: 2rem;
     p {
       font-family: 'Source Sans Pro';
       font-size: 1.25rem;
@@ -282,8 +296,13 @@
   }
 
   .footerwrapper {
-    margin-top: 16px;
+    gap: 0.2rem;
   }
+  .footerwrappertext {
+    font-weight: normal;
+    font-size: 0.6rem;
+    margin-top: 16px;
+    }
 
   .footerwrappertext {
     font-family: 'Source Sans Pro';
@@ -295,5 +314,11 @@
     font-size: 1.5rem;
     line-height: 30px;
     letter-spacing: 0.005em;
+  }
+}
+
+@media (min-width: 768px) {
+  .list_wrapper a:not(:first-child) {
+    display: inline;
   }
 }
