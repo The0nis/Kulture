@@ -1,10 +1,14 @@
 import Link from 'next/link';
 import style from './Footer.module.scss';
 
-function Footer() {
+function Footer({ type }) {
   return (
     <div className={style.wrapper}>
-      <div className={style.footer_first}>
+      <div
+        className={`${
+          type !== 'account' ? style.footer_first : style.footer__mod
+        }`}
+      >
         <div>
           <p>
             <Link href="#/">Terms of Policy</Link>
@@ -17,7 +21,11 @@ function Footer() {
         </div>
       </div>
 
-      <div className={style.footer_second}>
+      <div
+        className={`${
+          type !== 'account' ? style.footer_second : style.footer__mod
+        }`}
+      >
         <div>
           <p>
             <Link href="#/">Privacy Policy</Link>

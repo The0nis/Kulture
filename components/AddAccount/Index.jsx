@@ -5,7 +5,7 @@ import Page from '../Page';
 
 function addaccount() {
   return (
-    <Page>
+    <Page type="account">
       <div className={style.addaccount_container}>
         <div className={style.addaccountdiv}>
           <label>Account Number</label>

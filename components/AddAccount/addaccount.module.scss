@@ -1,97 +1,85 @@
-.addaccount_container{
-    background: white;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .addaccountdiv{
-    padding-top: 70px;
-    padding-left: 16px;
-  }
+.addaccount_container {
+  background: white;
+  width: 100%;
+  height: 100vh;
+}
 
-  .addaccountnumber{
-    color:black;
-    background-color: white;
-    box-sizing: border-box;
-    width: calc((195vw - 3rem)/2);
-    height: 52px;
-    left: 16px;
-    top: 92px;
-    border: 1px solid #949494;
-    border-radius: 10px;
+.addaccountdiv {
+  padding-top: 70px;
+  padding-left: 16px;
+}
 
-  }
+.addaccountnumber {
+  color: black;
+  background-color: white;
+  box-sizing: border-box;
+  width: calc((195vw - 3rem) / 2);
+  height: 52px;
+  left: 16px;
+  top: 92px;
+  border: 1px solid #949494;
+  border-radius: 10px;
+}
 
-  .addaccountdiv1{
-    margin-top: 1rem;
-    margin-left: 1rem;
+.addaccountdiv1 {
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+.addaccountnumber1 {
+  color: black;
+  background-color: white;
+  box-sizing: border-box;
+  width: calc((195vw - 3rem) / 2);
+  height: 52px;
+  left: 16px;
+  top: 92px;
+  border: 1px solid #949494;
+  border-radius: 10px;
+}
 
-  }
-  .addaccountnumber1{
-    color:black;
-    background-color: white;
-    box-sizing: border-box;
-    width: calc((195vw - 3rem)/2);
-    height: 52px;
-    left: 16px;
-    top: 92px;
-    border: 1px solid #949494;
-    border-radius: 10px;
+.selectbankimage {
+  margin-top: -2.4rem;
+  margin-left: 17rem;
+  cursor: pointer;
+}
 
-  }
+.addaccountdiv2 {
+  margin-top: 2.2rem;
+  margin-left: 1rem;
+}
+.addaccountnumber2 {
+  color: black;
+  background-color: white;
+  box-sizing: border-box;
+  width: calc((195vw - 3rem) / 2);
+  height: 52px;
+  border: 1px solid #949494;
+  border-radius: 10px;
+}
 
-
-  .selectbankimage{
-    margin-top: -2.4rem;
-    margin-left: 17rem;
-    cursor: pointer;
-   
-
-  }
-
-
-  .addaccountdiv2{
-    margin-top: 2.2rem;
-    margin-left: 1rem;
-
-  }
-  .addaccountnumber2{
-    color:black;
-    background-color: white;
-    box-sizing: border-box;
-    width: calc((195vw - 3rem)/2);
-    height: 52px;
-    border: 1px solid #949494;
-    border-radius: 10px;
-
-  }
-
-  .signicons{
-    margin-top: 0.3rem;
+.signicons {
+  margin-top: 0.3rem;
   font-size: 1.5rem;
   position: absolute;
   top: 15%;
   left: 25%;
-  }
-
+}
 
 .selectus {
-    margin-top: -0.6rem;
-  }
-  
-  .selectus > select {
-    width: calc((195vw - 3rem)/2);
-    height: 52px;
-    background: white;
-    border-radius: 0.5rem;
-    flex: none;
-    order: 1;
-    flex-grow: 0;
-    outline: none;
-    color: black;
-    border-color: black;
-    margin-left: 1rem;
-    margin-top:2rem;
-  }
-  
+  margin-top: -0.6rem;
+}
 
+.selectus > select {
+  width: calc((195vw - 3rem) / 2);
+  height: 52px;
+  background: white;
+  border-radius: 0.5rem;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  outline: none;
+  color: black;
+  border-color: black;
+  margin-left: 1rem;
+  margin-top: 2rem;
+}
