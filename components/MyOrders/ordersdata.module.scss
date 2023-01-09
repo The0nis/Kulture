@@ -1,0 +1,91 @@
+.myorders {
+  background: #1b1b1b;
+  border-radius: 8px;
+  padding: 1.5rem;
+  display: flex;
+  column-gap: 1.125rem;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  &__details {
+    > * {
+      font-family: 'Source Sans Pro';
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 30px;
+      letter-spacing: 0.0015em;
+      color: var(--cl-light);
+    }
+
+    .or {
+      background: var(--clr-accent);
+      border-radius: 8px;
+      width: fit-content;
+      padding: 0.25rem;
+
+      p {
+        font-weight: 600;
+        font-size: 0.75rem;
+        line-height: 15px;
+
+        letter-spacing: 0.0175em;
+        color: var(--clr-secondary);
+      }
+    }
+
+    p {
+      font-size: 16px;
+      display: flex;
+      line-height: 20px;
+      color: var(--cl-light);
+
+      .pspan {
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 20px;
+        margin-left: 0.563rem;
+        letter-spacing: 0.0175em;
+        color: #505050;
+      }
+    }
+
+    h3 {
+      font-weight: 600;
+      font-size: 1.5rem;
+      line-height: 30px;
+      letter-spacing: 0.0015em;
+      color: var(--cl-light);
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 1.25rem;
+      line-height: 25px;
+      letter-spacing: 0.0015em;
+
+      color: var(--cl-light);
+    }
+
+    button {
+      background: var(--clr-primary);
+      border-radius: 8px;
+      padding: 1rem 2rem;
+      border: none;
+      outline: none;
+      font-weight: 600;
+      font-size: 1rem;
+      line-height: 20px;
+      letter-spacing: 0.0175em;
+      margin-top: 8px;
+      color: var(--cl-light);
+    }
+  }
+}

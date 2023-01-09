@@ -1,6 +1,13 @@
 .uploadbeatext {
   color: white;
   margin-left: 2rem;
+  margin-top: 96px;
+  text-align: center;
+}
+
+.maincontainer {
+  margin-top: 5rem;
+  cursor: pointer;
 }
 
 .uploadcontainer,
@@ -14,6 +21,8 @@
   border-radius: 0.625rem;
   align-items: center;
   justify-content: center;
+  margin-left: 16px;
+  margin-right: 16px;
 }
 
 .uploadtext,
@@ -28,19 +37,26 @@
   color: #ffffff;
 }
 
+.btn_container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
 .uploadbeatbtn {
-  position: absolute;
   width: 8.875rem;
   height: 3.125rem;
   margin-top: 2.5rem;
   background: #6600e8;
   border-radius: 0.625rem;
   border: none;
+  color: white;
+  cursor: pointer;
 }
 
-.btn_container {
-  display: flex;
-  justify-content: center;
+.uploadbeatbtn:hover {
+  color: #6600e8;
+  background: white;
 }
 
 @media screen and (min-width: 750px) {
@@ -48,6 +64,7 @@
     display: flex;
     gap: 1.5rem;
     margin: auto;
+    margin-top: 5rem;
   }
 
   .btn_container {
