@@ -12,14 +12,23 @@
 
   align-items: center;
   justify-content: space-between;
-  &__logo {
+
+  &__logo,
+  &__acc_logo {
     display: flex;
     align-items: center;
     column-gap: 8px;
+
     p {
       font-size: 16px;
       line-height: 20px;
       color: var(--cl-light);
+    }
+  }
+
+  &__acc_logo {
+    p {
+      color: var(--clr-primary);
     }
   }
 
@@ -33,56 +42,50 @@
   height: 2rem;
   padding-top: 2rem;
   padding-bottom: 2rem;
-  margin-top:0;
+  margin-top: 0;
 }
 
 .navbar {
   position: relative;
 
-  &__submenu{
+  &__submenu {
     font-size: 1rem;
     line-height: 10px;
     margin-bottom: 2rem;
     margin-top: 1rem;
     margin-left: 1rem;
-    li{
+    li {
       margin-bottom: -1rem;
       line-height: 10px;
     }
   }
 
-  &__profile{
+  &__profile {
     width: 1rem;
     height: 1rem;
-
   }
 
-  &__upload{
+  &__upload {
     position: relative;
-    span{
-      position:absolute;
-      margin-top: -.244rem;
-
-    }
-   
-  }
-
-  &__signed{
-    li{
-    color: var(--clr-accent) !important;
-    position: relative;
-    span{
-      position:absolute;
-      margin-top: -.244rem;
-
-    }
-    ul{
-      margin-top: 1rem;
+    span {
+      position: absolute;
+      margin-top: -0.244rem;
     }
   }
-  
-}
 
+  &__signed {
+    li {
+      color: var(--clr-accent) !important;
+      position: relative;
+      span {
+        position: absolute;
+        margin-top: -0.244rem;
+      }
+      ul {
+        margin-top: 1rem;
+      }
+    }
+  }
 
   &__close {
     display: flex;
@@ -131,10 +134,9 @@
   height: 100vh;
   z-index: 2000;
   padding-left: 24px;
-  margin-top: -.5rem;
-  }
+  margin-top: -0.5rem;
+}
 
-  .arrow{
-    font-size: 2rem;
-  }
-
+.arrow {
+  font-size: 2rem;
+}

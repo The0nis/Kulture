@@ -1,10 +1,10 @@
-import Signup from "../components/Signup/Index"
-const Signingup = () => {
+import Signup from '../components/Signup/Index';
+const Signuppage = () => {
   return (
     <div>
       <Signup />
     </div>
-  )
-}
+  );
+};
 
-export default Signingup
+export default Signuppage;
