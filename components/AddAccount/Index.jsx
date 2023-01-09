@@ -5,8 +5,9 @@ import Page from '../Page';
 
 function addaccount() {
   return (
-    <Page>
+    <Page type="account">
       <div className={style.addaccount_container}>
+        <div className={style.addaccountwrapper}>
         <div className={style.addaccountdiv}>
           <input
             className={style.addaccountnumber}
@@ -40,6 +41,7 @@ function addaccount() {
               placeholder=" Account Name"
             ></input>
           </div>
+        </div>
         </div>
       </div>
     </Page>

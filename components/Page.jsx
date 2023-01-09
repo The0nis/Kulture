@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Footer from './Footer/Index';
 import Navbar from './Navbar/Index';
 
-function Page({ title, description, children }) {
+function Page({ title, description, children, type }) {
   // const editTitle = title?includes(undefined) ? 'loading...' : title;
 
   return (
@@ -13,9 +13,9 @@ function Page({ title, description, children }) {
         <title>Kulture</title>
         {description && <meta name="description" content={description} />}
       </Head>
-      <Navbar/>
+      <Navbar type={type} />
       {children}
-      <Footer />
+      <Footer type={type} />
     </>
   );
 }

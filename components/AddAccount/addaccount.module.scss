@@ -2,12 +2,14 @@
   background: white;
   width: 100%;
   height: 100vh;
-  margin-top: 3rem;
+}
+
+.addaccountwrapper {
+  padding-top: 7rem;
 }
 
 .addaccountdiv {
-  padding-top: 70px;
-  padding-left: 16px;
+  margin-left: 1rem;
 }
 
 .addaccountnumber {
@@ -26,22 +28,6 @@
 .addaccountnumber::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.addaccountdiv1 {
-  margin-top: 1rem;
-  margin-left: 1rem;
-}
-.addaccountnumber1 {
-  color: black;
-  background-color: white;
-  box-sizing: border-box;
-  width: calc((195vw - 3rem) / 2);
-  height: 52px;
-  left: 16px;
-  top: 92px;
-  border: 1px solid #949494;
-  border-radius: 10px;
 }
 
 .selectus {
@@ -79,14 +65,12 @@
   border-radius: 10px;
 }
 
-@media screen and (min-width: 750px) {
-
-
+@media screen and (min-width: 700px) {
   .addaccountnumber {
     margin-left: 40px;
     width: calc((180vw - 2rem) / 2);
   }
-  
+
   .selectus {
     margin-left: 40px;
   }
@@ -94,10 +78,8 @@
   .selectus > select {
     width: calc((180vw - 2rem) / 2);
   }
-
   .addaccountname {
     margin-left: 40px;
-    width: calc((180vw - 2rem) / 2);   
+    width: calc((180vw - 2rem) / 2);
   }
-
 }
