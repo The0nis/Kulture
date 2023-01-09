@@ -8,11 +8,14 @@ function AudioPlayer() {
   const [play, setPlay] = useState(true);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [volume, setVolume] = useState(50);
+  const [showVolume, setShowVolume] = useState(false);
 
   //References
   const audioPlayer = useRef(); //audio component
   const progressBar = useRef(); // reference our progress bar
   const animationRef = useRef(); // reference the animation
+  const volumeBar = useRef(); // reference the animation
 
   //Effect
   useEffect(() => {
@@ -21,6 +24,12 @@ function AudioPlayer() {
     progressBar.current.max = seconds;
   }, [audioPlayer?.current?.loadedmetadata, audioPlayer?.current?.readyState]);
 
+  // Effect to make default volume 50%
+  useEffect(() => {
+    audioPlayer.current.volume = 50 / 100;
+  }, []);
+
+  //Calculate time function
   const calculateTime = (secs) => {
     const minutes = Math.floor(secs / 60);
     const returnedMinutes = minutes < 10 ? `0${minutes}` : `${minutes}`;
@@ -46,6 +55,17 @@ function AudioPlayer() {
     progressBar.current.value = audioPlayer.current.currentTime;
     changePlayerCurrentTime();
     animationRef.current = requestAnimationFrame(whilePlaying);
+  };
+
+  // Volume onchange function
+  const changeVolume = () => {
+    audioPlayer.current.volume = volumeBar.current.value / 100;
+    setVolume(audioPlayer?.current?.volume * 100);
+  };
+
+  // Show and hide volume slider
+  const toggleVolumeSlider = () => {
+    setShowVolume(!showVolume);
   };
 
   //Progress bar functions
@@ -102,7 +122,19 @@ function AudioPlayer() {
           />
         </div>
         <div className={styles.controls__volume}>
-          <ImVolumeMedium color="#fff" size={20} />
+          <div onClick={toggleVolumeSlider}>
+            <ImVolumeMedium color="#fff" size={20} />
+          </div>
+          {showVolume && (
+            <input
+              type="range"
+              id="volumeslider"
+              max="100"
+              ref={volumeBar}
+              value={volume}
+              onChange={changeVolume}
+            />
+          )}
         </div>
       </div>
     </div>

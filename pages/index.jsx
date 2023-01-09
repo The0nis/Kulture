@@ -16,13 +16,17 @@ export default function Home() {
           <div className={styles.hero}>
             <h1>Find and upload trending beat for music production</h1>
             <p>Preview, upload, buy beats and vocals for you projects</p>
-            <div className={styles.hero__search}>
-              <input type="text" placeholder="Search" />
-              <div className={styles.icon}>
-                <FiSearch size={20} color="#fff" />
+            <div className={styles.hero__search_group}>
+              <div className={styles.hero__search}>
+                <input type="text" placeholder="Search" />
+                <div className={styles.icon}>
+                  <FiSearch size={20} color="#fff" />
+                </div>
+              </div>
+              <div className={styles.btn}>
+                <button type="button">UPLOAD YOUR BEATS</button>
               </div>
             </div>
-            <button type="button">UPLOAD YOUR BEATS</button>
           </div>
 
           <div className={styles.home__bodywrap}>

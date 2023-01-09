@@ -41,16 +41,10 @@ function BeatCard() {
           <div>
             <Image src={miriam} alt="image" className={style.imagebeatcard} />
           </div>
-          <div>
-            <p> Miriam </p>
-          </div>
-          <div>
-            <p>@ohuly </p>
-          </div>
+          <h3> Miriam </h3>
+          <p>@ohuly </p>
           <div className={style.make_circle}></div>
-          <div>
-            <p> 2 Hours Ago</p>
-          </div>
+          <p> 2 Hours Ago</p>
         </div>
 
         <div className={style.card_wrap}>
@@ -68,7 +62,7 @@ function BeatCard() {
                 <Image src={videocircle} alt="videocircle" />
               </div>{' '}
               <div>
-                <h4>Wintspeed</h4>
+                <h4>Wintspread cabasky</h4>
               </div>
             </div>
             <div className={style.beat_text}>
@@ -86,33 +80,32 @@ function BeatCard() {
               </button>
             </div>
           </div>
-          </div>
+        </div>
 
-          <div className={style.downicons}>
-            <div className={style.footericontext1}>
-              <div className={style.footericon1}>
-                <Image src={share} alt="image" className={style.foot} />
-              </div>
-
-              <div className={style.footertext1}>
-                <p>share</p>
-              </div>
+        <div className={style.downicons}>
+          <div className={style.footericontext1}>
+            <div className={style.footericon1}>
+              <Image src={share} alt="image" className={style.foot} />
             </div>
 
-            <div className={style.footericontext1}>
-              <div className={style.footericon1}>
-                <Image src={save} alt="image" className={style.foot} />
-              </div>
-              <div className={style.footertext1}>
-                <p>save for later</p>
-              </div>
+            <div className={style.footertext1}>
+              <p>share</p>
             </div>
           </div>
+
+          <div className={style.footericontext1}>
+            <div className={style.footericon1}>
+              <Image src={save} alt="image" className={style.foot} />
+            </div>
+            <div className={style.footertext1}>
+              <p>save for later</p>
+            </div>
+          </div>
+        </div>
       </div>
       {/* -----------------------------------------------------------------------------
       --------------------------------------------------------------------------------- */}
 
-      
       {/* Second Card....Notes its hard coded */}
       <div className={style.containerbeatcard1}>
         <div className={style.card_header}>
@@ -120,7 +113,7 @@ function BeatCard() {
             <Image src={miriam2} alt="image" className={style.imagebeatcard} />
           </div>
           <div>
-            <p> Miriam </p>
+            <h3> Miriam </h3>
           </div>
           <div>
             <p>@ohuly </p>
@@ -164,28 +157,28 @@ function BeatCard() {
               </button>
             </div>
           </div>
-          </div>
+        </div>
 
-          <div className={style.downicons}>
-            <div className={style.footericontext1}>
-              <div className={style.footericon1}>
-                <Image src={share} alt="image" className={style.foot} />
-              </div>
-
-              <div className={style.footertext1}>
-                <p>share</p>
-              </div>
+        <div className={style.downicons}>
+          <div className={style.footericontext1}>
+            <div className={style.footericon1}>
+              <Image src={share} alt="image" className={style.foot} />
             </div>
 
-            <div className={style.footericontext1}>
-              <div className={style.footericon1}>
-                <Image src={save} alt="image" className={style.foot} />
-              </div>
-              <div className={style.footertext1}>
-                <p>save for later</p>
-              </div>
+            <div className={style.footertext1}>
+              <p>share</p>
             </div>
           </div>
+
+          <div className={style.footericontext1}>
+            <div className={style.footericon1}>
+              <Image src={save} alt="image" className={style.foot} />
+            </div>
+            <div className={style.footertext1}>
+              <p>save for later</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* <div className={style.loadmore}>
