@@ -8,7 +8,6 @@ function addaccount() {
     <Page>
       <div className={style.addaccount_container}>
         <div className={style.addaccountdiv}>
-          <label>Account Number</label>
           <input
             className={style.addaccountnumber}
             type="Number"
@@ -33,21 +32,10 @@ function addaccount() {
           </select>
         </div>
 
-        {/* <div className={style.addaccountdiv1}>
-          <input
-            className={style.addaccountnumber1}
-            type=""
-            placeholder=" Select Bank "
-          ></input>
-           <div className={style.selectbankimage}>
-         <Image src={selectbank}></Image>
-        </div>
-        </div> */}
-
         <div>
           <div className={style.addaccountdiv2}>
             <input
-              className={style.addaccountnumber2}
+              className={style.addaccountname}
               type="text"
               placeholder=" Account Name"
             ></input>
