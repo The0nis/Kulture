@@ -1,8 +1,8 @@
-import style from './uploadbeatcloud.module.scss';
-import Image from 'next/image';
-import cloud from '../../assets/cloud.svg';
-import Page from '../Page';
-import { useState } from 'react';
+import style from "./uploadbeatcloud.module.scss";
+import Image from "next/image";
+import cloud from "../../assets/cloud.svg";
+import Page from "../Page";
+import { useState } from "react";
 
 function Uploadbeatcloud() {
   //declaring state for the input files
@@ -15,11 +15,11 @@ function Uploadbeatcloud() {
 
     const { type } = e.target.files[0];
     if (
-      type === 'image/png' ||
-      type === 'image/svg' ||
-      type === 'image/jpeg' ||
-      type === 'image/gif' ||
-      type === 'image/tiff'
+      type === "image/png" ||
+      type === "image/svg" ||
+      type === "image/jpeg" ||
+      type === "image/gif" ||
+      type === "image/tiff"
     ) {
       setValid(true);
       setFile(URL.createObjectURL(e.target.files[0]));
@@ -59,8 +59,8 @@ function Uploadbeatcloud() {
                 className={style.b_img}
                 style={{
                   backgroundImage: `url(${file})`,
-                  backgroundSize: 'cover',
-                  backgroundReapet: 'no-repeat',
+                  backgroundSize: "cover",
+                  backgroundReapet: "no-repeat",
                 }}
               ></div>
             )}

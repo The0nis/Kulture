@@ -1,9 +1,9 @@
-import style from './withdrawalaccount.module.scss';
-import Image from 'next/image';
-import smalltickcircle from '../../assets/smalltickcircle.svg';
+import style from "./withdrawalaccount.module.scss";
+import Image from "next/image";
+import smalltickcircle from "../../assets/smalltickcircle.svg";
 
-import React from 'react';
-import Page from '../Page';
+import React from "react";
+import Page from "../Page";
 
 function WithdrawalAccount() {
   return (
@@ -30,7 +30,7 @@ function WithdrawalAccount() {
             <div className={style.withdrawal_flex}>
               <ul className={style.withdrawallistul}>
                 <li className={style.withdrawallist}>Account Name</li>
-                <li className={style.withdrawallist1}>Banny Anderson</li>{' '}
+                <li className={style.withdrawallist1}>Banny Anderson</li>{" "}
                 <br></br>
               </ul>
               <ul className={style.withdrawallistul}>
