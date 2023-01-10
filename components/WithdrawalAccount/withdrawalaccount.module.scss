@@ -11,7 +11,6 @@
   font-weight: 700;
   font-size: 24px;
   margin-top: 4rem;
-  margin-left: 18rem;
   margin-bottom: 2rem;
 }
 
@@ -83,10 +82,14 @@
   border-color: blue;
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 800px) {
+
+  .withdrawalaccounttext1 {
+    margin-left: 18rem;
+  }
   .withdrawalaccount_con {
-    margin-left: 284px;
-    margin-right: 284px;
+    margin-left: 230px;
+    margin-right: 230px;
   }
 
   .withdrawallist {
@@ -207,10 +210,10 @@
   background: #6600e8;
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 800px) {
   .meta_data {
-    margin-left: 284px;
-    margin-right: 284px;
+    margin-left: 230px;
+    margin-right: 230px;
   }
 
   .withdrawalmetadataover {
@@ -223,11 +226,9 @@
   }
 
   .withdrawalinput_label_con {
-    // position: relative;
     display: flex;
     margin-top: -4rem;
     margin-left: 0.005rem;
-    // gap:5rem;
   }
 
   .withdrawal_label1 {
