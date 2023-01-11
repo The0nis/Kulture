@@ -1,10 +1,15 @@
+.container{
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
+
 .cartreview {
-  margin-top: 30px;
+  margin-top: 3rem;
   margin-bottom: 3.063rem;
   h1 {
     font-family: 'Montserrat';
     font-weight: 700;
-    font-size: 2.25rem;
     line-height: 44px;
     letter-spacing: -0.0025em;
     color: var(--cl-light);
@@ -13,7 +18,7 @@
 }
 
 .cartsummary {
-  margin-bottom: 118px;
+  margin-bottom: 55px;
 }
 
 .recentlyviewed {
@@ -26,5 +31,21 @@
     letter-spacing: 0.0015em;
     margin-bottom: 24px;
     color: var(--clr-f-light);
+  }
+}
+
+@media (min-width: 64rem) {
+  .container{
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  .wrapper{
+    display: flex;
+  }
+  .cartreview{
+    flex: 2;
+  }
+  .cartsummary{
+    flex: 1;
   }
 }
