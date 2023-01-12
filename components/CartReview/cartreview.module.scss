@@ -126,7 +126,7 @@
     }
 }
 
-@media (min-width: 20rem) {
+@media (min-width: 25rem) {
   .review{
     &__audio{
       gap: .5rem;
@@ -195,7 +195,7 @@
         flex: 1;
         justify-content: flex-start;
         font-size: 20px;
-        margin-left: -1rem;
+        margin-left: -4rem;
       }
   } 
 }
