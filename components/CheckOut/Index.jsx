@@ -55,12 +55,12 @@ function CheckOut() {
             <div className={style.cvvex}>
               <div className={style.ex}>
                 <label htmlFor="exp">expiration date (MM/YY)</label>
-                <input type="text" id="exp" />
+                <input className={style.input_ex} type="number" id="exp" />
               </div>
 
               <div className={style.cv}>
                 <label htmlFor="cvv">CVV</label>
-                <input type="text" id="cvv" />
+                <input className={style.input_cv} type="number" id="cvv" />
               </div>
             </div>
 

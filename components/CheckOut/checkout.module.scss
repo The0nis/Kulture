@@ -67,70 +67,14 @@
 
 .input_number::-webkit-outer-spin-button,
 .input_number::-webkit-inner-spin-button,
-.input_expdate::-webkit-outer-spin-button,
-.input_expdate::-webkit-inner-spin-button,
-.input_cvv::-webkit-outer-spin-button,
-.input_cvv::-webkit-inner-spin-button {
+.input_ex::-webkit-outer-spin-button,
+.input_ex::-webkit-inner-spin-button,
+.input_cv::-webkit-outer-spin-button,
+.input_cv::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
 
-.input_expdate {
-  color: black;
-  background-color: white;
-  box-sizing: border-box;
-  width: calc((60vw - 2rem) / 2);
-  height: 52px;
-  border: 1px solid #949494;
-  border-radius: 10px;
-  margin-left: -10rem;
-  margin-top: 3.8rem;
-}
-
-.input_cvv {
-  color: black;
-  background-color: white;
-  box-sizing: border-box;
-  width: calc((60vw - 2rem) / 2);
-  height: 52px;
-  border: 1px solid #949494;
-  border-radius: 10px;
-  margin-left: 15rem;
-  margin-top: 0.7rem;
-}
-
-.cvv_label {
-  margin-left: 15rem;
-  margin-top: 2rem;
-  color: #000000;
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0.0015em;
-}
-
-.exp_label {
-  margin-left: 1rem;
-  margin-top: 2rem;
-  color: #000000;
-  font-family: "Source Sans Pro";
-  font-style: normal;
-  font-weight: 600;
-  font-size: 12px;
-  line-height: 15px;
-  letter-spacing: 0.0015em;
-}
-
-/* Exp and Cvv code */
-.exp_cvv {
-  display: flex;
-  position: absolute;
-  gap: 2rem;
-}
-
-/* End of the code */
 
 .charges {
   font-family: "Source Sans Pro";
