@@ -1,6 +1,4 @@
 import style from './addaccount.module.scss';
-import Image from 'next/image';
-import selectbank from '../../assets/selectbank.svg';
 import Page from '../Page';
 
 function addaccount() {

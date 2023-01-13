@@ -1,22 +1,230 @@
 .checkout_container {
   background: white;
   width: 100%;
-  height: 100vh;
+  margin: 0 auto;
+  height: 150vh;
 }
 
-.addaccountdiv {
-  padding-top: 70px;
-  padding-left: 16px;
+.checkout_overall {
+  width: 90%;
+  margin: 0 auto;
 }
 
-.addaccountnumber {
+.addpayment {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 25px;
+  letter-spacing: 0.0015em;
+  color: #000000;
+  padding-top: 79px;
+}
+
+.image_checkout {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.visa_img {
+  margin-top: 1.6rem;
+}
+
+.mastercard_img {
+  margin-top: 1rem;
+}
+
+.fname,
+.lname,
+.card_number,
+.exp_date,
+.cv,
+.ex {
+  color: #000000;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 15px;
+  letter-spacing: 0.0015em;
+  text-transform: capitalize;
+}
+
+.input_name,
+.input_number,
+.cvvex input {
   color: black;
   background-color: white;
   box-sizing: border-box;
-  width: calc((195vw - 3rem) / 2);
+  width: 100%;
   height: 52px;
-  left: 16px;
-  top: 92px;
   border: 1px solid #949494;
   border-radius: 10px;
+  margin-top: 1rem;
+  padding: 0 0.5rem;
+}
+
+.input_number::-webkit-outer-spin-button,
+.input_number::-webkit-inner-spin-button,
+.input_expdate::-webkit-outer-spin-button,
+.input_expdate::-webkit-inner-spin-button,
+.input_cvv::-webkit-outer-spin-button,
+.input_cvv::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input_expdate {
+  color: black;
+  background-color: white;
+  box-sizing: border-box;
+  width: calc((60vw - 2rem) / 2);
+  height: 52px;
+  border: 1px solid #949494;
+  border-radius: 10px;
+  margin-left: -10rem;
+  margin-top: 3.8rem;
+}
+
+.input_cvv {
+  color: black;
+  background-color: white;
+  box-sizing: border-box;
+  width: calc((60vw - 2rem) / 2);
+  height: 52px;
+  border: 1px solid #949494;
+  border-radius: 10px;
+  margin-left: 15rem;
+  margin-top: 0.7rem;
+}
+
+.cvv_label {
+  margin-left: 15rem;
+  margin-top: 2rem;
+  color: #000000;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.0015em;
+}
+
+.exp_label {
+  margin-left: 1rem;
+  margin-top: 2rem;
+  color: #000000;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.0015em;
+}
+
+/* Exp and Cvv code */
+.exp_cvv {
+  display: flex;
+  position: absolute;
+  gap: 2rem;
+}
+
+/* End of the code */
+
+.charges {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  line-height: 25px;
+  letter-spacing: 0.0015em;
+  color: #000000;
+  margin-top: 2rem;
+}
+
+.checkout_btn {
+  width: 100%;
+  height: 52px;
+  margin-top: 2rem;
+  color: white;
+  background: #6600e8;
+  border-radius: 10px;
+  border: none;
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  letter-spacing: 0.0015em;
+}
+
+.cvvex,
+.fname,
+.lname,
+.card_number {
+  margin: 1rem 0;
+}
+
+.cvvex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.cvvex label {
+  color: black;
+}
+
+.cv,
+.ex {
+  width: 48%;
+}
+
+.cv input,
+.ex input {
+  width: 100%;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 46.25rem) {
+
+  .checkout_overall {
+    width: 80%;
+  }
+  .fname,
+  .lname,
+  .card_number,
+  .exp_date,
+  .cv,
+  .ex {
+    font-size: 15px;
+  }
+
+  .checkout_btn {
+    width: 100%;
+  }
+
+  .input_expdate {
+    margin-left: -10.5rem;
+    margin-top: 3.8rem;
+  }
+
+  .input_cvv {
+    margin-left: 45rem;
+    margin-top: 0.7rem;
+  }
+
+  .cvv_label {
+    margin-left: 45rem;
+    margin-top: 2rem;
+  }
+
+  .exp_label {
+    margin-left: 7rem;
+    margin-top: 2rem;
+  }
 }
