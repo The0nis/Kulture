@@ -13,16 +13,14 @@ function Uploadbeatcloud() {
   const handleChange = (e) => {
     // console.log(e.target.files);
 
-    const { type } = e.target.files[0];
-    if (
-      type === "image/png" ||
-      type === "image/svg" ||
-      type === "image/jpeg" ||
-      type === "image/gif" ||
-      type === "image/tiff"
-    ) {
-      setValid(true);
-      setFile(URL.createObjectURL(e.target.files[0]));
+    const file = e.target.files[0];
+    if (file.type.startsWith("audio/")) {
+      const reader = new FileReader();
+      reader.onload = (event) => {
+        setFile(event.target.result);
+        setValid(true);
+      };
+      reader.readAsDataURL(file);
     }
   };
 
@@ -53,8 +51,8 @@ function Uploadbeatcloud() {
               </div>
             )}
 
-            {/* if a valid image have  been selected display  this */}
-            {valid && (
+            {/* if a valid file have  been selected display  this */}
+            {/* {valid && (
               <div
                 className={style.b_img}
                 style={{
@@ -63,10 +61,26 @@ function Uploadbeatcloud() {
                   backgroundReapet: "no-repeat",
                 }}
               ></div>
+            )} */}
+
+            {valid && (
+              <div className={style.musicContainer}>
+                <div className={style.musicInfo}>
+                  <p className={style.musicName}>{file.name}</p>
+                  {file.image && (
+                    <img src={file.image} className={style.musicImage} />
+                  )}
+                </div>
+                <audio
+                  controls
+                  className={style.audioPlayer}
+                  src={file}
+                ></audio>
+              </div>
             )}
           </div>
           <div className={style.input_field}>
-            <input type="file" onChange={handleChange} accept="image/*" />
+            <input type="file" onChange={handleChange} accept="audio/*" />
           </div>
         </label>
 
