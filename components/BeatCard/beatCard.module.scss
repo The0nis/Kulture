@@ -63,7 +63,12 @@
   font-size: 0.625rem;
   /* background-color: white; */
 }
-
+.beatCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .containerbeatcard1 {
   background: #434343;
   border-radius: 0.5rem;

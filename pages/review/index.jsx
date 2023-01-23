@@ -6,6 +6,7 @@ import BuyOptionBox from '../../components/Buyingoption/BuyOptionBox';
 function Review() {
   return (
     <Page>
+    
       <div className={styles.review}>
         <section className={styles.review__beat}>
           <h1>Review</h1>

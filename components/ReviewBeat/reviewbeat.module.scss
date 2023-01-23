@@ -146,3 +146,14 @@
     }
   }
 }
+
+
+// Media Query
+@media(min-width: 768px){
+  .reviewbeat{
+    position: relative;
+    max-width: 375px;
+    border-radius: 10px;
+    background: var(--clr-secondary);
+  }
+}
