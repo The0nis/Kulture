@@ -3,10 +3,13 @@ import Image from 'next/image';
 import smalltickcircle from '../../assets/smalltickcircle.svg';
 
 import React from 'react';
+import Page from '../Page';
 
 function WithdrawalAccount() {
   return (
-    // Overall container
+    <Page>
+
+    {/* // Overall container */}
     <div className={style.overallwrapper}>
       <div>
         <p className={style.withdrawalaccounttext1}>Withdrawal</p>
@@ -92,6 +95,8 @@ function WithdrawalAccount() {
         </div>
       </div>
     </div>
+
+    </Page>
   );
 }
 

@@ -13,7 +13,7 @@ function Page({ title, description, children }) {
         <title>Kulture</title>
         {description && <meta name="description" content={description} />}
       </Head>
-      <Navbar />
+      <Navbar/>
       {children}
       <Footer />
     </>
