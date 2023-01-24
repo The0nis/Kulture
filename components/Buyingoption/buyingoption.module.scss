@@ -73,27 +73,24 @@
 
   &__item {
     h3,
-    h4,
+    h6,
     p {
       color: var(--cl-light);
       text-align: start;
       margin-bottom: 0.5rem;
     }
 
-    h3 {
-      font-size: 1.25rem;
-      line-height: 25px;
-      letter-spacing: 0.005em;
+    h6 {
+      font-weight: 100;
     }
 
-    h4 {
+    h6 {
       font-size: 1rem;
       line-height: 20px;
     }
-
     p {
-      font-weight: 600;
-      font-size: 12px;
+      font-weight: 200;
+      font-size: 14px;
       line-height: 15px;
       letter-spacing: 0.0175em;
       color: var(--clr-f-light);
@@ -102,17 +99,16 @@
 
   .box {
     // width: 159px;
-    padding: 8px;
+    padding: 1rem;
     border-radius: 8px;
-    background: #434343;
     border-radius: 8px;
     transition: all 250ms ease;
     will-change: transition;
     display: inline-block;
     text-align: center;
+    font-weight: 100;
     cursor: pointer;
     position: relative;
-    font-weight: 900;
     &:active {
       transform: translateY(10px);
     }
@@ -121,16 +117,16 @@
       font-size: 1.5em;
       user-select: none;
       color: var(--cl-light);
-      // &:before {
-      //   font-size: 1.2em;
-      //   font-family: FontAwesome;
-      //   display: block;
-      //   transform: translateY(-80px);
-      //   opacity: 0;
-      //   transition: all 300ms ease-in-out;
-      //   font-weight: normal;
-      //   color: white;
-      // }
+      &:before {
+        font-size: 1.2em;
+        font-family: FontAwesome;
+        display: block;
+        transform: translateY(-80px);
+        opacity: 0;
+        transition: all 300ms ease-in-out;
+        font-weight: normal;
+        color: white;
+      }
     }
   }
   .frontend {
@@ -148,3 +144,5 @@
     }
   }
 }
+
+
