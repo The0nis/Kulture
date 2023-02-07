@@ -1,16 +1,19 @@
 .summarywrap {
   background: #1b1b1b;
   border-radius: 0.5rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   padding: 1rem;
 
-  h2 {
-    font-family: 'Montserrat';
-    font-weight: 700;
-    font-size: 1.5rem;
-    line-height: 29px;
-    letter-spacing: 0.0015em;
-    color: var(--cl-light);
+  .header{
+    margin-bottom: 1rem;
+    h2 {
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 29px;
+      letter-spacing: 0.0015em;
+      color: var(--cl-light);
+    }
   }
 }
 
@@ -35,13 +38,18 @@
 .summarytextwrapper {
   margin-top: 1.5rem;
 }
+
+// .detail{
+//   display: flex;
+
+// }
 .summarytext7 {
   color: grey;
   font-size: 1.15rem;
 }
 
-.summarytext8 {
-  color: blue;
+.summarytext8 a{
+  color: #0077DC;
 }
 
 .btncheckout1 {
@@ -62,7 +70,39 @@
   color: var(--cl-light);
 }
 
+.continueBtn button{
+  margin-top: 1.5rem;
+  justify-content: center;
+  background: #1B1B1B;
+  box-shadow: 0px 0px 50px rgba(229, 69, 255, 0.15);
+  border-radius: 8px;
+  padding: 1rem 0;
+  width: 100%;
+  border: 1px solid #F5DE78;
+
+  // Button text
+  font-family: 'Source Sans Pro';
+  font-size: 1.25rem;
+  line-height: 25px;
+  letter-spacing: 0.005em;
+  color: var(--cl-light);
+  margin-bottom: 1rem;
+}
+
 .summarytext9 {
   color: grey;
   font-size: 1.15rem;
+}
+
+@media (min-width: 64rem) {
+  .summarytext7{
+    display: none;
+  }
+
+.summarywrap{
+  margin-top: 7rem;
+}
+
+  
+  
 }

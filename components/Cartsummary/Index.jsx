@@ -1,11 +1,13 @@
-import style from './cartsummary.module.scss';
+import style from "./cartsummary.module.scss";
 
 function Cartsummary() {
   return (
     <div>
       {/* The overall container */}
       <div className={style.summarywrap}>
-        <h2>Cart summary</h2>
+        <div className={style.header}>
+          <h2>Cart summary</h2>
+        </div>
         <div className={style.numberwrapper}>
           <div className={style.summarytext2}>
             <p>Total Gross</p>
@@ -34,13 +36,15 @@ function Cartsummary() {
         </div>
 
         <div className={style.summarytextwrapper}>
-          <span className={style.summarytext7}>
-            you are checking out as @andybanny, <br />
-            not you?{' '}
-          </span>{' '}
-          <a href="#/" className={style.summarytext8}>
-            logout
-          </a>
+          <div className={style.detail}>
+            <span className={style.summarytext7}>
+              you are checking out as @andybanny, <br />
+              not you?{" "}
+            </span>{" "}
+            <span className={style.summarytext8}>
+              <a href="#/">Logout</a>
+            </span>
+          </div>
           {/* The starting of the button div */}
           <div className={style.btncheckout}>
             <button type="button" className={style.btncheckout1}>
@@ -55,6 +59,9 @@ function Cartsummary() {
           <a href="#" className={style.summarytext8}>
             logout
           </a> */}
+          <div className={style.continueBtn}>
+            <button type="button">Continue Shopping</button>
+          </div>
         </div>
       </div>
     </div>

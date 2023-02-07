@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { useFormik } from 'formik';
-import logo from '../../assets/logo.svg'
+import logo from '../../assets/logo.svg';
 import * as Yup from 'yup';
-import style from './Signup.module.css';
+import style from './Signup.module.scss';
 import Link from 'next/link';
 import { MdStarRate } from 'react-icons/md';
 import PasswordStrengthBar from 'react-password-strength-bar';
+import Footer from '../Footer/Index';
 
 const Signup = () => {
   const [inputValue, setInputValue] = useState('');
@@ -45,7 +46,6 @@ const Signup = () => {
     },
   });
 
-
   //Password strength call function
   const funcCall = (e) => {
     setInputValue(e.target.value);
@@ -53,15 +53,13 @@ const Signup = () => {
 
   return (
     <div className={style.signup_wrapper}>
-
       <div className={style.signup_header}>
         <div className={style.signup_logo}>
-          <Image src={logo} alt='logo' />
+          <Image src={logo} alt="logo" />
         </div>
         <div className={style.signup_text}>
-          <p>Kindly provide the details below to get started</p>
+          <h1>Kindly provide the details below to get started</h1>
         </div>
-
       </div>
       <div className={style.register_form}>
         <form onSubmit={formik.handleSubmit} className={style.forms}>
@@ -215,7 +213,7 @@ const Signup = () => {
           />
           <div className={style.notification}>
             <div>
-              <MdStarRate className={style.star}/>
+              <MdStarRate className={style.star} />
             </div>
             <div className={style.notification_content}>
               <p>
@@ -247,14 +245,13 @@ const Signup = () => {
               </Link>
             </label>
             <div>
-            <div className={style.invalid_feedbacks}>
-              {formik.errors.acceptTerms && formik.touched.acceptTerms
-                ? formik.errors.acceptTerms
-                : null}
-            </div>
+              <div className={style.invalid_feedbacks}>
+                {formik.errors.acceptTerms && formik.touched.acceptTerms
+                  ? formik.errors.acceptTerms
+                  : null}
+              </div>
             </div>
           </div>
-          
 
           <div className={style.form_group}>
             <button type="submit" className={style.btn}>
@@ -266,6 +263,7 @@ const Signup = () => {
           </div>
         </form>
       </div>
+      <Footer />
     </div>
   );
 };

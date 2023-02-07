@@ -11,7 +11,7 @@ function ReviewBeat() {
           <Image src={beatreview} alt="beat image" />
         </div>
         <div className={styles.reviewbeat__topleft}>
-          <h2>Type: Hip Hop</h2>
+          <h5>Type: Hip Hop</h5>
           <h3>Wintspread</h3>
           <p>Beat by Winifred @ohuly released on 23 November 2022</p>
         </div>

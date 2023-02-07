@@ -1,10 +1,10 @@
 .cloudtextdiv {
   position: relative;
-  margin-top: 2rem;
+  margin-top: 4rem;
 }
 .cloudtext {
   color: #ffffff;
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 700;
   font-size: 1.5rem;
@@ -40,25 +40,26 @@
 
 .cloudtext1 {
   color: #ffffff;
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.25rem;
   text-align: center;
   letter-spacing: 0.0015em;
-  margin-bottom: -1rem;
+  margin-top: -2rem;
 }
 
 .cloudtext2 {
   color: #ffffff;
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
   font-size: 0.875rem;
   line-height: 1.125rem;
   text-align: center;
   letter-spacing: 0.0015em;
+  margin-top: -4rem;
 }
 
 .upload_btn {
@@ -103,10 +104,18 @@
   opacity: 0;
 }
 
-.b_img {
+.musicContainer {
   width: 10rem;
-  height: 10rem;
   justify-content: center;
   border-radius: 5px;
   margin: auto;
+}
+
+.musicInfo{
+  margin: auto;
+}
+
+.musicImage{
+  width: 8rem;
+  height: 8rem;
 }

@@ -1,18 +1,15 @@
 /* slider wrapper */
 .wrapper {
-  width: calc(100vw - 10vw);
   height: auto;
-  /* margin: auto; */
   background-color: var(--cl-dark);
   color: var(--cl-light);
   position: relative;
 }
 
 /* carousel images overhead container */
-.splider_wrapper {
-  padding-bottom: 2rem;
+/* .splider_wrapper {
   display: flex;
-}
+} */
 
 .splide_image {
   border-radius: 1pc;
@@ -20,7 +17,6 @@
 
 .carousel_body {
   width: 100%;
-  margin: auto;
 }
 
 .header h4 {
