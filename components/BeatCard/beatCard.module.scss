@@ -63,7 +63,12 @@
   font-size: 0.625rem;
   /* background-color: white; */
 }
-
+.beatCardWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 .containerbeatcard1 {
   background: #1b1b1b;
   border-radius: 8px;
@@ -86,6 +91,7 @@
 
   @media (min-width: 767px) {
     h3 {
+
       font-family: "Source Sans Pro";
       font-size: 1.5rem;
       font-weight: 400;
@@ -94,6 +100,7 @@
     }
 
     p {
+
       font-family: "Source Sans Pro";
       font-size: 1.25rem;
       line-height: 25px;
@@ -298,18 +305,12 @@
   .footerwrapper {
     gap: 0.2rem;
   }
-  .footerwrappertext {
-    font-weight: normal;
-    font-size: 0.6rem;
-    margin-top: 16px;
-  }
 
   .footerwrappertext {
     font-family: "Source Sans Pro";
     color: #ffffff;
     font-weight: 400;
     font-size: 0.6rem;
-
     font-style: normal;
     font-size: 1.5rem;
     line-height: 30px;

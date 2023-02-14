@@ -7,8 +7,8 @@ function BuyOptionBox() {
       <label htmlFor="buyoption">
         <input type="radio" name="radio" id="buyoption" />
         <div className={`${styles.radiobox__item} ${styles.box}`}>
-          <h3>{option.name}</h3>
-          <h4>NGN {option.price}</h4>
+          <h6>{option.name}</h6>
+          <p>NGN {option.price}</p>
           <p>{option.format}</p>
         </div>
       </label>
