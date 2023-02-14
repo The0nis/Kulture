@@ -7,7 +7,7 @@ import "@fontsource/open-sans";
 function MyApp({ Component, pageProps }) {
   return (
     //<ApiProvider api={KultureApi}>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
    // </ApiProvider>
   );
 }
