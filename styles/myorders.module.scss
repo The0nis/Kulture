@@ -2,6 +2,13 @@
   padding: 0 1rem;
   margin-top: 24px;
   margin-bottom: 24px;
+
+  @media (min-width: 60.563em) {
+    max-width: 44.5rem;
+    margin: auto;
+    margin-top: 125px;
+    margin-bottom: 60px;
+  }
 }
 
 .withdrawalaccount {

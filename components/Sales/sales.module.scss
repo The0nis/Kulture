@@ -1,65 +1,98 @@
 .saleswrapper {
   width: 100%;
-  height: 18.375rem;
-  background: #434343;
+  // height: 349px;
+  background: #1b1b1b;
   border-radius: 0.5rem;
-  margin-top: 2.938rem;
+  padding: 1.5rem;
 }
 
 .salestextwrap {
-  padding-top: 1rem;
-  margin-left: 1.5rem;
   color: white;
 }
 
 .sales_image {
   display: flex;
-  gap: 12rem;
+  justify-content: space-between;
 }
 
 .salestext1 {
-  color: white;
+  h3 {
+    font-family: "Montserrat";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.0015em;
+    color: var(--cl-light);
+    margin-bottom: 2rem;
+  }
 }
-.salestext2 {
+.salestext2,
+.salestext4 {
   margin-bottom: 0.5rem;
-  margin-top: 1.5rem;
   color: white;
+
+  h4 {
+    font-family: "Source Sans Pro";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--clr-f-light);
+  }
 }
-.salestext3 {
-  color: white;
+
+.salestext3,
+.salestext5 {
+  p {
+    font-family: "Source Sans Pro";
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.0015em;
+    color: var(--cl-light);
+  }
+
+  @media (min-width: 60.563em) {
+    font-weight: 600;
+  }
 }
 
 .salestext4 {
   color: white;
   margin-top: 1.5rem;
 }
-.salestext5 {
-  margin-top: 1rem;
-  margin-bottom: 3rem;
-  color: white;
-}
 
 .overallsalesbtn {
   display: flex;
-  gap: 3.7rem;
+  justify-content: space-between;
+  margin-top: 32px;
+  @media (min-width: 60.563em) {
+    column-gap: 0.75rem;
+  }
+}
+
+.salesbtn1,
+.salesbtn2 {
+  background-color: var(--clr-primary);
+  color: var(--cl-light);
+  border-radius: 0.5rem;
+  padding: 0.875rem 0.8rem;
+
+  font-family: "Source Sans Pro";
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.0175em;
 }
 
 .salesbtn1 {
-  background-color: #6600e8;
-  color: white;
+  font-size: 16px;
   border: none;
-  border-radius: 0.5rem;
-  font-size: 0.5rem;
-  width: 6rem;
-  height: 2rem;
 }
 
 .salesbtn2 {
+  font-size: 12px;
   background-color: grey;
   color: white;
-  border-color: gold;
+  background-color: transparent;
+  border: 1px solid var(--clr-warning);
   border-radius: 0.5rem;
-  font-size: 0.5rem;
-  width: 6rem;
-  height: 2rem;
 }
