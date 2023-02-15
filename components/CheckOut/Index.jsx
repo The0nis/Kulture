@@ -52,6 +52,7 @@ function CheckOut() {
               ></input>
             </div>
 
+            {/* Expiration and Cvv code */}
             <div className={style.cvvex}>
               <div className={style.ex}>
                 <label htmlFor="exp">expiration date (MM/YY)</label>
@@ -70,7 +71,9 @@ function CheckOut() {
 
             {/* Button code */}
             <div>
-              <button className={style.checkout_btn}>Continue</button>
+              <button type="submit" className={style.checkout_btn}>
+                Continue
+              </button>
             </div>
           </div>
         </div>

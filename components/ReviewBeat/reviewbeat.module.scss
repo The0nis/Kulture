@@ -5,7 +5,7 @@
   }
 
   &__topleft {
-    h2,
+    h5,
     h3 {
       font-weight: 600;
       line-height: 25px;
@@ -13,9 +13,9 @@
       color: var(--cl-light);
     }
 
-    h2 {
-      font-size: 1.25rem;
-      margin-bottom: 18px;
+    h5 {
+      font-size: 1rem;
+      margin-bottom: 12px;
     }
 
     h3 {
@@ -35,7 +35,7 @@
     position: relative;
     width: 100%;
     border-radius: 10px;
-    background: var(--clr-secondary);
+    // background: var(--clr-secondary);
   }
 }
 
@@ -161,5 +161,16 @@
       background: #949494;
       border-radius: 10px;
     }
+  }
+}
+
+
+// Media Query
+@media(min-width: 768px){
+  .reviewbeat{
+    position: relative;
+    max-width: 375px;
+    border-radius: 10px;
+    background: var(--clr-secondary);
   }
 }

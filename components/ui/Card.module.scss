@@ -1,3 +1,14 @@
 .cardContainer {
   padding: 0 16px;
 }
+
+@media (min-width: 768px) {
+  .cardContainer {
+    padding: 0 116px;
+  }
+}
+@media (min-width: 1280px) {
+  .cardContainer {
+    padding: 0 192px;
+  }
+}
