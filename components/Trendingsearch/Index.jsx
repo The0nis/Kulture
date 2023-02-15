@@ -1,8 +1,8 @@
-import style from './trendingsearch.module.scss';
+import style from "./trendingsearch.module.scss";
 
-import React from 'react';
+import React from "react";
 
-function trendingsearch() {
+function Trendingsearch() {
   return (
     <div className={style.trendingsearchcontainer}>
       <div className={style.searchcontainer}>
@@ -36,4 +36,4 @@ function trendingsearch() {
   );
 }
 
-export default trendingsearch;
+export default Trendingsearch;
