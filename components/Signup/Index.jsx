@@ -8,8 +8,7 @@ import Link from "next/link";
 import { MdStarRate } from "react-icons/md";
 import PasswordStrengthBar from "react-password-strength-bar";
 import Footer from "../Footer/Index";
-// import { useRegisterMutation } from "../features/authApi";
-// just imported Register hook by emmy
+
 
 const Signup = () => {
   const [inputValue, setInputValue] = useState("");
@@ -30,17 +29,6 @@ const Signup = () => {
       .oneOf([Yup.ref("password"), null], "Confirm Password does not match"),
     acceptTerms: Yup.bool().oneOf([true], "Accept Terms is required"),
   });
-
-    // just created const useRegisterMutation by emmy
-  // const [
-  //   Register,
-  //   {
-  //     data: RegisterData,
-  //     isSuccess: isRegisterSuccess,
-  //     isError: isRegisterError,
-  //     error: RegisterError,
-  //   },
-  // ] = useRegisterMutation();
 
 
   const formik = useFormik({
@@ -65,21 +53,6 @@ const Signup = () => {
     setInputValue(e.target.value);
   };
 
-  // created onclick fn called handleSubmit by emmy
-  const handleSubmit = async() => {
-      if (email && password){
-        await Register ({email,password});
-      } else{
-          <h1>Please Fill all the Input Field</h1>
-      }
-  };
-
-  // created UseEffect by emmy
-  // useEffect(() => {
-  //   if (isRegisterSuccess) {
-  //     <h1>Sign up successfully</h1>
-  //   }
-  // }) 
 
   return (
     <div className={style.signup_wrapper}>
@@ -282,12 +255,10 @@ const Signup = () => {
               </div>
             </div>
           </div>
-                    {/* created the onclick fn by emmy */}
           <div className={style.form_group}>
             <button
               type="submit"
               className={style.btn}
-              onClick={() => handleSubmit}
             >
               Sign Up
             </button>
