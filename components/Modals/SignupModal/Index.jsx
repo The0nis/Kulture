@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import style from './Signup.module.css';
-import ModalWrap from '../ModalWrapper/ModalWrap';
-import { CgCloseO } from 'react-icons/cg';
-import { Formik } from 'formik';
+import React, { useState } from "react";
+import style from "./Signup.module.css";
+import ModalWrap from "../ModalWrapper/ModalWrap";
+import { CgCloseO } from "react-icons/cg";
+import { Formik } from "formik";
 
-function SignupModal() {
+function SignupModal({ toggleModal }) {
   // TOGGLE MENU
   const [toggle, setToggle] = useState(false);
 
@@ -15,37 +15,37 @@ function SignupModal() {
 
   //FORMS VALIDATION
   const initialValues = {
-    email: '',
-    password: '',
+    email: "",
+    password: "",
   };
 
   const validate = (values) => {
     let errors = {};
     const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
     if (!values.email) {
-      errors.email = 'Email is required';
+      errors.email = "Email is required";
     } else if (!regex.test(values.email)) {
-      errors.email = 'Invalid Email';
+      errors.email = "Invalid Email";
     }
     if (!values.password) {
-      errors.password = 'Password is required';
+      errors.password = "Password is required";
     } else if (values.password.length < 4) {
-      errors.password = 'Password too short';
+      errors.password = "Password too short";
     }
     return errors;
   };
 
   //GETTING FORM DATA
   const submitForm = (values) => {
-    // console.log(values);
+    console.log(values);
   };
 
   return (
     <ModalWrap>
       <div className={`${!toggle ? style.backdrop : style.hidebackdrop}`}>
-        <div className={style.navbar_close} onClick={toggleMenu}>
+        <div className={style.navbar_close} onClick={toggleModal}>
           <CgCloseO size={20} color="fff" className={style.close} />
-        </div> 
+        </div>
         <div className={style.text_wrap}>
           <h3>Signin</h3>
           <p>
@@ -137,7 +137,7 @@ function SignupModal() {
                     <button
                       type="submit"
                       className={`${
-                        !(dirty && isValid) ? style.disabled_btn : ''
+                        !(dirty && isValid) ? style.disabled_btn : ""
                       } ${style.btn}`}
                       disabled={!(dirty && isValid)}
                     >
@@ -152,6 +152,6 @@ function SignupModal() {
       </div>
     </ModalWrap>
   );
-};
+}
 
 export default SignupModal;
