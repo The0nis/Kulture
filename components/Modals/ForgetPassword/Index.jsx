@@ -3,7 +3,7 @@ import style from "./forgetpassword.module.css";
 import ModalWrap from "../ModalWrapper/ModalWrap";
 import { CgCloseO } from "react-icons/cg";
 import { Formik } from "formik";
-import { useGetPasswordMutation } from "../services/ForgetPasswordApi";
+import { useGetPasswordMutation } from "../../../state/services/ForgetPasswordApi";
 
 function SignupModal() {
   // TOGGLE MENU
@@ -44,9 +44,9 @@ function SignupModal() {
   };
 
   // API function and code
-  const [getpassword] = useGetPasswordMutation();
+  // const [getpassword] = useGetPasswordMutation();
 
-  const handleOtp = () => {};
+  // const handleOtp = () => {};
 
   return (
     <ModalWrap>
