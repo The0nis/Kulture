@@ -1,40 +1,42 @@
-import React, { useState } from 'react';
-import Image from 'next/image';
-import { useFormik } from 'formik';
-import logo from '../../assets/logo.svg';
-import * as Yup from 'yup';
-import style from './Signup.module.scss';
-import Link from 'next/link';
-import { MdStarRate } from 'react-icons/md';
-import PasswordStrengthBar from 'react-password-strength-bar';
-import Footer from '../Footer/Index';
+import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import { useFormik } from "formik";
+import logo from "../../assets/logo.svg";
+import * as Yup from "yup";
+import style from "./Signup.module.scss";
+import Link from "next/link";
+import { MdStarRate } from "react-icons/md";
+import PasswordStrengthBar from "react-password-strength-bar";
+import Footer from "../Footer/Index";
+
 
 const Signup = () => {
-  const [inputValue, setInputValue] = useState('');
+  const [inputValue, setInputValue] = useState("");
   const validationSchema = Yup.object().shape({
-    firstname: Yup.string().required('Firstname is required'),
-    lastname: Yup.string().required('Lastname is required'),
+    firstname: Yup.string().required("Firstname is required"),
+    lastname: Yup.string().required("Lastname is required"),
     username: Yup.string()
-      .required('Username is required')
-      .min(6, 'Username must be at least 6 characters')
-      .max(20, 'Username must not exceed 20 characters'),
-    email: Yup.string().required('Email is required').email('Email is invalid'),
+      .required("Username is required")
+      .min(6, "Username must be at least 6 characters")
+      .max(20, "Username must not exceed 20 characters"),
+    email: Yup.string().required("Email is required").email("Email is invalid"),
     password: Yup.string()
     .min(6, 'Password must be at least 6 characters')
     .required('Password is required'),
     confirmPassword: Yup.string()
-      .required('Confirm Password is required')
-      .oneOf([Yup.ref('password'), null], 'Confirm Password does not match'),
-    acceptTerms: Yup.bool().oneOf([true], 'Accept Terms is required'),
+      .required("Confirm Password is required")
+      .oneOf([Yup.ref("password"), null], "Confirm Password does not match"),
+    acceptTerms: Yup.bool().oneOf([true], "Accept Terms is required"),
   });
+
 
   const formik = useFormik({
     initialValues: {
-      fullname: '',
-      username: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
+      fullname: "",
+      username: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
       acceptTerms: false,
     },
     validationSchema,
@@ -49,6 +51,7 @@ const Signup = () => {
   const funcCall = (e) => {
     setInputValue(e.target.value);
   };
+
 
   return (
     <div className={style.signup_wrapper}>
@@ -73,7 +76,7 @@ const Signup = () => {
                     style.form_control +
                     (formik.errors.fullname && formik.touched.fullname
                       ? style.is_invalid
-                      : '')
+                      : "")
                   }`}
                   onChange={formik.handleChange}
                   value={formik.values.firstname}
@@ -97,7 +100,7 @@ const Signup = () => {
                     style.form_control +
                     (formik.errors.fullname && formik.touched.fullname
                       ? style.is_invalid
-                      : '')
+                      : "")
                   }`}
                   onChange={formik.handleChange}
                   value={formik.values.lastnamename}
@@ -122,7 +125,7 @@ const Signup = () => {
                   style.form_control +
                   (formik.errors.fullname && formik.touched.fullname
                     ? style.is_invalid
-                    : '')
+                    : "")
                 }`}
                 onChange={formik.handleChange}
                 value={formik.values.email}
@@ -145,7 +148,7 @@ const Signup = () => {
                   style.form_control +
                   (formik.errors.fullname && formik.touched.fullname
                     ? style.is_invalid
-                    : '')
+                    : "")
                 }`}
                 onChange={formik.handleChange}
                 value={formik.values.username}
@@ -168,7 +171,7 @@ const Signup = () => {
                   style.form_control +
                   (formik.errors.password && formik.touched.password
                     ? style.is_invalid
-                    : '')
+                    : "")
                 }`}
                 onChange={formik.handleChange || funcCall}
                 value={formik.values.password}
@@ -191,7 +194,7 @@ const Signup = () => {
                   style.form_control +
                   (formik.errors.confirmPassword && formik.touched.confirmPassword
                     ? style.is_invalid
-                    : '')
+                    : "")
                 }`}
                 onChange={formik.handleChange}
                 value={formik.values.confirmPassword}
@@ -231,14 +234,14 @@ const Signup = () => {
                   style.form_control +
                   (formik.errors.fullname && formik.touched.fullname
                     ? style.is_invalid
-                    : '')
+                    : "")
                 }`}
                 onChange={formik.handleChange}
                 value={formik.values.acceptTerms}
               />
             </div>
             <label htmlFor="acceptTerms" className={style.form_check_label}>
-              By checking the box, you accept Kulture’s{' '}
+              By checking the box, you accept Kulture’s{" "}
               <Link href="/#" className={style.terms}>
                 Terms and Conditions
               </Link>
@@ -251,14 +254,14 @@ const Signup = () => {
               </div>
             </div>
           </div>
-
           <div className={style.form_group}>
-            <button type="submit" className={style.btn}>
+            <button
+              type="submit"
+              className={style.btn}
+            >
               Sign Up
             </button>
-            {/* <button type="button" className="" onClick={formik.handleReset}>
-              Reset
-            </button> */}
+            
           </div>
         </form>
       </div>
