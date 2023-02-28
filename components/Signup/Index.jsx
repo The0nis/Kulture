@@ -76,9 +76,14 @@ const Signup = () => {
   });
 
   //Password strength call function
-  const funcCall = (e) => {
-    setInputValue(e.target.value);
-  };
+  // const funcCall = (e) => {
+  //   setInputValue(e.target.value);
+  // };
+
+  useEffect(() => {
+    setInputValue(formik.values.password);
+  }, [formik.values.password])
+  
 
   useEffect(() => {
     if (isSuccess) {
@@ -222,7 +227,6 @@ const Signup = () => {
                   onChange={formik.handleChange}
                   value={formik.values.password}
                 />
-                {console.log("formik----", formik.values.password)}
               </div>
               <div className={style.invalid_feedback}>
                 {formik.errors.password && formik.touched.password
