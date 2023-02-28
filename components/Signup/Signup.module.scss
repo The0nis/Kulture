@@ -140,6 +140,12 @@
   background: rgba(#1d3557, 0.8);
 }
 
+.spinner{
+  margin-top: 1rem;
+  margin-left: 50%;
+  height: calc(100vh - 20rem);
+}
+
 @media (min-width: 48rem) {
   .signup_wrapper {
     width: 80vw;
