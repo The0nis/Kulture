@@ -68,7 +68,7 @@ function SignupModal() {
         email,
         password,
         confirmPassword,
-      });
+      }).unwrap();
     } catch (error) {
       alert(error);
     }
