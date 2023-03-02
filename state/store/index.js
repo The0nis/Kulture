@@ -14,6 +14,7 @@ export const store = configureStore({
   },
   middleware: (getDefault) => getDefault().concat(UserApi.middleware),
   middleware: (getDefault) => getDefault().concat(RegisterApi.middleware),
+  middleware: (getDefault) => getDefault().concat(ForgetPasswordApi.middleware),
 });
 
 setupListeners(store.dispatch);

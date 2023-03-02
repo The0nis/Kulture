@@ -5,7 +5,7 @@ export const ForgetPasswordApi = createApi({
   reducerPath: "ForgetPasswordApi",
   tagTypes: ["forgetpassword"],
   endpoints: (builder) => ({
-    getpassword: builder.mutation({
+    getPassword: builder.mutation({
       query: (data) => {
         return {
           url: `forgetpassword`,
