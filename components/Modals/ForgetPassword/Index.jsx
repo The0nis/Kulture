@@ -1,9 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { nanoid } from "@reduxjs/toolkit";
 import style from "./forgetpassword.module.css";
 import ModalWrap from "../ModalWrapper/ModalWrap";
 import { CgCloseO } from "react-icons/cg";
 import { Formik } from "formik";
 import { useGetPasswordMutation } from "../../../state/services/ForgetPasswordApi";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function SignupModal() {
   // TOGGLE MENU
@@ -13,6 +16,8 @@ function SignupModal() {
   const toggleMenu = () => {
     setToggle(!toggle);
   };
+//CALLINNG THE HOOK FUNCTION AND ALSO  DESTRUCTING THE STATE
+  const [forgetpassword, { isLoading, error, isSuccess }] = useGetPasswordMutation();
 
   //FORMS VALIDATION
   const initialValues = {
@@ -21,6 +26,20 @@ function SignupModal() {
     password: "",
     confirmpassword: "",
   };
+
+  //TO HANDLE DIFFERENT STATE  OF THE RESPONSE
+  useEffect(() => {
+    if (isSuccess) {
+      toast.success("Sucessfully Registered");
+      formik.handleReset();
+    }
+    if (error) {
+      toast.error("An error occured");
+    }
+    if (isLoading) {
+      toast.info("In progress...");
+    }
+  }, [isSuccess, error]);
 
   const validate = (values) => {
     let errors = {};
@@ -39,8 +58,23 @@ function SignupModal() {
   };
 
   //GETTING FORM DATA
-  const submitForm = (values) => {
-    // console.log(values);
+  const submitForm = async (data) => {
+    //getting the form  data and sending it to  the backend
+    // alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
+    const {
+      email,
+      password,
+      confirmPassword,
+    } = data;
+    try {
+      await forgetpassword({
+        email,
+        password,
+        confirmPassword,
+      });
+    } catch (error) {
+      alert(error);
+    }
   };
 
   // API function and code
