@@ -16,8 +16,9 @@ function SignupModal() {
   const toggleMenu = () => {
     setToggle(!toggle);
   };
-//CALLINNG THE HOOK FUNCTION AND ALSO  DESTRUCTING THE STATE
-  const [forgetpassword, { isLoading, error, isSuccess }] = useGetPasswordMutation();
+  //CALLINNG THE HOOK FUNCTION AND ALSO  DESTRUCTING THE STATE
+  const [getPassword, { isLoading, error, isSuccess }] =
+    useGetPasswordMutation();
 
   //FORMS VALIDATION
   const initialValues = {
@@ -60,14 +61,10 @@ function SignupModal() {
   //GETTING FORM DATA
   const submitForm = async (data) => {
     //getting the form  data and sending it to  the backend
-    // alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
-    const {
-      email,
-      password,
-      confirmPassword,
-    } = data;
+    //alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
+    const { email, password, confirmPassword } = data;
     try {
-      await forgetpassword({
+      await getPassword({
         email,
         password,
         confirmPassword,
@@ -143,7 +140,7 @@ function SignupModal() {
                         <div>
                           <button
                             className={style.otp_btn}
-                            onClick={() => handleOtp()}
+                            // onClick={() => handleOtp()}
                           >
                             Send OTP
                           </button>
