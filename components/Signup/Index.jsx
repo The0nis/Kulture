@@ -68,7 +68,8 @@ const Signup = () => {
           password,
           confirmPassword,
           id,
-        });
+        }).unwrap();
+
       } catch (error) {
         alert(error);
       }
