@@ -6,7 +6,7 @@ import { setLoginUser } from "../slices/auth";
 
 // const { REACT_APP_BACKEND_API } = process.env;
 
-const baseUrl = `http://127.0.0.1:8000/api/`;
+const baseUrl = `http://100.26.218.150/api/`;
 
 export const baseQueryWithoutHeader = fetchBaseQuery({
   baseUrl: baseUrl,

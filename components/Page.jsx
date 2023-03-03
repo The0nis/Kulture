@@ -24,7 +24,7 @@ function Page({ title, description, children, type }) {
       <Navbar type={type} toggleModal={onShowModal} />
       <div
         style={{
-          display: showModal !== true ? "flex" : "none",
+          display: showModal === true ? "flex" : "none",
           maxWidth: "514px",
           height: "100vh",
           zIndex: "1000000",
