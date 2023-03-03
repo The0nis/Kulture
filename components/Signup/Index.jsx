@@ -20,9 +20,8 @@ const Signup = () => {
       .max(20, 'Username must not exceed 20 characters'),
     email: Yup.string().required('Email is required').email('Email is invalid'),
     password: Yup.string()
-      .required('Password is required')
-      .min(6, 'Password must be at least 6 characters')
-      .max(40, 'Password must not exceed 40 characters'),
+    .min(6, 'Password must be at least 6 characters')
+    .required('Password is required'),
     confirmPassword: Yup.string()
       .required('Confirm Password is required')
       .oneOf([Yup.ref('password'), null], 'Confirm Password does not match'),
@@ -42,7 +41,7 @@ const Signup = () => {
     // validateOnChange: false,
     // validateOnBlur: false,
     onSubmit: (data) => {
-      //   console.log(JSON.stringify(data, null, 2));
+      alert('SUCCESS!! :-)\n\n' + JSON.stringify(data, null, 4))
     },
   });
 
@@ -167,12 +166,12 @@ const Signup = () => {
                 type="password"
                 className={`${
                   style.form_control +
-                  (formik.errors.fullname && formik.touched.fullname
+                  (formik.errors.password && formik.touched.password
                     ? style.is_invalid
                     : '')
                 }`}
-                onChange={formik.handleChange && funcCall}
-                value={formik.values.password || inputValue}
+                onChange={formik.handleChange || funcCall}
+                value={formik.values.password}
               />
             </div>
             <div className={style.invalid_feedback}>
@@ -190,7 +189,7 @@ const Signup = () => {
                 type="password"
                 className={`${
                   style.form_control +
-                  (formik.errors.fullname && formik.touched.fullname
+                  (formik.errors.confirmPassword && formik.touched.confirmPassword
                     ? style.is_invalid
                     : '')
                 }`}
@@ -207,9 +206,9 @@ const Signup = () => {
           <PasswordStrengthBar
             password={inputValue}
             minLength={5}
-            onChangeScore={(score, feedback) => {
-              console.log(score, feedback);
-            }}
+            // onChangeScore={(score, feedback) => {
+            //   console.log(score, feedback);
+            // }}
           />
           <div className={style.notification}>
             <div>

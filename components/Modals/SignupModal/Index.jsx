@@ -3,10 +3,13 @@ import style from "./Signup.module.css";
 import ModalWrap from "../ModalWrapper/ModalWrap";
 import { CgCloseO } from "react-icons/cg";
 import { Formik } from "formik";
+import { useLoginUserMutation } from "../../../state/services/LoginApi";
 
 function SignupModal({ toggleModal }) {
   // TOGGLE MENU
   const [toggle, setToggle] = useState(false);
+  const [login, { data, isLoading, isSuccess, isError, error }] =
+    useLoginUserMutation();
 
   //   Toggle Function
   const toggleMenu = () => {
@@ -37,7 +40,7 @@ function SignupModal({ toggleModal }) {
 
   //GETTING FORM DATA
   const submitForm = (values) => {
-    console.log(values);
+    login(values);
   };
 
   return (
