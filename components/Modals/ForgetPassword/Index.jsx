@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { nanoid } from "@reduxjs/toolkit";
 import style from "./forgetpassword.module.css";
 import ModalWrap from "../ModalWrapper/ModalWrap";
 import { CgCloseO } from "react-icons/cg";
@@ -16,8 +15,9 @@ function SignupModal() {
   const toggleMenu = () => {
     setToggle(!toggle);
   };
-//CALLINNG THE HOOK FUNCTION AND ALSO  DESTRUCTING THE STATE
-  const [forgetpassword, { isLoading, error, isSuccess }] = useGetPasswordMutation();
+  //CALLINNG THE HOOK FUNCTION AND ALSO  DESTRUCTING THE STATE
+  const [getPassword, { isLoading, error, isSuccess }] =
+    useGetPasswordMutation();
 
   //FORMS VALIDATION
   const initialValues = {
@@ -60,18 +60,14 @@ function SignupModal() {
   //GETTING FORM DATA
   const submitForm = async (data) => {
     //getting the form  data and sending it to  the backend
-    // alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
-    const {
-      email,
-      password,
-      confirmPassword,
-    } = data;
+    //alert("SUCCESS!! :-)\n\n" + JSON.stringify(data, null, 4));
+    const { email, password, confirmPassword } = data;
     try {
-      await forgetpassword({
+      await getPassword({
         email,
         password,
         confirmPassword,
-      });
+      }).unwrap();
     } catch (error) {
       alert(error);
     }
@@ -85,6 +81,7 @@ function SignupModal() {
   return (
     <ModalWrap>
       <div className={`${!toggle ? style.backdrop : style.hidebackdrop}`}>
+        <ToastContainer/>
         <div className={style.navbar_close} onClick={toggleMenu}>
           <CgCloseO size={20} color="fff" className={style.close} />
         </div>
@@ -143,7 +140,7 @@ function SignupModal() {
                         <div>
                           <button
                             className={style.otp_btn}
-                            onClick={() => handleOtp()}
+                            // onClick={() => handleOtp()}
                           >
                             Send OTP
                           </button>
