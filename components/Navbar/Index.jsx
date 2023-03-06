@@ -147,13 +147,15 @@ function Navbar({ type, toggleModal }) {
                 {!hidden && (
                   <ul className={styles.navbar__signed}>
                     <li>
-                      <MdAccountCircle /> My Profile
+                      <MdAccountCircle />
+                      <Link href='/profile'>My Profile</Link>
                     </li>
                     <li>
-                      <MdStorefront /> My Orders
+                      <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
                     </li>
                     <li>
-                      <MdFavoriteBorder /> Save Orders
+                      <MdFavoriteBorder />
+                      <Link href='/SavedItem'>Saved Items</Link>
                     </li>
                     <li>
                       <MdLogout /> Logout
