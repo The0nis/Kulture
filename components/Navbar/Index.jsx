@@ -1,4 +1,5 @@
 import { useEffect, useState, useCallback } from "react";
+import Link from "next/link";
 import Image from "next/image";
 import { IoMenu } from "react-icons/io5";
 import { CgCloseO } from "react-icons/cg";
@@ -15,7 +16,6 @@ import {
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
 } from "react-icons/md";
-import SignupModal from "../Modals/SignupModal/Index";
 
 function Navbar({ type, toggleModal }) {
   // TOGGLE MENU
@@ -54,22 +54,23 @@ function Navbar({ type, toggleModal }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
-  console.log(type);
+  // console.log(type);
   return (
     <header className={styles.header_container}>
       <div className={`${styles.header} ${scrollTop ? styles.scrolled : ""}`}>
-        <div
+        <Link
+          href='/'
           className={`${
             type === "account" ? styles.header__acc_logo : styles.header__logo
           }`}
         >
-          <Image src={logo} alt="logo" />
+          <Image src={logo} alt='logo' />
           <p>Kulture</p>
-        </div>
+        </Link>
         {type === "account" ? null : (
           <div className={styles.navbar__hamburger} onClick={toggleMenu}>
             {/* React Icon */}
-            <IoMenu size={20} color="fff" />
+            <IoMenu size={20} color='fff' />
           </div>
         )}
       </div>
@@ -82,18 +83,21 @@ function Navbar({ type, toggleModal }) {
           {/* React Icon */}
           <div className={styles.navbar__close}>
             <div onClick={toggleMenu}>
-              <CgCloseO size={20} color="fff" />
+              <CgCloseO size={20} color='fff' />
             </div>
           </div>
           <ul>
             <li>
-              <IoHomeOutline /> Home
+              <IoHomeOutline />
+              <Link href='/'>Home</Link>
             </li>
             <li>
-              <IoCart /> Cart
+              <IoCart />
+              <Link href='/CartReview'>Cart</Link>
             </li>
             <li onClick={handleUpload} className={styles.navbar__upload}>
-              <TbFileUpload /> Upload{" "}
+              <TbFileUpload />
+              Upload
               {hide ? (
                 <span>
                   <MdKeyboardArrowDown className={styles.arrow} />
@@ -105,15 +109,21 @@ function Navbar({ type, toggleModal }) {
               )}
               {!hide && (
                 <ul className={styles.navbar__submenu}>
-                  <li>New Upload</li>
-                  <li>My Load</li>
+                  <li>
+                    <Link href='/uploadbeatview'>New Upload</Link>
+                  </li>
+                  <li>
+                    <Link href='/MyUploads'>My Uploads</Link>
+                  </li>
                 </ul>
               )}
             </li>
             {/* will apply rendering statement here */}
-            <li onClick={toggleModal}>Signin</li>
+            <li onClick={toggleModal}>
+              <Link href='/SignIn'>SignIn</Link>
+            </li>
             <li>
-              <button type="button">Signup</button>
+              <Link href='/Signup'>Signup</Link>
             </li>
 
             {/* to show if user is login */}
@@ -121,7 +131,7 @@ function Navbar({ type, toggleModal }) {
               <li onClick={handleUser}>
                 <Image
                   src={sample}
-                  alt="user-profile"
+                  alt='user-profile'
                   className={styles.navbar__profile}
                 />{" "}
                 Hi User-name{" "}

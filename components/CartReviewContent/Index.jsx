@@ -5,7 +5,7 @@ import playbtn from "../../assets/videocircle.svg";
 import items from "../DummyLists/cartCardList";
 import deleteMe from "../../assets/deletebtn.png";
 
-function CartReview() {
+function CartReviewContent() {
   const [savedLists, setSavedLists] = useState(items); // create a state variable and set it to the `datas` array
   const [datas, setDatas] = useState(items); // create a state variable to store the original list of items
   const [currentPage, setCurrentPage] = useState(1); // state variable to store the current page number
@@ -35,12 +35,12 @@ function CartReview() {
             <div className={styles.review__imaged}>
               <Image
                 src={picture}
-                alt="cover"
+                alt='cover'
                 className={styles.review__picture}
               />
               <Image
                 src={playbtn}
-                alt="play btn"
+                alt='play btn'
                 className={styles.review__playBtn}
               />
             </div>
@@ -75,7 +75,7 @@ function CartReview() {
                   </button>
                 </div>
                 <div className={styles.review__priceBtn}>
-                  <button type="submit">Review license</button>
+                  <button type='submit'>Review license</button>
                 </div>
               </div>
             </div>
@@ -89,4 +89,4 @@ function CartReview() {
   );
 }
 
-export default CartReview;
+export default CartReviewContent;
