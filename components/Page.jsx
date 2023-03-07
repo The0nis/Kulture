@@ -2,7 +2,7 @@
 import Head from "next/head";
 import { useState } from "react";
 import Footer from "./Footer/Index";
-import SignupModal from "./Modals/SignupModal/Index";
+import SignupModal from "./Signin/Index";
 import Navbar from "./Navbar/Index";
 
 function Page({ title, description, children, type }) {
@@ -19,7 +19,7 @@ function Page({ title, description, children, type }) {
       <Head>
         {/* <title>{editTitle ? `${editTitle}` : 'Kulture'}</title> */}
         <title>Kulture</title>
-        {description && <meta name='description' content={description} />}
+        {description && <meta name="description" content={description} />}
       </Head>
       <Navbar type={type} toggleModal={onShowModal} />
       <div

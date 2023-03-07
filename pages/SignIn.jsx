@@ -1,10 +1,10 @@
 import React from "react";
-import SignupModal from "../components/Modals/SignupModal/Index";
+import Signin from "../components/Signin/Index";
 
 const SignIn = () => {
   return (
     <div>
-      <SignupModal />
+      <Signin />
     </div>
   );
 };
