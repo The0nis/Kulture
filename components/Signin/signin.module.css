@@ -1,3 +1,9 @@
+.signin {
+  padding: 80px 1.875rem;
+  max-width: 47rem;
+  margin: auto;
+}
+
 .backdrop {
   color: var(--cl-light);
   padding-left: 1rem;
@@ -25,11 +31,18 @@
   font: var(--ft-h3);
   font-weight: 600;
   font-size: 1.5rem;
+  color: #fff;
+  margin-bottom: 16px;
 }
 .text_wrap p {
   line-height: 1.5rem;
   letter-spacing: 0.01rem;
   text-align: inherit;
+  color: #fff;
+}
+
+.text_wrap a {
+  color: var(--clr-info);
 }
 
 .sign_form {
@@ -46,6 +59,7 @@
 .input_label {
   font: var(--ft-btn-sm);
   font-weight: 400;
+  color: var(--cl-light);
 }
 .labels label {
   margin-top: 1rem;
@@ -62,7 +76,9 @@
   border: 1px solid var(--cl-light);
   border-radius: 5px;
   color: var(--clr-f-dark);
-  font-size: 0.8rem;
+  font-size: clamp(14px, 3vw, 16px);
+  outline: none;
+  padding-left: 1.188rem;
 }
 
 .password_wrap input[type="password"] {
