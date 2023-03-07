@@ -1,0 +1,21 @@
+.tabContainer {
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-between;
+  overflow-x: scroll;
+  gap: 1em;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+/* Hide scrollbar for Chrome, Safari and Opera */
+.tabContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.tabItem {
+  list-style: none;
+}
+
+.activeTab {
+  color: var(--clr-primary);
+}
