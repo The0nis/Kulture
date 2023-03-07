@@ -19,7 +19,7 @@ function Page({ title, description, children, type }) {
       <Head>
         {/* <title>{editTitle ? `${editTitle}` : 'Kulture'}</title> */}
         <title>Kulture</title>
-        {description && <meta name="description" content={description} />}
+        {description && <meta name='description' content={description} />}
       </Head>
       <Navbar type={type} toggleModal={onShowModal} />
       <div
@@ -32,7 +32,7 @@ function Page({ title, description, children, type }) {
           alignItems: "center",
         }}
       >
-        <SignupModal toggleModal={onShowModal} />
+        {/* <SignupModal toggleModal={onShowModal} /> */}
       </div>
       {children}
       <Footer type={type} />
