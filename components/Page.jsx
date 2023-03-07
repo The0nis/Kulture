@@ -4,6 +4,7 @@ import { useState } from "react";
 import Footer from "./Footer/Index";
 import SignupModal from "./Modals/SignupModal/Index";
 import Navbar from "./Navbar/Index";
+import style from "./Page.module.css";
 
 function Page({ title, description, children, type }) {
   // const editTitle = title?includes(undefined) ? 'loading...' : title;
@@ -32,9 +33,9 @@ function Page({ title, description, children, type }) {
           alignItems: "center",
         }}
       >
-        {/* <SignupModal toggleModal={onShowModal} /> */}
+        <SignupModal toggleModal={onShowModal} />
       </div>
-      {children}
+      <main className={style.pageContent}>{children}</main>
       <Footer type={type} />
     </>
   );
