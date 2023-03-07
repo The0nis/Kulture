@@ -13,8 +13,10 @@ import { useCreateUserMutation } from "../../state/services/RegisterApi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingSpinner from "../Modals/LoadingSpinner";
+import { useNavigate } from "react-router-dom";
 
 const Signup = () => {
+  const navigate =  useNavigate();
   const [createUser, { isLoading, error, isSuccess }] = useCreateUserMutation();
 
   const [inputValue, setInputValue] = useState("");
@@ -90,6 +92,7 @@ const Signup = () => {
     if (isSuccess) {
       toast.success("Sucessfully Registered");
       formik.handleReset();
+      navigate('/SignIn');
     }
     if (error) {
       toast.error("An error occured");
