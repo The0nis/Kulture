@@ -1,12 +1,13 @@
-import { useEffect, useState, useCallback } from 'react';
-import Image from 'next/image';
-import { IoMenu } from 'react-icons/io5';
-import { CgCloseO } from 'react-icons/cg';
-import styles from './Navbar.module.scss';
-import logo from '../../assets/logo.svg';
-import { IoHomeOutline, IoCart } from 'react-icons/io5';
-import { TbFileUpload } from 'react-icons/tb';
-import sample from '../../assets/miriam.svg';
+import { useEffect, useState, useCallback } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import { IoMenu } from "react-icons/io5";
+import { CgCloseO } from "react-icons/cg";
+import styles from "./Navbar.module.scss";
+import logo from "../../assets/logo.svg";
+import { IoHomeOutline, IoCart } from "react-icons/io5";
+import { TbFileUpload } from "react-icons/tb";
+import sample from "../../assets/miriam.svg";
 import {
   MdAccountCircle,
   MdStorefront,
@@ -14,9 +15,9 @@ import {
   MdFavoriteBorder,
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
-} from 'react-icons/md';
+} from "react-icons/md";
 
-function Navbar({ type }) {
+function Navbar({ type, toggleModal }) {
   // TOGGLE MENU
   const [toggle, setToggle] = useState(false);
 
@@ -48,51 +49,55 @@ function Navbar({ type }) {
       setScrollTop(e.target.documentElement.scrollTop);
       setScrolling(e.target.documentElement.scrollTop > scrollTop);
     };
-    window.addEventListener('scroll', onScroll);
+    window.addEventListener("scroll", onScroll);
 
-    return () => window.removeEventListener('scroll', onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
-  console.log(type);
+  // console.log(type);
   return (
     <header className={styles.header_container}>
-      <div className={`${styles.header} ${scrollTop ? styles.scrolled : ''}`}>
-        <div
+      <div className={`${styles.header} ${scrollTop ? styles.scrolled : ""}`}>
+        <Link
+          href='/'
           className={`${
-            type === 'account' ? styles.header__acc_logo : styles.header__logo
+            type === "account" ? styles.header__acc_logo : styles.header__logo
           }`}
         >
-          <Image src={logo} alt="logo" />
+          <Image src={logo} alt='logo' />
           <p>Kulture</p>
-        </div>
-        {type === 'account' ? null : (
+        </Link>
+        {type === "account" ? null : (
           <div className={styles.navbar__hamburger} onClick={toggleMenu}>
             {/* React Icon */}
-            <IoMenu size={20} color="fff" />
+            <IoMenu size={20} color='fff' />
           </div>
         )}
       </div>
-      {type === 'account' ? null : (
+      {type === "account" ? null : (
         <nav
           className={`${styles.navbar} ${styles.navbar_mobile} ${
-            toggle ? styles.openmobile : ''
+            toggle ? styles.openmobile : ""
           }`}
         >
           {/* React Icon */}
           <div className={styles.navbar__close}>
             <div onClick={toggleMenu}>
-              <CgCloseO size={20} color="fff" />
+              <CgCloseO size={20} color='fff' />
             </div>
           </div>
           <ul>
             <li>
-              <IoHomeOutline /> Home
+              <IoHomeOutline />
+              <Link href='/'>Home</Link>
             </li>
             <li>
-              <IoCart /> Cart
+              <IoCart />
+              <Link href='/CartReview'>Cart</Link>
             </li>
             <li onClick={handleUpload} className={styles.navbar__upload}>
-              <TbFileUpload /> Upload{' '}
+              <TbFileUpload />
+              Upload
               {hide ? (
                 <span>
                   <MdKeyboardArrowDown className={styles.arrow} />
@@ -104,15 +109,21 @@ function Navbar({ type }) {
               )}
               {!hide && (
                 <ul className={styles.navbar__submenu}>
-                  <li>New Upload</li>
-                  <li>My Load</li>
+                  <li>
+                    <Link href='/uploadbeatview'>New Upload</Link>
+                  </li>
+                  <li>
+                    <Link href='/MyUploads'>My Uploads</Link>
+                  </li>
                 </ul>
               )}
             </li>
             {/* will apply rendering statement here */}
-            <li>Signin</li>
+            <li onClick={toggleModal}>
+              <Link href='/SignIn'>SignIn</Link>
+            </li>
             <li>
-              <button type="submit">Signup</button>
+              <Link href='/Signup'>Signup</Link>
             </li>
 
             {/* to show if user is login */}
@@ -120,10 +131,10 @@ function Navbar({ type }) {
               <li onClick={handleUser}>
                 <Image
                   src={sample}
-                  alt="user-profile"
+                  alt='user-profile'
                   className={styles.navbar__profile}
-                />{' '}
-                Hi User-name{' '}
+                />{" "}
+                Hi User-name{" "}
                 {hidden ? (
                   <span>
                     <MdKeyboardArrowDown className={styles.arrow} />
@@ -136,13 +147,15 @@ function Navbar({ type }) {
                 {!hidden && (
                   <ul className={styles.navbar__signed}>
                     <li>
-                      <MdAccountCircle /> My Profile
+                      <MdAccountCircle />
+                      <Link href='/profile'>My Profile</Link>
                     </li>
                     <li>
-                      <MdStorefront /> My Orders
+                      <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
                     </li>
                     <li>
-                      <MdFavoriteBorder /> Save Orders
+                      <MdFavoriteBorder />
+                      <Link href='/SavedItem'>Saved Items</Link>
                     </li>
                     <li>
                       <MdLogout /> Logout
