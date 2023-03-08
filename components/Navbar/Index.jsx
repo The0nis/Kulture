@@ -1,4 +1,4 @@
-import { useEffect, useState, useCallback } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IoMenu } from "react-icons/io5";
@@ -7,7 +7,6 @@ import styles from "./Navbar.module.scss";
 import logo from "../../assets/logo.svg";
 import { IoHomeOutline, IoCart } from "react-icons/io5";
 import { TbFileUpload } from "react-icons/tb";
-import sample from "../../assets/miriam.svg";
 import { FiSearch } from "react-icons/fi";
 import {
   MdAccountCircle,
@@ -81,6 +80,8 @@ function Navbar({ type, toggleModal }) {
             </div>
           )}
         </div>
+
+        {/* Navigation for Mobile Screens */}
         {type === "account" ? null : (
           <nav
             className={`${styles.navbar} ${styles.navbar_mobile} ${
@@ -93,7 +94,7 @@ function Navbar({ type, toggleModal }) {
                 <CgCloseO size={20} color='fff' />
               </div>
             </div>
-            <ul>
+            <ul className={styles.linkWrapperMobile}>
               <li className={styles.listItemMobile}>
                 <IoHomeOutline />
                 <Link href='/'>Home</Link>
@@ -103,15 +104,17 @@ function Navbar({ type, toggleModal }) {
                 <Link href='/CartReview'>Cart</Link>
               </li>
               <li onClick={handleUpload} className={styles.navbar__upload}>
-                <TbFileUpload />
-                Upload
+                <span className={styles.uploadLinkWrapper}>
+                  <TbFileUpload />
+                  Upload
+                </span>
                 {hide ? (
-                  <span>
-                    <MdKeyboardArrowDown className={styles.arrow} />
+                  <span className={styles.arrow}>
+                    <MdKeyboardArrowDown />
                   </span>
                 ) : (
-                  <span>
-                    <MdKeyboardArrowUp className={styles.arrow} />
+                  <span className={styles.arrow}>
+                    <MdKeyboardArrowUp />
                   </span>
                 )}
                 {!hide && (
@@ -126,10 +129,10 @@ function Navbar({ type, toggleModal }) {
                 )}
               </li>
               {/* will apply rendering statement here */}
-              <li onClick={toggleModal}>
+              <li onClick={toggleModal} className={styles.signinListItemMobile}>
                 <Link href='/SignIn'>SignIn</Link>
               </li>
-              <li>
+              <li className={styles.signupListItemMobile}>
                 <Link href='/Signup'>Signup</Link>
               </li>
 
@@ -142,8 +145,8 @@ function Navbar({ type, toggleModal }) {
                     className={styles.navbar__profile}
                     width={40}
                     height={40}
-                  />{" "}
-                  Hi User-name{" "}
+                  />
+                  Hi, Muyiwa
                   {hidden ? (
                     <span>
                       <MdKeyboardArrowDown className={styles.arrow} />
@@ -219,9 +222,10 @@ function Navbar({ type, toggleModal }) {
               <li onClick={handleUser} className={styles.listItem}>
                 <div className={styles.userImgWrapper}>
                   <Image
-                    src={sample}
+                    src='https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZhY2V8ZW58MHx8MHx8&w=1000&q=80'
                     alt='user-profile'
-                    className={styles.navbar__profile}
+                    width={40}
+                    height={40}
                   />
                 </div>
                 Hi, Adekunle {/* <ul className={styles.navbar__signed}> */}
