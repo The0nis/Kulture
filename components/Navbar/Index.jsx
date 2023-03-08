@@ -8,6 +8,7 @@ import logo from "../../assets/logo.svg";
 import { IoHomeOutline, IoCart } from "react-icons/io5";
 import { TbFileUpload } from "react-icons/tb";
 import sample from "../../assets/miriam.svg";
+import { FiSearch } from "react-icons/fi";
 import {
   MdAccountCircle,
   MdStorefront,
@@ -57,85 +58,54 @@ function Navbar({ type, toggleModal }) {
   // console.log(type);
   return (
     <header className={styles.header_container}>
-      <div className={`${styles.header} ${scrollTop ? styles.scrolled : ""}`}>
-        <Link
-          href='/'
-          className={`${
-            type === "account" ? styles.header__acc_logo : styles.header__logo
-          }`}
-        >
-          <Image src={logo} alt='logo' />
-          <p>Kulture</p>
-        </Link>
-        {type === "account" ? null : (
-          <div className={styles.navbar__hamburger} onClick={toggleMenu}>
-            {/* React Icon */}
-            <IoMenu size={20} color='fff' />
-          </div>
-        )}
-      </div>
-      {type === "account" ? null : (
-        <nav
-          className={`${styles.navbar} ${styles.navbar_mobile} ${
-            toggle ? styles.openmobile : ""
-          }`}
-        >
-          {/* React Icon */}
-          <div className={styles.navbar__close}>
-            <div onClick={toggleMenu}>
-              <CgCloseO size={20} color='fff' />
+      <div
+        className={`${styles.headerWrapper} ${styles.header} ${
+          scrollTop ? styles.scrolled : ""
+        }`}
+      >
+        <div className={styles.headerBackground}></div>
+        <div className={`${styles.logo} `}>
+          <Link
+            href='/'
+            className={`${
+              type === "account" ? styles.header__acc_logo : styles.header__logo
+            }`}
+          >
+            <Image src={logo} alt='logo' />
+            <p>Kulture</p>
+          </Link>
+          {type === "account" ? null : (
+            <div className={styles.navbar__hamburger} onClick={toggleMenu}>
+              {/* React Icon */}
+              <IoMenu size={20} color='fff' />
             </div>
-          </div>
-          <ul>
-            <li>
-              <IoHomeOutline />
-              <Link href='/'>Home</Link>
-            </li>
-            <li>
-              <IoCart />
-              <Link href='/CartReview'>Cart</Link>
-            </li>
-            <li onClick={handleUpload} className={styles.navbar__upload}>
-              <TbFileUpload />
-              Upload
-              {hide ? (
-                <span>
-                  <MdKeyboardArrowDown className={styles.arrow} />
-                </span>
-              ) : (
-                <span>
-                  <MdKeyboardArrowUp className={styles.arrow} />
-                </span>
-              )}
-              {!hide && (
-                <ul className={styles.navbar__submenu}>
-                  <li>
-                    <Link href='/uploadbeatview'>New Upload</Link>
-                  </li>
-                  <li>
-                    <Link href='/MyUploads'>My Uploads</Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-            {/* will apply rendering statement here */}
-            <li onClick={toggleModal}>
-              <Link href='/SignIn'>SignIn</Link>
-            </li>
-            <li>
-              <Link href='/Signup'>Signup</Link>
-            </li>
-
-            {/* to show if user is login */}
-            <ul className={styles.navbar__signed}>
-              <li onClick={handleUser}>
-                <Image
-                  src={sample}
-                  alt='user-profile'
-                  className={styles.navbar__profile}
-                />{" "}
-                Hi User-name{" "}
-                {hidden ? (
+          )}
+        </div>
+        {type === "account" ? null : (
+          <nav
+            className={`${styles.navbar} ${styles.navbar_mobile} ${
+              toggle ? styles.openmobile : ""
+            }`}
+          >
+            {/* React Icon */}
+            <div className={styles.navbar__close}>
+              <div onClick={toggleMenu}>
+                <CgCloseO size={20} color='fff' />
+              </div>
+            </div>
+            <ul>
+              <li className={styles.listItemMobile}>
+                <IoHomeOutline />
+                <Link href='/'>Home</Link>
+              </li>
+              <li className={styles.listItemMobile}>
+                <IoCart />
+                <Link href='/CartReview'>Cart</Link>
+              </li>
+              <li onClick={handleUpload} className={styles.navbar__upload}>
+                <TbFileUpload />
+                Upload
+                {hide ? (
                   <span>
                     <MdKeyboardArrowDown className={styles.arrow} />
                   </span>
@@ -144,29 +114,150 @@ function Navbar({ type, toggleModal }) {
                     <MdKeyboardArrowUp className={styles.arrow} />
                   </span>
                 )}
-                {!hidden && (
-                  <ul className={styles.navbar__signed}>
+                {!hide && (
+                  <ul className={styles.navbar__submenu}>
                     <li>
-                      <MdAccountCircle />
-                      <Link href='/profile'>My Profile</Link>
+                      <Link href='/uploadbeatview'>New Upload</Link>
                     </li>
                     <li>
-                      <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
-                    </li>
-                    <li>
-                      <MdFavoriteBorder />
-                      <Link href='/SavedItem'>Saved Items</Link>
-                    </li>
-                    <li>
-                      <MdLogout /> Logout
+                      <Link href='/MyUploads'>My Uploads</Link>
                     </li>
                   </ul>
                 )}
               </li>
+              {/* will apply rendering statement here */}
+              <li onClick={toggleModal}>
+                <Link href='/SignIn'>SignIn</Link>
+              </li>
+              <li>
+                <Link href='/Signup'>Signup</Link>
+              </li>
+
+              {/* to show if user is login */}
+              <ul className={styles.navbar__signed}>
+                <li onClick={handleUser}>
+                  <Image
+                    src='https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZhY2V8ZW58MHx8MHx8&w=1000&q=80'
+                    alt='user-profile'
+                    className={styles.navbar__profile}
+                    width={40}
+                    height={40}
+                  />{" "}
+                  Hi User-name{" "}
+                  {hidden ? (
+                    <span>
+                      <MdKeyboardArrowDown className={styles.arrow} />
+                    </span>
+                  ) : (
+                    <span>
+                      <MdKeyboardArrowUp className={styles.arrow} />
+                    </span>
+                  )}
+                  {!hidden && (
+                    <ul className={styles.navbar__signed}>
+                      <li>
+                        <MdAccountCircle />
+                        <Link href='/profile'>My Profile</Link>
+                      </li>
+                      <li>
+                        <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
+                      </li>
+                      <li>
+                        <MdFavoriteBorder />
+                        <Link href='/SavedItem'>Saved Items</Link>
+                      </li>
+                      <li>
+                        <MdLogout /> Logout
+                      </li>
+                    </ul>
+                  )}
+                </li>
+              </ul>
             </ul>
-          </ul>
-        </nav>
-      )}
+          </nav>
+        )}
+
+        {/* Large Screens Navigation */}
+        <div className={styles.navDesktopWrapper}>
+          <div className={styles.searchContainer}>
+            <label htmlFor='search'>
+              <div className={styles.inputWrapper}>
+                <input
+                  id='search'
+                  placeholder='Search'
+                  className={styles.input}
+                />{" "}
+                <FiSearch />
+              </div>
+            </label>
+          </div>
+          <nav className={styles.navbar_desktop}>
+            <ul className={styles.linkWrapper_desktop}>
+              <li className={styles.listItem}>
+                <IoHomeOutline size={24} />
+                <Link href='/'>Home</Link>
+              </li>
+              <li className={styles.listItem}>
+                <IoCart size={24} />
+                <Link href='/CartReview'>Cart</Link>
+              </li>
+              <li
+                onClick={handleUpload}
+                className={`${styles.listItem} ${styles.uploadListItem}`}
+              >
+                <TbFileUpload size={24} color='white' />
+                Upload
+              </li>
+              {/* <li onClick={toggleModal}>
+              <Link href='/SignIn'>SignIn</Link>
+            </li>
+            <li>
+              <Link href='/Signup'>Signup</Link>
+            </li> */}
+
+              {/* to show if user is login */}
+              <li onClick={handleUser} className={styles.listItem}>
+                <div className={styles.userImgWrapper}>
+                  <Image
+                    src={sample}
+                    alt='user-profile'
+                    className={styles.navbar__profile}
+                  />
+                </div>
+                Hi, Adekunle {/* <ul className={styles.navbar__signed}> */}
+                {/* {hidden ? (
+                    <span>
+                      <MdKeyboardArrowDown className={styles.arrow} />
+                    </span>
+                  ) : (
+                    <span>
+                      <MdKeyboardArrowUp className={styles.arrow} />
+                    </span>
+                  )} */}
+                {/* {!hidden && (
+                    <ul className={styles.navbar__signed}>
+                      <li>
+                        <MdAccountCircle />
+                        <Link href='/profile'>My Profile</Link>
+                      </li>
+                      <li>
+                        <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
+                      </li>
+                      <li>
+                        <MdFavoriteBorder />
+                        <Link href='/SavedItem'>Saved Items</Link>
+                      </li>
+                      <li>
+                        <MdLogout /> Logout
+                      </li>
+                    </ul>
+                  )}
+              </ul> */}
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 }

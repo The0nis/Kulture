@@ -1,18 +1,46 @@
 .header_container {
   overflow: hidden;
+  position: relative;
+}
+.headerWrapper {
+  display: flex;
+  background-color: transparent;
+  padding: 32px;
+}
+.headerBackground {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(243, 39, 161, 1) 25%,
+    rgba(102, 0, 232, 1) 50%,
+    rgba(0, 0, 0, 1) 100%
+  );
+  backdrop-filter: blur(38px);
+  filter: blur(450px);
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .header {
-  padding: 0 1.75rem;
+  // padding: 0 1.75rem;
   display: flex;
   position: fixed;
   width: 100%;
-  margin-top: 1rem;
+  // margin-top: 1rem;
   z-index: 999;
-
   align-items: center;
   justify-content: space-between;
-
   &__logo,
   &__acc_logo {
     display: flex;
@@ -25,7 +53,6 @@
       color: var(--cl-light);
     }
   }
-
   &__acc_logo {
     p {
       color: var(--clr-primary);
@@ -37,16 +64,21 @@
     // margin-left: 1rem;
   }
 }
-.scrolled {
-  background-color: black;
-  height: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  margin-top: 0;
-}
+// .scrolled {
+//   background-color: black;
+//   // height: 2rem;
+//   // padding-top: 2rem;
+//   // padding-bottom: 2rem;
+//   // margin-top: 0;
+// }
 
 .navbar {
-  position: relative;
+  // position: relative;
+  .listItemMobile {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+  }
 
   &__submenu {
     font-size: 1rem;
@@ -87,12 +119,14 @@
     }
   }
   &__close {
-    display: flex;
-    justify-content: flex-end;
+    // display: flex;
+    // justify-content: flex-end;
     // padding: 12px;
-    position: relative;
-    top: 20px;
-    right: 50px;
+    // position: relative;
+    // top: 20px;
+    // right: 50px;
+
+    // position: absolute;
 
     div {
       cursor: pointer;
@@ -128,14 +162,116 @@
 .openmobile {
   background: var(--cl-dark);
   width: 100vw;
-  display: block;
+  display: flex;
+  flex-direction: row-reverse;
   position: absolute;
+  justify-content: space-between;
+  top: 0;
+  left: 0;
   height: 100vh;
-  z-index: 2000;
-  padding-left: 24px;
-  margin-top: -0.5rem;
+  z-index: 999;
+  // padding-left: 24px;
+  padding: 12px 12px 12px 26px;
+  // margin-top: -0.5rem;
+  ul {
+    margin-top: 28px;
+  }
 }
 
 .arrow {
   font-size: 2rem;
+}
+.navDesktopWrapper {
+  display: none;
+}
+
+// Large Screen
+@media (min-width: 1024px) {
+  .navbar,
+  .navbar__hamburger,
+  .navbar_mobile,
+  .openmobile {
+    display: none;
+  }
+  .headerWrapper {
+    gap: 58px;
+    padding: 51px 70px 95px 70px;
+  }
+  .logo {
+    display: block;
+    flex-basis: auto;
+    flex-grow: 0;
+    width: auto;
+  }
+  .navDesktopWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 0;
+    flex-grow: 1;
+    gap: 46px;
+  }
+  .searchContainer {
+    flex-basis: auto;
+    flex-grow: 0;
+    width: 297px;
+  }
+  .inputWrapper {
+    border: 1px solid #fff;
+    display: inline-flex;
+    justify-content: space-between;
+    padding: 1em;
+    border-radius: 0.5em;
+    width: 100%;
+  }
+  .inputWrapper .input {
+    background-color: transparent;
+    border: 0;
+    font-size: 1rem;
+    color: #fff;
+    outline: none;
+  }
+  .input::placeholder {
+    color: #fff;
+  }
+  .navbar_desktop {
+    flex-basis: 0;
+    flex-grow: 1;
+  }
+  .linkWrapper_desktop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .listItem {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .uploadListItem {
+    background-color: var(--clr-accent);
+    color: var(--clr-primary);
+    padding: 9px;
+    border-radius: 0.5rem;
+    font-weight: 600;
+  }
+  .userImgWrapper {
+    display: flex;
+  }
+  .userImgWrapper img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .headerWrapper {
+    gap: 58px;
+    padding: 51px 118px 95px 118px;
+  }
+  .navDesktopWrapper {
+    gap: 92px;
+  }
 }
