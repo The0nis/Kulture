@@ -1,8 +1,10 @@
 import style from "./uploadbeatcloud.module.scss";
+import Link from "next/link";
 import Image from "next/image";
 import cloud from "../../assets/cloud.svg";
 import Page from "../Page";
 import { useState } from "react";
+import { navigateBack } from "../../util";
 
 function Uploadbeatcloud() {
   //declaring state for the input files
@@ -36,7 +38,7 @@ function Uploadbeatcloud() {
             {!valid && (
               <div className={style.wrap}>
                 <div className={style.cloud_image}>
-                  <Image src={cloud} alt="musicapp" />
+                  <Image src={cloud} alt='musicapp' />
                 </div>
 
                 <div className={style.cloudtextdiv}>
@@ -80,13 +82,17 @@ function Uploadbeatcloud() {
             )}
           </div>
           <div className={style.input_field}>
-            <input type="file" onChange={handleChange} accept="audio/*" />
+            <input type='file' onChange={handleChange} accept='audio/*' />
           </div>
         </label>
 
         <div className={style.upload_btn}>
-          <button className={style.back_btn}>Back</button>
-          <button className={style.next_btn}>Next</button>
+          <button className={style.back_btn} onClick={navigateBack}>
+            Back
+          </button>
+          <button className={style.next_btn}>
+            <Link href='/Uploadbeat'>Next</Link>
+          </button>
         </div>
       </Page>
     </div>
