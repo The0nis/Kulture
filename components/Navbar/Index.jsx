@@ -204,19 +204,29 @@ function Navbar({ type, toggleModal }) {
                 <IoCart size={24} />
                 <Link href='/CartReview'>Cart</Link>
               </li>
-              <li
-                onClick={handleUpload}
-                className={`${styles.listItem} ${styles.uploadListItem}`}
-              >
-                <TbFileUpload size={24} color='white' />
-                Upload
+              <li onClick={handleUpload} className={`${styles.listItem} `}>
+                <button className={styles.uploadListItem}>
+                  <TbFileUpload size={24} color='white' />
+                  Upload
+                </button>
+                {!hide && (
+                  <ul className={styles.uploadOptionsDesktop}>
+                    <li className={styles.listItem}>
+                      <Link href='/uploadbeatview'>New Upload</Link>
+                    </li>
+                    <li className={styles.listItem}>
+                      <Link href='/MyUploads'>My Uploads</Link>
+                    </li>
+                  </ul>
+                )}
               </li>
-              {/* <li onClick={toggleModal}>
-              <Link href='/SignIn'>SignIn</Link>
-            </li>
-            <li>
-              <Link href='/Signup'>Signup</Link>
-            </li> */}
+
+              <li onClick={toggleModal}>
+                <Link href='/SignIn'>SignIn</Link>
+              </li>
+              <li className={styles.signupListItemDesktop}>
+                <Link href='/Signup'>Signup</Link>
+              </li>
 
               {/* to show if user is login */}
               <li onClick={handleUser} className={styles.listItem}>
@@ -228,35 +238,34 @@ function Navbar({ type, toggleModal }) {
                     height={40}
                   />
                 </div>
-                Hi, Adekunle {/* <ul className={styles.navbar__signed}> */}
-                {/* {hidden ? (
-                    <span>
-                      <MdKeyboardArrowDown className={styles.arrow} />
-                    </span>
-                  ) : (
-                    <span>
-                      <MdKeyboardArrowUp className={styles.arrow} />
-                    </span>
-                  )} */}
-                {/* {!hidden && (
-                    <ul className={styles.navbar__signed}>
-                      <li>
-                        <MdAccountCircle />
-                        <Link href='/profile'>My Profile</Link>
-                      </li>
-                      <li>
-                        <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
-                      </li>
-                      <li>
-                        <MdFavoriteBorder />
-                        <Link href='/SavedItem'>Saved Items</Link>
-                      </li>
-                      <li>
-                        <MdLogout /> Logout
-                      </li>
-                    </ul>
-                  )}
-              </ul> */}
+                Hi, Adekunle
+                {hidden ? (
+                  <span className={styles.arrow}>
+                    <MdKeyboardArrowDown />
+                  </span>
+                ) : (
+                  <span className={styles.arrow}>
+                    <MdKeyboardArrowUp />
+                  </span>
+                )}
+                {!hidden && (
+                  <ul className={styles.navbar_desktop__signedIn}>
+                    <li>
+                      <MdAccountCircle />
+                      <Link href='/profile'>My Profile</Link>
+                    </li>
+                    <li>
+                      <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
+                    </li>
+                    <li>
+                      <MdFavoriteBorder />
+                      <Link href='/SavedItem'>Saved Items</Link>
+                    </li>
+                    <li>
+                      <MdLogout /> Logout
+                    </li>
+                  </ul>
+                )}
               </li>
             </ul>
           </nav>
