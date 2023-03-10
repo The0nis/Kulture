@@ -1,11 +1,12 @@
 /* eslint-disable node/no-missing-import */
-import { FiSearch } from 'react-icons/fi';
-import Page from '../components/Page';
-import styles from '../styles/Home.module.scss';
-import CarouselSlider from '../components/CarouselSlider/Index';
-import BeatCard from '../components/BeatCard/BeatCard';
-import TrendingSearch from '../components/Trendingsearch/Index';
-import PopularProducers from '../components/PopularProducer/Index';
+import Link from "next/link";
+import { FiSearch } from "react-icons/fi";
+import Page from "../components/Page";
+import styles from "../styles/Home.module.scss";
+import CarouselSlider from "../components/CarouselSlider/Index";
+import BeatCard from "../components/BeatCard/BeatCard";
+import TrendingSearch from "../components/Trendingsearch/Index";
+import PopularProducers from "../components/PopularProducer/Index";
 
 export default function Home() {
   return (
@@ -18,13 +19,15 @@ export default function Home() {
             <p>Preview, upload, buy beats and vocals for you projects</p>
             <div className={styles.hero__search_group}>
               <div className={styles.hero__search}>
-                <input type="text" placeholder="Search" />
+                <input type='text' placeholder='Search' />
                 <div className={styles.icon}>
-                  <FiSearch size={20} color="#fff" />
+                  <FiSearch size={20} color='#fff' />
                 </div>
               </div>
               <div className={styles.btn}>
-                <button type="button">UPLOAD YOUR BEATS</button>
+                <button type='button'>
+                  <Link href='/uploadbeatview'>UPLOAD YOUR BEATS</Link>
+                </button>
               </div>
             </div>
           </div>
