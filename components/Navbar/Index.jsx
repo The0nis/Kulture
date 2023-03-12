@@ -62,7 +62,7 @@ function Navbar({ type, toggleModal }) {
           scrollTop ? styles.scrolled : ""
         }`}
       >
-        <div className={styles.headerBackground}></div>
+        <div className={`${styles.headerBackground}`}></div>
         <div className={`${styles.logo} `}>
           <Link
             href='/'
@@ -221,15 +221,15 @@ function Navbar({ type, toggleModal }) {
                 )}
               </li>
 
-              <li onClick={toggleModal}>
+              {/* <li onClick={toggleModal}>
                 <Link href='/SignIn'>SignIn</Link>
               </li>
               <li className={styles.signupListItemDesktop}>
                 <Link href='/Signup'>Signup</Link>
-              </li>
+              </li> */}
 
               {/* to show if user is login */}
-              <li onClick={handleUser} className={styles.listItem}>
+              <li onClick={handleUser} className={styles.userListItem}>
                 <div className={styles.userImgWrapper}>
                   <Image
                     src='https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZhY2V8ZW58MHx8MHx8&w=1000&q=80'

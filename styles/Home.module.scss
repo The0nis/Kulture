@@ -6,7 +6,7 @@
     color: var(--cl-light);
   }
   .hero {
-    background-image: url('/unsplash_YrtFlrLo2DQ.png');
+    background-image: url("/unsplash_YrtFlrLo2DQ.png");
     padding: 4.5rem 2rem;
     background-position: center;
     background-size: cover;
@@ -61,7 +61,7 @@
       margin-bottom: 16px;
 
       @media (min-width: 767px) {
-        font-family: 'Source Sans Pro';
+        font-family: "Source Sans Pro";
         font-size: 1.25rem;
         line-height: 25px;
         letter-spacing: 0.005em;

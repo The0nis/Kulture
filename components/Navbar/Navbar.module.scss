@@ -1,11 +1,14 @@
 .header_container {
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 .headerWrapper {
   display: flex;
   background-color: transparent;
   padding: 32px;
+  position: relative;
 }
 .headerBackground {
   background: rgb(0, 0, 0);
@@ -25,6 +28,13 @@
   right: 0;
   bottom: 0;
 }
+// .scrolled {
+//   background-color: black;
+//   // height: 2rem;
+//   // padding-top: 2rem;
+//   // padding-bottom: 2rem;
+//   // margin-top: 0;
+// }
 
 .logo {
   display: flex;
@@ -64,13 +74,6 @@
     // margin-left: 1rem;
   }
 }
-// .scrolled {
-//   background-color: black;
-//   // height: 2rem;
-//   // padding-top: 2rem;
-//   // padding-bottom: 2rem;
-//   // margin-top: 0;
-// }
 
 .navbar {
   li {
@@ -297,6 +300,16 @@
     gap: 10px;
     cursor: pointer;
     position: relative;
+  }
+  .userListItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    // .userImgWrapper {
+    //   // margin-right: 5px;
+    // }
   }
   .uploadListItem {
     background-color: var(--clr-accent);

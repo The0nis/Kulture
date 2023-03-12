@@ -1,4 +1,5 @@
 import style from "./cartsummary.module.scss";
+import Link from "next/link";
 
 function Cartsummary() {
   return (
@@ -42,13 +43,13 @@ function Cartsummary() {
               not you?{" "}
             </span>{" "}
             <span className={style.summarytext8}>
-              <a href="#/">Logout</a>
+              <a href='#/'>Logout</a>
             </span>
           </div>
           {/* The starting of the button div */}
           <div className={style.btncheckout}>
-            <button type="button" className={style.btncheckout1}>
-              CHECKOUT
+            <button type='button' className={style.btncheckout1}>
+              <Link href='/checkout'>CHECKOUT</Link>
             </button>
           </div>
           {/* The ending of the button div */}
@@ -60,7 +61,9 @@ function Cartsummary() {
             logout
           </a> */}
           <div className={style.continueBtn}>
-            <button type="button">Continue Shopping</button>
+            <button type='button'>
+              <Link href='/'>Continue Shopping</Link>
+            </button>
           </div>
         </div>
       </div>

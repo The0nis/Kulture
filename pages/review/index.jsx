@@ -1,4 +1,6 @@
 import ReviewBeat from "../../components/ReviewBeat/Index";
+import Link from "next/link";
+
 import Page from "../../components/Page";
 import styles from "./review.module.scss";
 import BuyOptionBox from "../../components/Buyingoption/BuyOptionBox";
@@ -6,7 +8,6 @@ import BuyOptionBox from "../../components/Buyingoption/BuyOptionBox";
 function Review() {
   return (
     <Page>
-    
       <div className={styles.review}>
         <section className={styles.review__beat}>
           <h1>Review</h1>
@@ -23,11 +24,11 @@ function Review() {
           <h2>Total:</h2>
           <p>NGN 1,000,000</p>
           <div className={styles.review__btnwrap}>
-            <button type="submit" className={styles.add_btn}>
-              Add to cart
+            <button type='submit' className={styles.add_btn}>
+              <Link href='/cartreview'>Add to cart</Link>
             </button>
-            <button type="submit" className={styles.continue_btn}>
-              Continue Shopping
+            <button type='submit' className={styles.continue_btn}>
+              <Link href='/'>Continue Shopping</Link>
             </button>
           </div>
         </section>
