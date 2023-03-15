@@ -6,7 +6,7 @@ import music from "../../assets/Music.svg";
 import musicfolder from "../../assets/musicfolder.svg";
 import Page from "../Page";
 
-function Uploadbeatview() {
+function UploadBeatViewContent() {
   return (
     <div>
       <Page>
@@ -42,7 +42,7 @@ function Uploadbeatview() {
         {/* Button codes */}
         <div className={style.btn_container}>
           <button className={style.uploadbeatbtn}>
-            <Link href='/uploadbeatcloud'>NEXT</Link>
+            <Link href='/new-upload/upload-beat'>NEXT</Link>
           </button>
         </div>
       </Page>
@@ -50,4 +50,4 @@ function Uploadbeatview() {
   );
 }
 
-export default Uploadbeatview;
+export default UploadBeatViewContent;

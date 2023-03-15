@@ -3,12 +3,12 @@ import Image from "next/image";
 import camera from "../../assets/camera.svg";
 import { useFormik, Field } from "formik";
 import * as Yup from "yup";
-import style from "./UploadBeat.module.css";
+import style from "./UploadFormContent.module.css";
 import Page from "../Page";
 import { useRouter } from "next/router";
 import { navigateBack } from "../../util";
 
-const UploadBeat = () => {
+const UploadFormContent = () => {
   let [percentRange, setProgress] = useState(0);
 
   const [entryProducer, setEntryProducer] = useState("");
@@ -351,4 +351,4 @@ const UploadBeat = () => {
   );
 };
 
-export default UploadBeat;
+export default UploadFormContent;

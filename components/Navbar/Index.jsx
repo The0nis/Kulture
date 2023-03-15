@@ -120,10 +120,10 @@ function Navbar({ type, toggleModal }) {
                 {!hide && (
                   <ul className={styles.navbar__submenu}>
                     <li>
-                      <Link href='/uploadbeatview'>New Upload</Link>
+                      <Link href='/new-upload'>New Upload</Link>
                     </li>
                     <li>
-                      <Link href='/MyUploads'>My Uploads</Link>
+                      <Link href='/myuploads'>My Uploads</Link>
                     </li>
                   </ul>
                 )}
@@ -212,10 +212,10 @@ function Navbar({ type, toggleModal }) {
                 {!hide && (
                   <ul className={styles.uploadOptionsDesktop}>
                     <li className={styles.listItem}>
-                      <Link href='/uploadbeatview'>New Upload</Link>
+                      <Link href='/new-upload'>New Upload</Link>
                     </li>
                     <li className={styles.listItem}>
-                      <Link href='/MyUploads'>My Uploads</Link>
+                      <Link href='/myuploads'>My Uploads</Link>
                     </li>
                   </ul>
                 )}

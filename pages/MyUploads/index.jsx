@@ -3,7 +3,7 @@ import Page from "../../components/Page";
 import GenreTab from "./GenreTab";
 import UploadCard from "./UploadCard";
 
-const index = () => {
+const MyUploads = () => {
   return (
     <Page>
       <section style={{ maxWidth: "528px", margin: "auto" }}>
@@ -14,4 +14,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default MyUploads;
