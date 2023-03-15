@@ -6,7 +6,7 @@ import Page from "../Page";
 import { useState } from "react";
 import { navigateBack } from "../../util";
 
-function Uploadbeatcloud() {
+function UploadBeatContent() {
   //declaring state for the input files
   const [file, setFile] = useState();
   const [valid, setValid] = useState(false);
@@ -91,7 +91,7 @@ function Uploadbeatcloud() {
             Back
           </button>
           <button className={style.next_btn}>
-            <Link href='/Uploadbeat'>Next</Link>
+            <Link href='/new-upload/upload-form'>Next</Link>
           </button>
         </div>
       </Page>
@@ -99,4 +99,4 @@ function Uploadbeatcloud() {
   );
 }
 
-export default Uploadbeatcloud;
+export default UploadBeatContent;

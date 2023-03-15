@@ -4,6 +4,7 @@
 }
 @media (min-width: 768px) {
   .pageContent {
-    margin-top: 200px;
+    /* margin-top: 200px; */
+    margin: 0;
   }
 }

@@ -1,11 +1,14 @@
 .header_container {
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 999;
 }
 .headerWrapper {
   display: flex;
   background-color: transparent;
   padding: 32px;
+  position: relative;
 }
 .headerBackground {
   background: rgb(0, 0, 0);
@@ -25,6 +28,13 @@
   right: 0;
   bottom: 0;
 }
+// .scrolled {
+//   background-color: black;
+//   // height: 2rem;
+//   // padding-top: 2rem;
+//   // padding-bottom: 2rem;
+//   // margin-top: 0;
+// }
 
 .logo {
   display: flex;
@@ -64,16 +74,8 @@
     // margin-left: 1rem;
   }
 }
-// .scrolled {
-//   background-color: black;
-//   // height: 2rem;
-//   // padding-top: 2rem;
-//   // padding-bottom: 2rem;
-//   // margin-top: 0;
-// }
 
 .navbar {
-  // position: relative;
   li {
     list-style: none;
   }
@@ -108,14 +110,7 @@
     margin-top: 0;
     padding-left: 34px;
     font-size: 1rem;
-    // line-height: 10px;
-    // margin-bottom: 2rem;
-    // margin-top: 1rem;
-    // margin-left: 1rem;
-    // li {
-    //   // margin-bottom: -1rem;
-    //   // line-height: 10px;
-    // }
+
     display: flex;
     flex-direction: column;
     gap: 0.7em;
@@ -177,40 +172,10 @@
     }
   }
   &__close {
-    // display: flex;
-    // justify-content: flex-end;
-    // padding: 12px;
-    // position: relative;
-    // top: 20px;
-    // right: 50px;
-
-    // position: absolute;
-
     div {
       cursor: pointer;
     }
   }
-
-  // ul {
-  //   li {
-  //     list-style-type: none;
-  //     color: var(--cl-light);
-  //     font-size: 1rem;
-  //     // margin-bottom: 1rem;
-  //     cursor: pointer;
-
-  //     button {
-  //       font-size: 0.75;
-  //       line-height: 15px;
-  //       letter-spacing: 0.0175em;
-  //       color: #ffffff;
-  //       border: 1px solid var(--clr-warning);
-  //       padding: 0.5rem 1rem;
-  //       border-radius: 5px;
-  //       background-color: transparent;
-  //     }
-  //   }
-  // }
 }
 
 .navbar_mobile {
@@ -289,18 +254,62 @@
   .navbar_desktop {
     flex-basis: 0;
     flex-grow: 1;
+    position: relative;
+
+    .arrow {
+      font-size: 2rem;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    // Styles the drop down when user is clicked
+    &__signedIn {
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      left: 0;
+      padding: 18px 10px;
+      display: flex;
+      flex-direction: column;
+      gap: 36px;
+      font-size: 1rem;
+      border-radius: 8px;
+      background-color: var(--clr-bg-neutral);
+      z-index: 5;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 18px;
+      }
+    }
   }
   .linkWrapper_desktop {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .listItem {
+  .linkWrapper_desktop li {
     list-style: none;
+  }
+  .listItem {
     display: flex;
     align-items: center;
     gap: 10px;
     cursor: pointer;
+    position: relative;
+  }
+  .userListItem {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+
+    // .userImgWrapper {
+    //   // margin-right: 5px;
+    // }
   }
   .uploadListItem {
     background-color: var(--clr-accent);
@@ -308,6 +317,32 @@
     padding: 9px;
     border-radius: 0.5rem;
     font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+  .uploadOptionsDesktop {
+    position: absolute;
+    bottom: -180%;
+    left: 0;
+    font-size: 0.75rem;
+    padding: 1em 0;
+    background-color: var(--clr-bg-neutral);
+    border-radius: 0.67em;
+  }
+  .uploadOptionsDesktop .listItem:first-child {
+    padding: 0 18px 12px 18px;
+  }
+  .uploadOptionsDesktop .listItem:nth-child(2) {
+    padding: 12px 18px 0 18px;
+  }
+  .signupListItemDesktop {
+    border: 1px solid #fff;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    padding: 8px 16px;
   }
   .userImgWrapper {
     display: flex;

@@ -26,7 +26,7 @@ export default function Home() {
               </div>
               <div className={styles.btn}>
                 <button type='button'>
-                  <Link href='/uploadbeatview'>UPLOAD YOUR BEATS</Link>
+                  <Link href='/new-upload'>UPLOAD YOUR BEATS</Link>
                 </button>
               </div>
             </div>
