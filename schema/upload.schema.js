@@ -2,7 +2,7 @@ import * as Yup from "yup";
 
 export const initialUploadValues = {
   producer: "",
-  nameOfBeat: "",
+  nameofbeat: "",
   genre: "",
   price: "",
 };

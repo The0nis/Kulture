@@ -11,6 +11,18 @@ import UploadCompleted from "../Popup/UploadCompleted/UploadCompleted";
 import { current } from "@reduxjs/toolkit";
 import { initialUploadValues, UploadSchema } from "../../schema/upload.schema";
 
+// A list for the genres....to be mapped later
+const nameOptions = [
+  { label: "Choose a genre", value: "" },
+  { label: "Fiction", value: "Fiction" },
+  { label: "Natural", value: "Natural" },
+  { label: "Novel", value: "Novel" },
+  { label: "Natural", value: "Natural" },
+  { label: "Fantansy", value: "Fantansy" },
+  { label: "Thriller", value: "Thriller" },
+  { label: "Drama", value: "Drama" },
+];
+
 const UploadFormContent = () => {
   let [percentRange, setProgress] = useState(0);
   let [open, setOpen] = useState(false);
@@ -37,15 +49,6 @@ const UploadFormContent = () => {
       router.push("/");
     }, 1500);
   };
-
-  // const validationSchema = Yup.object().shape({
-  //   producer: Yup.string().required("producer name is required"),
-  //   nameofbeat: Yup.string().required("The Name of Beat is required"),
-  //   price: Yup.string()
-  //     .required("Price is required")
-  //     .min(2, "Price must be at least 2 characters")
-  //     .max(20, "Price must not exceed 20 characters"),
-  // });
 
   const formik = useFormik({
     initialValues: initialUploadValues,
@@ -76,18 +79,6 @@ const UploadFormContent = () => {
       </div>
     );
   };
-
-  // A list for the genres....to be mapped later
-  const nameOptions = [
-    { label: "Choose a genre", value: "" },
-    { label: "Fiction", value: "Fiction" },
-    { label: "Natural", value: "Natural" },
-    { label: "Novel", value: "Novel" },
-    { label: "Natural", value: "Natural" },
-    { label: "Fantansy", value: "Fantansy" },
-    { label: "Thriller", value: "Thriller" },
-    { label: "Drama", value: "Drama" },
-  ];
 
   const handleChange = (e) => {
     // console.log(e.target.files);
