@@ -7,9 +7,12 @@ import style from "./UploadFormContent.module.css";
 import Page from "../Page";
 import { useRouter } from "next/router";
 import { navigateBack } from "../../util";
+import UploadCompleted from "../Popup/UploadCompleted/UploadCompleted";
+import { current } from "@reduxjs/toolkit";
 
 const UploadFormContent = () => {
   let [percentRange, setProgress] = useState(0);
+  let [open, setOpen] = useState(false);
 
   const [entryProducer, setEntryProducer] = useState("");
   const [nameOfBeat, setNameOfBeat] = useState("");
@@ -27,7 +30,8 @@ const UploadFormContent = () => {
 
   // Route to the complete page, then route to the homepage
   const submitHandler = () => {
-    router.push("/uploadcompleted");
+    // router.push("/uploadcompleted");
+    setOpen((current) => !current);
     setTimeout(() => {
       router.push("/");
     }, 1500);
@@ -174,6 +178,7 @@ const UploadFormContent = () => {
 
   return (
     <Page>
+      <UploadCompleted open={open} />
       <div className={style.wrapper}>
         <div className={style.container}>
           <div className={style.section_a}>
