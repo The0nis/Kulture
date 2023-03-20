@@ -1,32 +1,52 @@
 .header_container {
-  overflow: hidden;
-  position: fixed;
+  // overflow: hidden;
   top: 0;
   z-index: 999;
+  position: fixed;
+  background: #121212;
+
+  @media (min-width: 1024px) {
+    position: sticky;
+  }
 }
+
+.homenav {
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+}
+
 .headerWrapper {
   display: flex;
-  background-color: transparent;
+  background: #121212;
   padding: 32px;
-  position: relative;
+  // position: relative;
+}
+
+.headerWrapperHome {
+  background: transparent;
+}
+
+.homeheaderonscroll {
+  background: #121212;
 }
 .headerBackground {
-  background: rgb(0, 0, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 1) 0%,
-    rgba(243, 39, 161, 1) 25%,
-    rgba(102, 0, 232, 1) 50%,
-    rgba(0, 0, 0, 1) 100%
-  );
-  backdrop-filter: blur(38px);
-  filter: blur(450px);
-  z-index: -1;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  // background: #121212;
+  // background: linear-gradient(
+  //   90deg,
+  //   rgba(0, 0, 0, 1) 0%,
+  //   rgba(243, 39, 161, 1) 25%,
+  //   rgba(102, 0, 232, 1) 50%,
+  //   rgba(0, 0, 0, 1) 100%
+  // );
+  // backdrop-filter: blur(38px);
+  // filter: blur(450px);
+  // z-index: -1;
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  // right: 0;
+  // bottom: 0;
 }
 // .scrolled {
 //   background-color: black;
@@ -51,6 +71,11 @@
   z-index: 999;
   align-items: center;
   justify-content: space-between;
+
+  @media (min-width: 1024px) {
+    position: sticky;
+  }
+
   &__logo,
   &__acc_logo {
     display: flex;
@@ -212,7 +237,7 @@
   }
   .headerWrapper {
     gap: 58px;
-    padding: 51px 70px 95px 70px;
+    // padding: 51px 70px 95px 70px;
   }
   .logo {
     display: block;
@@ -224,10 +249,16 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-basis: 0;
+    // flex-basis: 0;
     flex-grow: 1;
-    gap: 46px;
+    gap: 50px;
   }
+
+  .homenavdesktopwrapper {
+    width: 60%;
+    flex-grow: 0;
+  }
+
   .searchContainer {
     flex-basis: auto;
     flex-grow: 0;
@@ -294,6 +325,16 @@
   .linkWrapper_desktop li {
     list-style: none;
   }
+
+  .active {
+    background: #ddc8f9;
+    border-radius: 8px;
+    color: #6600e8;
+    padding: 1rem;
+    font-weight: 600;
+    font-size: 16px;
+  }
+
   .listItem {
     display: flex;
     align-items: center;
@@ -306,16 +347,22 @@
     align-items: center;
     cursor: pointer;
     position: relative;
+    column-gap: 1rem;
 
     // .userImgWrapper {
     //   // margin-right: 5px;
     // }
   }
+
+  .navbar_desktop__signedIn {
+    color: var(--cl-light);
+  }
+
   .uploadListItem {
-    background-color: var(--clr-accent);
-    color: var(--clr-primary);
-    padding: 9px;
-    border-radius: 0.5rem;
+    background-color: transparent;
+    // color: var(--clr-light);
+    border: none;
+    // padding: 9px;
     font-weight: 600;
     display: flex;
     justify-content: center;
@@ -323,14 +370,21 @@
     gap: 10px;
     cursor: pointer;
   }
+
+  .uploadinactive {
+    padding: 1rem;
+  }
+
   .uploadOptionsDesktop {
     position: absolute;
-    bottom: -180%;
+    top: 4rem;
+    width: 100%;
     left: 0;
     font-size: 0.75rem;
     padding: 1em 0;
     background-color: var(--clr-bg-neutral);
     border-radius: 0.67em;
+    color: var(--cl-light);
   }
   .uploadOptionsDesktop .listItem:first-child {
     padding: 0 18px 12px 18px;
@@ -357,9 +411,9 @@
 @media (min-width: 1280px) {
   .headerWrapper {
     gap: 58px;
-    padding: 51px 118px 95px 118px;
+    padding: 51px 118px 24px 118px;
   }
   .navDesktopWrapper {
-    gap: 92px;
+    // gap: 92px;
   }
 }

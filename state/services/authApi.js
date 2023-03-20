@@ -1,8 +1,8 @@
 import { createApi } from "@reduxjs/toolkit/query/react";
 import { baseQueryWithReauth, createRequest } from "./shared";
 
-export const LoginApi = createApi({
-  reducerPath: "LoginApi",
+export const authApi = createApi({
+  reducerPath: "authApi",
   baseQuery: baseQueryWithReauth,
   endpoints: (builder) => ({
     loginUser: builder.mutation({
@@ -14,7 +14,10 @@ export const LoginApi = createApi({
         };
       },
     }),
+    logoutUser: builder.query({
+      query: () => createRequest(`logout`),
+    }),
   }),
 });
 
-export const { useLoginUserMutation } = LoginApi;
+export const { useLoginUserMutation, useLogoutUserQuery } = authApi;
