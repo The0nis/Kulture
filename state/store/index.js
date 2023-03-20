@@ -2,7 +2,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { UserApi } from "../services/UserApi";
 import { RegisterApi } from "../services/RegisterApi";
-import { LoginApi } from "../services/LoginApi";
+import { authApi } from "../services/authApi";
 import { ForgetPasswordApi } from "../services/ForgetPasswordApi";
 import globalReducer from "../../state";
 import { persistStore } from "redux-persist";
@@ -15,12 +15,20 @@ export const store = configureStore({
     [UserApi.reducerPath]: UserApi.reducer,
     [ForgetPasswordApi.reducerPath]: ForgetPasswordApi.reducer,
     [RegisterApi.reducerPath]: RegisterApi.reducer,
-    [LoginApi.reducerPath]: LoginApi.reducer,
+    [authApi.reducerPath]: authApi.reducer,
   },
   middleware: (getDefault) => getDefault().concat(UserApi.middleware),
   middleware: (getDefault) => getDefault().concat(RegisterApi.middleware),
   middleware: (getDefault) => getDefault().concat(ForgetPasswordApi.middleware),
-  middleware: (getDefault) => getDefault().concat(LoginApi.middleware),
+  middleware: (getDefault) => getDefault().concat(authApi.middleware),
 });
+
+export const rootReducer = (state, action) => {
+  if (action.type === "LOGOUT") {
+    localStorage.clear();
+    return reducers(undefined, action);
+  }
+  return reducers(state, action);
+};
 
 setupListeners(store.dispatch);

@@ -16,8 +16,21 @@ import {
   MdKeyboardArrowDown,
   MdKeyboardArrowUp,
 } from "react-icons/md";
+import { useRouter } from "next/router";
 
 function Navbar({ type, toggleModal }) {
+  const router = useRouter();
+
+  const [homeheaderonscroll, setHomeHeaderonScroll] = useState(false);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", () =>
+        setHomeHeaderonScroll(window.pageYOffset > 200)
+      );
+    }
+  }, []);
+
   // TOGGLE MENU
   const [toggle, setToggle] = useState(false);
 
@@ -54,29 +67,31 @@ function Navbar({ type, toggleModal }) {
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
 
-  // console.log(type);
   return (
-    <header className={styles.header_container}>
+    <header
+      className={`${styles.header_container} ${
+        type === "home" ? styles.homenav : ""
+      } ${homeheaderonscroll ? styles.homeheaderonscroll : ""}`}
+    >
       <div
-        className={`${styles.headerWrapper} ${styles.header} ${
+        className={`${styles.headerWrapper} ${styles.header}  ${
           scrollTop ? styles.scrolled : ""
-        }`}
+        } ${type === "home" && styles.headerWrapperHome}`}
       >
-        <div className={`${styles.headerBackground}`}></div>
         <div className={`${styles.logo} `}>
           <Link
-            href='/'
+            href="/"
             className={`${
               type === "account" ? styles.header__acc_logo : styles.header__logo
             }`}
           >
-            <Image src={logo} alt='logo' />
+            <Image src={logo} alt="logo" />
             <p>Kulture</p>
           </Link>
           {type === "account" ? null : (
             <div className={styles.navbar__hamburger} onClick={toggleMenu}>
               {/* React Icon */}
-              <IoMenu size={20} color='fff' />
+              <IoMenu size={20} color="fff" />
             </div>
           )}
         </div>
@@ -91,17 +106,25 @@ function Navbar({ type, toggleModal }) {
             {/* React Icon */}
             <div className={styles.navbar__close}>
               <div onClick={toggleMenu}>
-                <CgCloseO size={20} color='fff' />
+                <CgCloseO size={20} color="fff" />
               </div>
             </div>
             <ul className={styles.linkWrapperMobile}>
-              <li className={styles.listItemMobile}>
+              <li
+                className={`${
+                  router.pathname == "/CartReview" ? styles.active : ""
+                } ${styles.listItemMobile} `}
+              >
                 <IoHomeOutline />
-                <Link href='/'>Home</Link>
+                <Link href="/">Home</Link>
               </li>
-              <li className={styles.listItemMobile}>
+              <li
+                className={`${
+                  router.pathname == "/CartReview" ? styles.active : ""
+                } ${styles.listItemMobile}`}
+              >
                 <IoCart />
-                <Link href='/CartReview'>Cart</Link>
+                <Link href="/CartReview">Cart</Link>
               </li>
               <li onClick={handleUpload} className={styles.navbar__upload}>
                 <span className={styles.uploadLinkWrapper}>
@@ -120,28 +143,28 @@ function Navbar({ type, toggleModal }) {
                 {!hide && (
                   <ul className={styles.navbar__submenu}>
                     <li>
-                      <Link href='/new-upload'>New Upload</Link>
+                      <Link href="/new-upload">New Upload</Link>
                     </li>
                     <li>
-                      <Link href='/myuploads'>My Uploads</Link>
+                      <Link href="/myuploads">My Uploads</Link>
                     </li>
                   </ul>
                 )}
               </li>
               {/* will apply rendering statement here */}
               <li onClick={toggleModal} className={styles.signinListItemMobile}>
-                <Link href='/SignIn'>SignIn</Link>
+                <Link href="/SignIn">SignIn</Link>
               </li>
               <li className={styles.signupListItemMobile}>
-                <Link href='/Signup'>Signup</Link>
+                <Link href="/Signup">Signup</Link>
               </li>
 
               {/* to show if user is login */}
               <ul className={styles.navbar__signed}>
                 <li onClick={handleUser}>
                   <Image
-                    src='https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZhY2V8ZW58MHx8MHx8&w=1000&q=80'
-                    alt='user-profile'
+                    src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZhY2V8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="user-profile"
                     className={styles.navbar__profile}
                     width={40}
                     height={40}
@@ -160,14 +183,14 @@ function Navbar({ type, toggleModal }) {
                     <ul className={styles.navbar__signed}>
                       <li>
                         <MdAccountCircle />
-                        <Link href='/profile'>My Profile</Link>
+                        <Link href="/profile">My Profile</Link>
                       </li>
                       <li>
-                        <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
+                        <MdStorefront /> <Link href="/MyOrders">My Orders</Link>
                       </li>
                       <li>
                         <MdFavoriteBorder />
-                        <Link href='/SavedItem'>Saved Items</Link>
+                        <Link href="/SavedItem">Saved Items</Link>
                       </li>
                       <li>
                         <MdLogout /> Logout
@@ -181,41 +204,63 @@ function Navbar({ type, toggleModal }) {
         )}
 
         {/* Large Screens Navigation */}
-        <div className={styles.navDesktopWrapper}>
-          <div className={styles.searchContainer}>
-            <label htmlFor='search'>
-              <div className={styles.inputWrapper}>
-                <input
-                  id='search'
-                  placeholder='Search'
-                  className={styles.input}
-                />{" "}
-                <FiSearch />
-              </div>
-            </label>
-          </div>
+        <div
+          className={`${styles.navDesktopWrapper}  ${
+            type === "home" && styles.homenavdesktopwrapper
+          }`}
+        >
+          {type !== "home" && (
+            <div className={styles.searchContainer}>
+              <label htmlFor="search">
+                <div className={styles.inputWrapper}>
+                  <input
+                    id="search"
+                    placeholder="Search"
+                    className={styles.input}
+                  />{" "}
+                  <FiSearch />
+                </div>
+              </label>
+            </div>
+          )}
           <nav className={styles.navbar_desktop}>
             <ul className={styles.linkWrapper_desktop}>
-              <li className={styles.listItem}>
+              <li
+                className={`${router.pathname == "/" ? styles.active : ""} ${
+                  styles.listItem
+                }`}
+              >
                 <IoHomeOutline size={24} />
-                <Link href='/'>Home</Link>
+                <Link href="/">Home</Link>
               </li>
-              <li className={styles.listItem}>
+              <li
+                className={`${
+                  router.pathname == "/cartreview" ? styles.active : ""
+                } ${styles.listItem}`}
+              >
                 <IoCart size={24} />
-                <Link href='/CartReview'>Cart</Link>
+                <Link href="/cartreview">Cart</Link>
               </li>
-              <li onClick={handleUpload} className={`${styles.listItem} `}>
-                <button className={styles.uploadListItem}>
-                  <TbFileUpload size={24} color='white' />
+              <li
+                onClick={handleUpload}
+                className={`${
+                  router.pathname === "/new-upload" ||
+                  router.pathname === "/myuploads"
+                    ? styles.active
+                    : styles.uploadinactive
+                } ${styles.listItem} `}
+              >
+                <p className={styles.uploadListItem}>
+                  <TbFileUpload size={24} color="white" />
                   Upload
-                </button>
+                </p>
                 {!hide && (
                   <ul className={styles.uploadOptionsDesktop}>
                     <li className={styles.listItem}>
-                      <Link href='/new-upload'>New Upload</Link>
+                      <Link href="/new-upload">New Upload</Link>
                     </li>
                     <li className={styles.listItem}>
-                      <Link href='/myuploads'>My Uploads</Link>
+                      <Link href="/myuploads">My Uploads</Link>
                     </li>
                   </ul>
                 )}
@@ -229,11 +274,16 @@ function Navbar({ type, toggleModal }) {
               </li> */}
 
               {/* to show if user is login */}
-              <li onClick={handleUser} className={styles.userListItem}>
+              <li
+                onClick={handleUser}
+                className={`${
+                  router.pathname === "/profile" ? styles.active : ""
+                } ${styles.userListItem} `}
+              >
                 <div className={styles.userImgWrapper}>
                   <Image
-                    src='https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZhY2V8ZW58MHx8MHx8&w=1000&q=80'
-                    alt='user-profile'
+                    src="https://images.unsplash.com/photo-1597223557154-721c1cecc4b0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGZhY2V8ZW58MHx8MHx8&w=1000&q=80"
+                    alt="user-profile"
                     width={40}
                     height={40}
                   />
@@ -252,14 +302,14 @@ function Navbar({ type, toggleModal }) {
                   <ul className={styles.navbar_desktop__signedIn}>
                     <li>
                       <MdAccountCircle />
-                      <Link href='/profile'>My Profile</Link>
+                      <Link href="/profile">My Profile</Link>
                     </li>
                     <li>
-                      <MdStorefront /> <Link href='/MyOrders'>My Orders</Link>
+                      <MdStorefront /> <Link href="/MyOrders">My Orders</Link>
                     </li>
                     <li>
                       <MdFavoriteBorder />
-                      <Link href='/SavedItem'>Saved Items</Link>
+                      <Link href="/SavedItem">Saved Items</Link>
                     </li>
                     <li>
                       <MdLogout /> Logout

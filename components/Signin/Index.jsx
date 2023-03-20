@@ -3,7 +3,7 @@ import style from "./signin.module.css";
 import ModalWrap from "../Modals/ModalWrapper/ModalWrap";
 import { CgCloseO } from "react-icons/cg";
 import { Formik } from "formik";
-import { useLoginUserMutation } from "../../state/services/LoginApi";
+import { useLoginUserMutation } from "../../state/services/authApi";
 import Link from "next/link";
 
 function Signin({ toggleModal }) {
