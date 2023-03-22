@@ -1,12 +1,12 @@
-import React from 'react'
-import Footer from '../components/Footer/Index'
+import React from "react";
+import Footer from "../components/Footer/Index";
 
 const FooterPage = () => {
   return (
     <div>
-        <Footer/>
+      <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default FooterPage
+export default FooterPage;

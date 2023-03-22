@@ -17,6 +17,8 @@ function CartReviewContent() {
     setSavedLists(updatedSavedLists);
     setDatas(updatedSavedLists); // update the datas array with the new array
   };
+
+  console.log(items);
   return (
     <div className={styles.reviews}>
       <div className={styles.reviews__header}>
@@ -35,12 +37,12 @@ function CartReviewContent() {
             <div className={styles.review__imaged}>
               <Image
                 src={picture}
-                alt='cover'
+                alt="cover"
                 className={styles.review__picture}
               />
               <Image
                 src={playbtn}
-                alt='play btn'
+                alt="play btn"
                 className={styles.review__playBtn}
               />
             </div>
@@ -75,7 +77,7 @@ function CartReviewContent() {
                   </button>
                 </div>
                 <div className={styles.review__priceBtn}>
-                  <button type='submit'>Review license</button>
+                  <button type="submit">Review license</button>
                 </div>
               </div>
             </div>
