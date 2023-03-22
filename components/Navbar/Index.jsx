@@ -97,7 +97,6 @@ function Navbar({ type, toggleModal }) {
       className={`${styles.header_container} ${
         type === "home" ? styles.homenav : ""
       } ${homeheaderonscroll ? styles.homeheaderonscroll : ""}`}
-      ref={toggleRef}
     >
       <div
         className={`${styles.headerWrapper} ${styles.header}  ${
@@ -128,6 +127,7 @@ function Navbar({ type, toggleModal }) {
             className={`${styles.navbar} ${styles.navbar_mobile} ${
               toggle ? styles.openmobile : ""
             }`}
+            ref={toggleRef}
           >
             {/* React Icon */}
             <div className={styles.navbar__close}>
@@ -138,7 +138,7 @@ function Navbar({ type, toggleModal }) {
             <ul className={styles.linkWrapperMobile}>
               <li
                 className={`${
-                  router.pathname == "/CartReview" ? styles.active : ""
+                  router.pathname == "/cartreview" ? styles.active : ""
                 } ${styles.listItemMobile} `}
               >
                 <IoHomeOutline />
@@ -146,11 +146,11 @@ function Navbar({ type, toggleModal }) {
               </li>
               <li
                 className={`${
-                  router.pathname == "/CartReview" ? styles.active : ""
+                  router.pathname == "/cartreview" ? styles.active : ""
                 } ${styles.listItemMobile}`}
               >
                 <IoCart />
-                <Link href="/CartReview">Cart</Link>
+                <Link href="/cartreview">Cart</Link>
               </li>
               <li onClick={handleUpload} className={styles.navbar__upload}>
                 <span className={styles.uploadLinkWrapper}>
@@ -234,6 +234,7 @@ function Navbar({ type, toggleModal }) {
           className={`${styles.navDesktopWrapper}  ${
             type === "home" && styles.homenavdesktopwrapper
           }`}
+          ref={toggleRef}
         >
           {type !== "home" && (
             <div className={styles.searchContainer}>
