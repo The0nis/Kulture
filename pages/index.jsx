@@ -7,11 +7,29 @@ import CarouselSlider from "../components/CarouselSlider/Index";
 import BeatCard from "../components/BeatCard/BeatCard";
 import TrendingSearch from "../components/Trendingsearch/Index";
 import PopularProducers from "../components/PopularProducer/Index";
+import { useRouter } from "next/router";
+import { useState } from "react";
 
 export default function Home() {
+  const [searchInput, setSearchInput] = useState("");
+
+  const router = useRouter();
+
+  const handleSearchInput = (e) => {
+    setSearchInput(e.target.value);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      // execute your search function with the searchTerm
+      console.log("search for:", searchInput);
+      router.push("/search");
+    }
+  };
+
   return (
     <div className={styles.container}>
-      <Page type="home">
+      <Page type='home'>
         <div className={styles.home}>
           {/* Hero */}
           <div className={styles.hero}>
@@ -19,14 +37,20 @@ export default function Home() {
             <p>Preview, upload, buy beats and vocals for you projects</p>
             <div className={styles.hero__search_group}>
               <div className={styles.hero__search}>
-                <input type="text" placeholder="Search" />
+                <input
+                  type='text'
+                  placeholder='Search'
+                  value={searchInput}
+                  onChange={handleSearchInput}
+                  onKeyDown={handleKeyDown}
+                />
                 <div className={styles.icon}>
-                  <FiSearch size={20} color="#fff" />
+                  <FiSearch size={20} color='#fff' />
                 </div>
               </div>
               <div className={styles.btn}>
-                <button type="button">
-                  <Link href="/new-upload">UPLOAD YOUR BEATS</Link>
+                <button type='button'>
+                  <Link href='/new-upload'>UPLOAD YOUR BEATS</Link>
                 </button>
               </div>
             </div>
