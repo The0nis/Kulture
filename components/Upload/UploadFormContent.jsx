@@ -2,13 +2,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 import camera from "../../assets/camera.svg";
 import { useFormik, Field } from "formik";
-import * as Yup from "yup";
 import style from "./UploadFormContent.module.css";
 import Page from "../Page";
 import { useRouter } from "next/router";
 import { navigateBack } from "../../util";
 import UploadCompleted from "../Popup/UploadCompleted/UploadCompleted";
-import { current } from "@reduxjs/toolkit";
 import { initialUploadValues, UploadSchema } from "../../schema/upload.schema";
 
 // A list for the genres....to be mapped later
@@ -43,7 +41,6 @@ const UploadFormContent = () => {
 
   // Route to the complete page, then route to the homepage
   const submitHandler = () => {
-    // router.push("/uploadcompleted");
     setOpen((current) => !current);
     setTimeout(() => {
       router.push("/");
