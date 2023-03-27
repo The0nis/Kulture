@@ -32,55 +32,40 @@ function CartReviewContent() {
         let { picture, name, amount, genre, license, type } = item;
         return (
           <div className={styles.review} key={id}>
-            <div className={styles.review__imaged}>
-              <Image
-                src={picture}
-                alt='cover'
-                className={styles.review__picture}
-              />
-              <Image
-                src={playbtn}
-                alt='play btn'
-                className={styles.review__playBtn}
-              />
-            </div>
-            <div className={styles.review__details}>
-              <div className={styles.review__name}>
-                <p>{name}</p>
-              </div>
-              <div className={styles.review__amount}>
-                <h5>NGN {amount}</h5>
-              </div>
-              <div className={styles.review__audio}>
-                <p>{genre}</p>
-                <h2 className={styles.review__midDot}>.</h2>
-                <p>
-                  {license} License ({type})
-                </p>
-              </div>
-              <div className={styles.review__Btn}>
-                <div className={styles.review__firstBn}>
-                  {/* write a function for the button that will remove only the specific items from the object */}
-                  <button
-                    className={styles.review__deleteBtn}
-                    onClick={() => removeItem(id)}
-                  >
-                    <span>
-                      <Image
-                        src={deleteMe}
-                        className={styles.reveiw__deleteIcon}
-                      />
-                    </span>
-                    <span> Remove</span>
-                  </button>
-                </div>
-                <div className={styles.review__priceBtn}>
-                  <button type='submit'>Review license</button>
+            <div className={styles.review__identity}>
+              <div className={styles.review__imaged}>
+                <Image
+                  src={picture}
+                  alt="cover"
+                  className={styles.review__picture}
+                />
+                <div className={styles.review__playBtn}>
+                  <Image src={playbtn} alt="play btn" />
                 </div>
               </div>
             </div>
-            <div className={styles.review__pricetag}>
-              <h5>NGN {amount}</h5>
+            <div>
+              <div className={styles.review__identityText}>
+                <div className={styles.review__name}>
+                  <p>{name}</p>
+                </div>
+                <div className={styles.review__audio}>
+                  <p>{genre}</p>
+                  <h2 className={styles.review__midDot}>.</h2>
+                  <p>
+                    {license} License ({type})
+                  </p>
+                </div>
+              </div>
+              <div className={styles.review__amountGroup}>
+                <div className={styles.review__amount}>
+                  <h5>NGN {amount}</h5>
+                </div>
+                <button type="submit">Review license</button>
+                <div>
+                  <p>x</p>
+                </div>
+              </div>
             </div>
           </div>
         );

@@ -10,7 +10,7 @@
 
 .list_wrapper {
   display: flex;
-  width: 100%;
+  width: 70%;
   justify-content: space-between;
 
   a {
@@ -82,12 +82,10 @@
   justify-items: flex-start;
   align-items: center;
   color: white !important;
-  gap: 0.8rem;
+  gap: 0.5rem;
   font-size: 0.8rem;
   font-weight: 100;
   font-family: "Source Sans Pro";
-  gap: 0.8rem;
-  color: white;
 
   @media (min-width: 767px) {
     h3 {
@@ -124,6 +122,11 @@
 
 .wrap_image {
   width: 100%;
+}
+
+.wrap{
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 .hideme {
@@ -303,7 +306,7 @@
   }
 
   .footerwrapper {
-    gap: 0.2rem;
+    gap: 0.6rem;
   }
 
   .footerwrappertext {
