@@ -17,6 +17,8 @@ function CartReviewContent() {
     setSavedLists(updatedSavedLists);
     setDatas(updatedSavedLists); // update the datas array with the new array
   };
+
+  console.log(items);
   return (
     <div className={styles.reviews}>
       <div className={styles.reviews__header}>

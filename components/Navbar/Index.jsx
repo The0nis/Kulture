@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { IoMenu } from "react-icons/io5";
@@ -45,11 +45,13 @@ function Navbar({ type, toggleModal }) {
   //HMABURGER UPLOAD FUNCTION
   const handleUpload = (e) => {
     setHide(!hide);
+    setHidden(true);
   };
 
   //HMABURGER UPLOAD FUNCTION
   const handleUser = (e) => {
     setHidden(!hidden);
+    setHide(true);
   };
 
   //   Toggle Function
@@ -66,6 +68,29 @@ function Navbar({ type, toggleModal }) {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [scrollTop]);
+
+  //REFCLOSE MODAL WHEN OUT ELEMENT IS CLICKED
+  const toggleRef = useRef();
+
+  useEffect(() => {
+    const checkIfClickedOutside = (e) => {
+      // If the menu is open and the clicked target is not within the menu, then close the menu
+      if (!hidden && !toggleRef.current?.contains(e.target)) {
+        setHidden(true);
+      }
+
+      if (!hide && !toggleRef.current?.contains(e.target)) {
+        setHide(!false);
+      }
+    };
+
+    document.addEventListener("mousedown", checkIfClickedOutside);
+
+    return () => {
+      // Cleanup the event listener
+      document.removeEventListener("mousedown", checkIfClickedOutside);
+    };
+  }, [hide, hidden]);
 
   return (
     <header
@@ -102,6 +127,7 @@ function Navbar({ type, toggleModal }) {
             className={`${styles.navbar} ${styles.navbar_mobile} ${
               toggle ? styles.openmobile : ""
             }`}
+            ref={toggleRef}
           >
             {/* React Icon */}
             <div className={styles.navbar__close}>
@@ -112,7 +138,7 @@ function Navbar({ type, toggleModal }) {
             <ul className={styles.linkWrapperMobile}>
               <li
                 className={`${
-                  router.pathname == "/CartReview" ? styles.active : ""
+                  router.pathname == "/cartreview" ? styles.active : ""
                 } ${styles.listItemMobile} `}
               >
                 <IoHomeOutline />
@@ -120,11 +146,11 @@ function Navbar({ type, toggleModal }) {
               </li>
               <li
                 className={`${
-                  router.pathname == "/CartReview" ? styles.active : ""
+                  router.pathname == "/cartreview" ? styles.active : ""
                 } ${styles.listItemMobile}`}
               >
                 <IoCart />
-                <Link href="/CartReview">Cart</Link>
+                <Link href="/cartreview">Cart</Link>
               </li>
               <li onClick={handleUpload} className={styles.navbar__upload}>
                 <span className={styles.uploadLinkWrapper}>
@@ -208,6 +234,7 @@ function Navbar({ type, toggleModal }) {
           className={`${styles.navDesktopWrapper}  ${
             type === "home" && styles.homenavdesktopwrapper
           }`}
+          ref={toggleRef}
         >
           {type !== "home" && (
             <div className={styles.searchContainer}>
@@ -275,7 +302,7 @@ function Navbar({ type, toggleModal }) {
 
               {/* to show if user is login */}
               <li
-                onClick={handleUser}
+                onClick={() => handleUser()}
                 className={`${
                   router.pathname === "/profile" ? styles.active : ""
                 } ${styles.userListItem} `}
