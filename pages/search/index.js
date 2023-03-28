@@ -1,6 +1,6 @@
 import React from "react";
 
-import BeatCard from "../../components/BeatCard/BeatCard";
+import BeatCard from "../../components/BeatCard";
 import SearchBar from "../../components/Home/SearchBar";
 import Layout from "../../components/Layout/Layout";
 import Card from "../../components/ui/Card";
