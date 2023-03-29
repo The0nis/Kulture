@@ -9,7 +9,7 @@ const index = () => {
   return (
     <Layout>
       <Card>
-        <SearchBar />
+        {/* <SearchBar /> */}
         <BeatCard />
       </Card>
     </Layout>
