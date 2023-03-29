@@ -90,7 +90,6 @@
 
   @media (min-width: 767px) {
     h3 {
-
       font-family: "Source Sans Pro";
       font-size: 1.5rem;
       font-weight: 400;
@@ -99,7 +98,6 @@
     }
 
     p {
-
       font-family: "Source Sans Pro";
       font-size: 1.25rem;
       line-height: 25px;
@@ -125,13 +123,13 @@
   width: 100%;
 }
 
-.wrap{
+.wrap {
   display: flex;
   flex-wrap: nowrap;
-  
-@media (max-width: 768px){
-  flex-direction: column;
-}
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .hideme {
@@ -193,7 +191,6 @@
 }
 
 .btn_footer {
-  color: white;
   background-color: #6600e8;
   border-radius: 0.5rem;
   width: 8.188rem;
@@ -203,6 +200,11 @@
   font-weight: 600;
   letter-spacing: 0.0175em;
   color: #ffffff;
+}
+
+.btn_footer:hover {
+  color: #6600e8;
+  background-color: #ffffff;
 }
 
 .downicons {
