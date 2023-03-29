@@ -4,7 +4,7 @@
   padding-top: 30px;
 }
 
-.delete{
+.delete {
   width: 2rem;
   height: 2rem;
 }
@@ -120,7 +120,7 @@
 
 .car_wrap {
   display: flex;
-   margin: 0 1rem;
+  margin: 0 1rem;
   justify-content: flex-start;
 }
 
@@ -128,14 +128,14 @@
   width: 100%;
 }
 
-.wrap{
+.wrap {
   display: flex;
   flex-direction: column;
   // flex-wrap: nowrap;
-  
-@media (max-width: 768px){
-  flex-direction: column;
-}
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 .hideme {
@@ -197,7 +197,7 @@
 }
 
 .btn_footer {
-  background-color: #6600e8;
+  background-color: green;
   border-radius: 0.5rem;
   width: 4rem;
   height: 2.5rem;
@@ -297,7 +297,7 @@
         line-height: 29px;
         letter-spacing: 0.0015em;
         color: var(--cl-light);
-        margin-bottom: .1rem;
+        margin-bottom: 0.1rem;
       }
     }
   }
@@ -307,7 +307,7 @@
     line-height: 2rem;
     p {
       font-family: "Source Sans Pro";
-      font-size: .8rem;
+      font-size: 0.8rem;
       line-height: 25px;
       letter-spacing: 0.005em;
       color: #e2e2e2;
