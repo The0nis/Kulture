@@ -9,6 +9,7 @@ import TrendingSearch from "../components/Trendingsearch/Index";
 import PopularProducers from "../components/PopularProducer/Index";
 import { useRouter } from "next/router";
 import { useState } from "react";
+import ButtonLink from "../components/Button/ButtonLink";
 
 export default function Home() {
   const [searchInput, setSearchInput] = useState("");
@@ -48,11 +49,12 @@ export default function Home() {
                   <FiSearch size={20} color='#fff' />
                 </div>
               </div>
-              <div className={styles.btn}>
-                <button type='button'>
+              {/* <div className={styles.btn}> */}
+              {/* <button type='button'>
                   <Link href='/new-upload'>UPLOAD YOUR BEATS</Link>
-                </button>
-              </div>
+                </button> */}
+              <ButtonLink page='new-upload' title='UPLOAD YOUR BEATS' />
+              {/* </div> */}
             </div>
           </div>
 

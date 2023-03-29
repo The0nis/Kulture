@@ -1,0 +1,9 @@
+.btn {
+  padding: 0 2rem;
+}
+@media (max-width: 300px) {
+  .btn {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
