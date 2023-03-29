@@ -10,7 +10,7 @@ import styles from "./profile.module.scss";
 import avatarProfile from "../../assets/Avatar_profile.svg";
 import camera from "../../assets/camera.svg";
 import SaleChart from "../../components/SalesChart/Index";
-import BeatCard from "../../components/BeatCard";
+import BeatCard from "../../components/BeatCard/BeatCard";
 import Trendingsearch from "../../components/Trendingsearch/Index";
 
 function Profile() {

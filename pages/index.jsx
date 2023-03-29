@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import Page from "../components/Page";
 import styles from "../styles/Home.module.scss";
 import CarouselSlider from "../components/CarouselSlider/Index";
-import BeatCard from "../components/HomeBeatCard";
+import BeatCard from "../components/HomeBeatCard/Index";
 import TrendingSearch from "../components/Trendingsearch/Index";
 import PopularProducers from "../components/PopularProducer/Index";
 import { useRouter } from "next/router";
