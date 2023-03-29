@@ -13,8 +13,10 @@ import { useCreateUserMutation } from "../../state/services/RegisterApi";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import LoadingSpinner from "../Modals/LoadingSpinner";
+import { useRouter } from "next/router";
 
 const Signup = () => {
+  const router = useRouter();
   const [createUser, { isLoading, error, isSuccess }] = useCreateUserMutation();
 
   const [inputValue, setInputValue] = useState("");
@@ -69,9 +71,8 @@ const Signup = () => {
           confirmPassword,
           id,
         }).unwrap();
-
       } catch (error) {
-        alert(error);
+        // alert('An error occured');
       }
     },
   });
@@ -83,13 +84,13 @@ const Signup = () => {
 
   useEffect(() => {
     setInputValue(formik.values.password);
-  }, [formik.values.password])
-  
+  }, [formik.values.password]);
 
   useEffect(() => {
     if (isSuccess) {
       toast.success("Sucessfully Registered");
       formik.handleReset();
+      router.push("/SignIn");
     }
     if (error) {
       toast.error("An error occured");
@@ -259,13 +260,13 @@ const Signup = () => {
                   : null}
               </div>
             </div>
-            <PasswordStrengthBar
+            {/* <PasswordStrengthBar
               password={inputValue}
               minLength={5}
               // onChangeScore={(score, feedback) => {
               //   console.log(score, feedback);
               // }}
-            />
+            /> */}
             {/* {console.log("password strength---", inputValue)} */}
             <div className={style.notification}>
               <div>

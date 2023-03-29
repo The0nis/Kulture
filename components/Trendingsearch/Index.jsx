@@ -1,4 +1,5 @@
 import style from "./trendingsearch.module.scss";
+import Link from "next/link";
 
 import React from "react";
 
@@ -11,25 +12,33 @@ function Trendingsearch() {
 
       <div className={style.searchcontainer1}>
         <div className={style.search_div}>
-          <p>IamDonemmy</p>
+          <p>
+            <Link href='/profile'>IamDonemmy</Link>
+          </p>
         </div>
       </div>
 
       <div className={style.searchcontainer1}>
         <div className={style.search_div}>
-          <p>TheOnis</p>
+          <p>
+            <Link href='/profile'>IamDonemmy</Link>
+          </p>{" "}
         </div>
       </div>
 
       <div className={style.searchcontainer1}>
         <div className={style.search_div}>
-          <p>Odizee</p>
+          <p>
+            <Link href='/profile'>IamDonemmy</Link>
+          </p>{" "}
         </div>
       </div>
 
       <div className={style.searchcontainer1}>
         <div className={style.search_div}>
-          <p>Drew-chidi</p>
+          <p>
+            <Link href='/profile'>IamDonemmy</Link>
+          </p>{" "}
         </div>
       </div>
     </div>

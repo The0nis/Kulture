@@ -1,0 +1,10 @@
+.pageContent {
+  /* margin-top: 88px; */
+  padding: 0 16px;
+}
+@media (min-width: 768px) {
+  .pageContent {
+    /* margin-top: 200px; */
+    margin: 0;
+  }
+}

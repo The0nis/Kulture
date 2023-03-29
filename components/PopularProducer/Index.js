@@ -1,9 +1,10 @@
-import style from './popularproducer.module.scss';
-import Image from 'next/image';
-import producer1 from '../../assets/producer1.svg';
-import producer2 from '../../assets/producer2.svg';
-import producer3 from '../../assets/producer3.svg';
-import producer4 from '../../assets/producer4.svg';
+import style from "./popularproducer.module.scss";
+import Link from "next/link";
+import Image from "next/image";
+import producer1 from "../../assets/producer1.svg";
+import producer2 from "../../assets/producer2.svg";
+import producer3 from "../../assets/producer3.svg";
+import producer4 from "../../assets/producer4.svg";
 
 function PopularProducer() {
   return (
@@ -17,16 +18,20 @@ function PopularProducer() {
 
         <div className={style.producer_wrapper}>
           <div className={style.cloud_image}>
-            <Image src={producer1} alt="producer1" />
+            <Image src={producer1} alt='producer1' />
           </div>
 
           <div className={style.producertext}>
             <div>
-              <p className={style.producer1_text1}>Mariam</p>
+              <p className={style.producer1_text1}>
+                <Link href='/profile'>Mariam</Link>
+              </p>
             </div>
 
             <div>
-              <p className={style.producer1_text2}>@odizee</p>
+              <p className={style.producer1_text2}>
+                <Link href='/profile'>@odizee</Link>
+              </p>
             </div>
           </div>
         </div>
@@ -35,7 +40,7 @@ function PopularProducer() {
 
         <div className={style.producer_wrapper}>
           <div className={style.cloud_image}>
-            <Image src={producer2} alt="producer1" />
+            <Image src={producer2} alt='producer1' />
           </div>
 
           <div className={style.producertext}>
@@ -53,7 +58,7 @@ function PopularProducer() {
 
         <div className={style.producer_wrapper}>
           <div className={style.cloud_image}>
-            <Image src={producer3} alt="producer1" />
+            <Image src={producer3} alt='producer1' />
           </div>
 
           <div className={style.producertext}>
@@ -71,7 +76,7 @@ function PopularProducer() {
 
         <div className={style.producer_wrapper}>
           <div className={style.cloud_image}>
-            <Image src={producer4} alt="producer1" />
+            <Image src={producer4} alt='producer1' />
           </div>
 
           <div className={style.producertext}>

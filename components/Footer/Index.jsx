@@ -1,12 +1,12 @@
-import Link from 'next/link';
-import style from './Footer.module.scss';
+import Link from "next/link";
+import style from "./Footer.module.scss";
 
 function Footer({ type }) {
   return (
     <div className={style.wrapper}>
       <div
         className={`${
-          type !== 'account' ? style.footer_first : style.footer__mod
+          type !== "withdrawal" ? style.footer_first : style.footer__mod
         }`}
       >
         <div>
@@ -23,7 +23,7 @@ function Footer({ type }) {
 
       <div
         className={`${
-          type !== 'account' ? style.footer_second : style.footer__mod
+          type !== "account" ? style.footer_second : style.footer__mod
         }`}
       >
         <div>
