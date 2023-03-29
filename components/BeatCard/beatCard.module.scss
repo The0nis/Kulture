@@ -1,6 +1,7 @@
 .containerbeatcard {
   width: 100%;
   padding-top: 30px;
+  padding-top: 30px;
 }
 
 .delete{
@@ -94,7 +95,6 @@
 
   @media (min-width: 767px) {
     h3 {
-
       font-family: "Source Sans Pro";
       font-size: 1.5rem;
       font-weight: 400;
@@ -103,7 +103,6 @@
     }
 
     p {
-
       font-family: "Source Sans Pro";
       font-size: 1.25rem;
       line-height: 25px;
@@ -198,7 +197,6 @@
 }
 
 .btn_footer {
-  color: white;
   background-color: #6600e8;
   border-radius: 0.5rem;
   width: 4rem;
@@ -208,6 +206,11 @@
   font-weight: 600;
   letter-spacing: 0.0175em;
   color: #ffffff;
+}
+
+.btn_footer:hover {
+  color: #6600e8;
+  background-color: #ffffff;
 }
 
 .downicons {
