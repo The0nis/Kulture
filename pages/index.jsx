@@ -4,7 +4,7 @@ import { FiSearch } from "react-icons/fi";
 import Page from "../components/Page";
 import styles from "../styles/Home.module.scss";
 import CarouselSlider from "../components/CarouselSlider/Index";
-import BeatCard from "../components/BeatCard/BeatCard";
+import BeatCard from "../components/HomeBeatCard/Index";
 import TrendingSearch from "../components/Trendingsearch/Index";
 import PopularProducers from "../components/PopularProducer/Index";
 import { useRouter } from "next/router";
@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Page type='home'>
+      <Page type="home">
         <div className={styles.home}>
           {/* Hero */}
           <div className={styles.hero}>
@@ -38,19 +38,19 @@ export default function Home() {
             <div className={styles.hero__search_group}>
               <div className={styles.hero__search}>
                 <input
-                  type='text'
-                  placeholder='Search'
+                  type="text"
+                  placeholder="Search"
                   value={searchInput}
                   onChange={handleSearchInput}
                   onKeyDown={handleKeyDown}
                 />
                 <div className={styles.icon}>
-                  <FiSearch size={20} color='#fff' />
+                  <FiSearch size={20} color="#fff" />
                 </div>
               </div>
               <div className={styles.btn}>
-                <button type='button'>
-                  <Link href='/new-upload'>UPLOAD YOUR BEATS</Link>
+                <button type="button">
+                  <Link href="/new-upload">UPLOAD YOUR BEATS</Link>
                 </button>
               </div>
             </div>
