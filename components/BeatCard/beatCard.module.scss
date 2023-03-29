@@ -128,6 +128,10 @@
 .wrap{
   display: flex;
   flex-wrap: nowrap;
+  
+@media (max-width: 768px){
+  flex-direction: column;
+}
 }
 
 .hideme {
