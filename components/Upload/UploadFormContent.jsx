@@ -2,11 +2,13 @@ import React, { useState } from "react";
 import Image from "next/image";
 import camera from "../../assets/camera.svg";
 import { useFormik, Field } from "formik";
+import * as Yup from "yup";
 import style from "./UploadFormContent.module.css";
 import Page from "../Page";
 import { useRouter } from "next/router";
 import { navigateBack } from "../../util";
 import UploadCompleted from "../Popup/UploadCompleted/UploadCompleted";
+import { current } from "@reduxjs/toolkit";
 import { initialUploadValues, UploadSchema } from "../../schema/upload.schema";
 import { motion } from "framer-motion";
 
@@ -42,16 +44,30 @@ const UploadFormContent = () => {
 
   // Route to the complete page, then route to the homepage
   const submitHandler = () => {
+    // router.push("/uploadcompleted");
     setOpen((current) => !current);
     setTimeout(() => {
       router.push("/");
     }, 1500);
   };
 
+  const validationSchema = Yup.object().shape({
+    producer: Yup.string().required("producer name is required"),
+    nameofbeat: Yup.string().required("The Name of Beat is required"),
+    price: Yup.string()
+      .required("Price is required")
+      .min(2, "Price must be at least 2 characters")
+      .max(20, "Price must not exceed 20 characters"),
+  });
+
   const formik = useFormik({
-    initialValues: initialUploadValues,
-    validationSchema: UploadSchema,
-    // validationSchema,
+    initialValues: {
+      producer: "",
+      nameofbeat: "",
+      genre: "",
+      price: "",
+    },
+    validationSchema,
     // validateOnChange: false,
     // validateOnBlur: false,
     onSubmit: (data) => {
@@ -77,6 +93,18 @@ const UploadFormContent = () => {
       </div>
     );
   };
+
+  // A list for the genres....to be mapped later
+  const nameOptions = [
+    { label: "Choose a genre", value: "" },
+    { label: "Fiction", value: "Fiction" },
+    { label: "Natural", value: "Natural" },
+    { label: "Novel", value: "Novel" },
+    { label: "Natural", value: "Natural" },
+    { label: "Fantansy", value: "Fantansy" },
+    { label: "Thriller", value: "Thriller" },
+    { label: "Drama", value: "Drama" },
+  ];
 
   const handleChange = (e) => {
     // console.log(e.target.files);

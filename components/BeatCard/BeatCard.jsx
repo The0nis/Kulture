@@ -8,18 +8,19 @@ import wintspread2 from "../../assets/wintspread2.svg";
 import videocircle from "../../assets/videocircle.svg";
 import share from "../../assets/share.svg";
 import save from "../../assets/save.svg";
+import ButtonLink from "../Button/ButtonLink";
 
 function BeatCard() {
   return (
     <div className={style.containerbeatcard}>
       <div className={style.genre_header}>
         <div className={style.list_wrapper}>
-          <Link href="#/">All</Link>
-          <Link href="#/">Afro pop</Link>
-          <Link href="#/">R&B</Link>
-          <Link href="#/">world</Link>
+          <Link href='#/'>All</Link>
+          <Link href='#/'>Afro pop</Link>
+          <Link href='#/'>R&B</Link>
+          <Link href='#/'>world</Link>
           <div className={style.selectus}>
-            <select name="" id="" placeholder="Filter">
+            <select name='' id='' placeholder='Filter'>
               <option>Filter</option>
               <option>Afro pop</option>
               <option>Gospel</option>
@@ -39,7 +40,7 @@ function BeatCard() {
         <div className={style.containerbeatcard1}>
           <div className={style.card_header}>
             <div>
-              <Image src={miriam} alt="image" className={style.imagebeatcard} />
+              <Image src={miriam} alt='image' className={style.imagebeatcard} />
             </div>
             <h3> Miriam </h3>
             <p>@ohuly </p>
@@ -50,16 +51,16 @@ function BeatCard() {
           <div className={style.card_wrap}>
             <div className={style.wrap_image}>
               <div className={style.image_snow}>
-                <Image src={wintspread} alt="Snow" className={style.snow} />
+                <Image src={wintspread} alt='Snow' className={style.snow} />
               </div>
               <div className={style.hideme}>
-                <Image src={videocircle} alt="videocircle" />
+                <Image src={videocircle} alt='videocircle' />
               </div>
             </div>
             <div className={style.producer_content}>
               <div className={style.producer_label}>
                 <div className={style.hidenow}>
-                  <Image src={videocircle} alt="videocircle" />
+                  <Image src={videocircle} alt='videocircle' />
                 </div>{" "}
                 <div>
                   <h4>Wintspread cabasky</h4>
@@ -75,9 +76,7 @@ function BeatCard() {
 
               <div className={style.footerwrapper}>
                 <p className={style.footerwrappertext}>NGN 90,0000 </p>{" "}
-                <button className={style.btn_footer} type="submit">
-                  <Link href="/review">BUY NOW</Link>
-                </button>
+                <ButtonLink page='review' title='BUY NOW' />
               </div>
             </div>
           </div>
@@ -85,7 +84,7 @@ function BeatCard() {
           <div className={style.downicons}>
             <div className={style.footericontext1}>
               <div className={style.footericon1}>
-                <Image src={share} alt="image" className={style.foot} />
+                <Image src={share} alt='image' className={style.foot} />
               </div>
 
               <div className={style.footertext1}>
@@ -95,7 +94,7 @@ function BeatCard() {
 
             <div className={style.footericontext1}>
               <div className={style.footericon1}>
-                <Image src={save} alt="image" className={style.foot} />
+                <Image src={save} alt='image' className={style.foot} />
               </div>
               <div className={style.footertext1}>
                 <p>save for later</p>
@@ -112,7 +111,7 @@ function BeatCard() {
             <div>
               <Image
                 src={miriam2}
-                alt="image"
+                alt='image'
                 className={style.imagebeatcard}
               />
             </div>
@@ -131,16 +130,16 @@ function BeatCard() {
           <div className={style.card_wrap}>
             <div className={style.wrap_image}>
               <div className={style.image_snow}>
-                <Image src={wintspread2} alt="Snow" className={style.snow} />
+                <Image src={wintspread2} alt='Snow' className={style.snow} />
               </div>
               <div className={style.hideme}>
-                <Image src={videocircle} alt="videocircle" />
+                <Image src={videocircle} alt='videocircle' />
               </div>
             </div>
             <div className={style.producer_content}>
               <div className={style.producer_label}>
                 <div className={style.hidenow}>
-                  <Image src={videocircle} alt="videocircle" />
+                  <Image src={videocircle} alt='videocircle' />
                 </div>{" "}
                 <div>
                   <h4>Wintspeed</h4>
@@ -156,9 +155,10 @@ function BeatCard() {
 
               <div className={style.footerwrapper}>
                 <p className={style.footerwrappertext}>NGN 90,0000 </p>{" "}
-                <button className={style.btn_footer} type="submit">
+                {/* <button className={style.btn_footer} type="submit">
                   <Link href="/review">BUY NOW</Link>
-                </button>
+                </button> */}
+                <ButtonLink page='review' title='BUY NOW' />
               </div>
             </div>
           </div>
@@ -166,7 +166,7 @@ function BeatCard() {
           <div className={style.downicons}>
             <div className={style.footericontext1}>
               <div className={style.footericon1}>
-                <Image src={share} alt="image" className={style.foot} />
+                <Image src={share} alt='image' className={style.foot} />
               </div>
 
               <div className={style.footertext1}>
@@ -176,7 +176,7 @@ function BeatCard() {
 
             <div className={style.footericontext1}>
               <div className={style.footericon1}>
-                <Image src={save} alt="image" className={style.foot} />
+                <Image src={save} alt='image' className={style.foot} />
               </div>
               <div className={style.footertext1}>
                 <p>save for later</p>

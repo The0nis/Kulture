@@ -75,31 +75,32 @@
         display: flex;
         margin: auto;
         align-items: center;
+        gap: 24px;
       }
-      .btn {
-        padding: 0 2rem;
+      // .btn {
+      //   padding: 0 2rem;
 
-        @media (max-width: 300px) {
-          padding-left: 1rem;
-          padding-right: 1rem;
-        }
-      }
-      button {
-        background: #6600e8;
-        border-radius: 8px;
-        outline: none;
-        border: none;
-        padding: 1rem 2rem;
-        // width: 214px;
-        width: 100%;
+      //   @media (max-width: 300px) {
+      //     padding-left: 1rem;
+      //     padding-right: 1rem;
+      //   }
+      // }
+      // button {
+      //   // background: #6600e8;
+      //   border-radius: 8px;
+      //   outline: none;
+      //   border: none;
+      //   padding: 1rem 2rem;
+      //   // width: 214px;
+      //   width: 100%;
 
-        //Button fonts
-        font-weight: 600;
-        font-size: 0.8rem;
-        line-height: 20px;
-        letter-spacing: 0.0175em;
-        color: var(--cl-light);
-      }
+      //   //Button fonts
+      //   font-weight: 600;
+      //   font-size: 0.8rem;
+      //   line-height: 20px;
+      //   letter-spacing: 0.0175em;
+      //   color: var(--cl-light);
+      // }
     }
 
     &__search {
