@@ -1,13 +1,8 @@
 .containerbeatcard {
   width: 100%;
   padding-top: 30px;
-  padding-top: 30px;
 }
 
-.delete {
-  width: 2rem;
-  height: 2rem;
-}
 .genre_header {
   display: flex;
   // padding-top: 2rem;
@@ -95,6 +90,7 @@
 
   @media (min-width: 767px) {
     h3 {
+
       font-family: "Source Sans Pro";
       font-size: 1.5rem;
       font-weight: 400;
@@ -103,6 +99,7 @@
     }
 
     p {
+
       font-family: "Source Sans Pro";
       font-size: 1.25rem;
       line-height: 25px;
@@ -120,7 +117,7 @@
 
 .car_wrap {
   display: flex;
-  margin: 0 1rem;
+   margin: 0 1rem;
   justify-content: flex-start;
 }
 
@@ -128,14 +125,14 @@
   width: 100%;
 }
 
-.wrap {
+.wrap{
   display: flex;
   flex-direction: column;
   // flex-wrap: nowrap;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-  }
+  
+@media (max-width: 768px){
+  flex-direction: column;
+}
 }
 
 .hideme {
@@ -197,20 +194,16 @@
 }
 
 .btn_footer {
-  background-color: green;
+  color: white;
+  background-color: #6600e8;
   border-radius: 0.5rem;
-  width: 4rem;
-  height: 2.5rem;
+  width: 6rem;
+  height: 3rem;
   border: none;
   font-family: "Source Sans Pro";
   font-weight: 600;
   letter-spacing: 0.0175em;
   color: #ffffff;
-}
-
-.btn_footer:hover {
-  color: #6600e8;
-  background-color: #ffffff;
 }
 
 .downicons {
@@ -297,7 +290,7 @@
         line-height: 29px;
         letter-spacing: 0.0015em;
         color: var(--cl-light);
-        margin-bottom: 0.1rem;
+        margin-bottom: .1rem;
       }
     }
   }
@@ -307,7 +300,7 @@
     line-height: 2rem;
     p {
       font-family: "Source Sans Pro";
-      font-size: 0.8rem;
+      font-size: .8rem;
       line-height: 25px;
       letter-spacing: 0.005em;
       color: #e2e2e2;

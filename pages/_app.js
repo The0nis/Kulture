@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import "@fontsource/open-sans";
 import { Provider } from "react-redux";
 import { store } from "../state/store";
+import { AnimatePresence } from "framer-motion";
 // import { configureStore } from "@reduxjs/toolkit";
 // import globalReducer from "../state";
 // import { setupListeners } from "@reduxjs/toolkit/query/react";
@@ -20,9 +21,11 @@ import { store } from "../state/store";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Provider store={store}>
-      <Component {...pageProps} />
-    </Provider>
+    <AnimatePresence mode="wait">
+      <Provider store={store}>
+        <Component {...pageProps} />
+      </Provider>
+    </AnimatePresence>
   );
 }
 
