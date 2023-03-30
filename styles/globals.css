@@ -78,6 +78,11 @@ h6 {
   margin-right: 1rem;
 }
 
+button {
+  outline: 0;
+  border: 0;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

@@ -49,12 +49,7 @@ export default function Home() {
                   <FiSearch size={20} color='#fff' />
                 </div>
               </div>
-              {/* <div className={styles.btn}> */}
-              {/* <button type='button'>
-                  <Link href='/new-upload'>UPLOAD YOUR BEATS</Link>
-                </button> */}
               <ButtonLink page='new-upload' title='UPLOAD YOUR BEATS' />
-              {/* </div> */}
             </div>
           </div>
 
