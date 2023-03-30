@@ -1,5 +1,6 @@
 import style from "./cartsummary.module.scss";
 import Link from "next/link";
+import ButtonLink from "../Button/ButtonLink";
 
 function Cartsummary() {
   return (
@@ -48,9 +49,10 @@ function Cartsummary() {
           </div>
           {/* The starting of the button div */}
           <div className={style.btncheckout}>
-            <button type='button' className={style.btncheckout1}>
+            {/* <button type='button' className={style.btncheckout1}>
               <Link href='/checkout'>CHECKOUT</Link>
-            </button>
+            </button> */}
+            <ButtonLink page='checkout' title='CHECKOUT' />
           </div>
           {/* The ending of the button div */}
           {/* <span className={style.summarytext9}>
