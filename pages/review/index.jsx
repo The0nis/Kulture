@@ -1,5 +1,4 @@
 import ReviewBeat from "../../components/ReviewBeat/Index";
-import Link from "next/link";
 import Button from "../../components/Button";
 import Page from "../../components/Page";
 import styles from "./review.module.scss";
@@ -25,16 +24,8 @@ function Review() {
           <h2>Total:</h2>
           <p>NGN 1,000,000</p>
           <div className={styles.review__btnwrap}>
-            {/* <ButtonLink
-              page='cartreview'
-              title='Add to cart'
-              customStyle='padding: 15px 24px'
-            /> */}
-            <Button page='cartreview'>Add to cart</Button>
+            <Button page='review/cart-review'>Add to cart</Button>
             <ButtonOutline page='#'>Continue Shopping</ButtonOutline>
-            {/* <button type='submit' className={styles.continue_btn}>
-              <Link href='/'>Continue Shopping</Link>
-            </button> */}
           </div>
         </section>
       </div>

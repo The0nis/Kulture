@@ -2,9 +2,9 @@ import { FiSearch } from "react-icons/fi";
 import Page from "../components/Page";
 import styles from "../styles/Home.module.scss";
 import CarouselSlider from "../components/CarouselSlider/Index";
-import BeatCard from "../components/HomeBeatCard/Index";
-import TrendingSearch from "../components/Trendingsearch/Index";
-import PopularProducers from "../components/PopularProducer/Index";
+import BeatCard from "../components/HomeBeatCard";
+import TrendingSearch from "../components/Trendingsearch";
+import PopularProducers from "../components/PopularProducer";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import Button from "../components/Button";
@@ -47,7 +47,6 @@ export default function Home() {
                   <FiSearch size={20} color='#fff' />
                 </div>
               </div>
-              {/* <ButtonLink page='new-upload' title='UPLOAD YOUR BEATS' /> */}
               <Button page='new-upload'>UPLOAD YOUR BEATS</Button>
             </div>
           </div>

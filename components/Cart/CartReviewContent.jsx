@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import Image from "next/image";
-import styles from "./cartreview.module.scss";
+import styles from "./CartReviewContent.module.scss";
 import playbtn from "../../assets/videocircle.svg";
 import items from "../DummyLists/cartCardList";
-import deleteMe from "../../assets/deletebtn.png";
 
 function CartReviewContent() {
   const [savedLists, setSavedLists] = useState(items); // create a state variable and set it to the `datas` array
@@ -38,11 +37,11 @@ function CartReviewContent() {
               <div className={styles.review__imaged}>
                 <Image
                   src={picture}
-                  alt="cover"
+                  alt='cover'
                   className={styles.review__picture}
                 />
                 <div className={styles.review__playBtn}>
-                  <Image src={playbtn} alt="play btn" />
+                  <Image src={playbtn} alt='play btn' />
                 </div>
               </div>
             </div>
@@ -63,7 +62,7 @@ function CartReviewContent() {
                 <div className={styles.review__amount}>
                   <h5>NGN {amount}</h5>
                 </div>
-                <button type="submit">Review license</button>
+                <button type='submit'>Review license</button>
                 <div>
                   <p>x</p>
                 </div>

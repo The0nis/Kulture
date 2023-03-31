@@ -1,9 +1,8 @@
-/* eslint-disable node/no-missing-import */
-import CarouselSlider from "../components/CarouselSlider/Index";
-import CartReviewContent from "../components/CartReviewContent/Index";
-import Cartsummary from "../components/Cartsummary/Index";
-import Page from "../components/Page";
-import styles from "../styles/cartreview.module.scss";
+import CarouselSlider from "../../components/CarouselSlider/Index";
+import CartReviewContent from "../../components/Cart/CartReviewContent";
+import CartSummary from "../../components/Cart/CartSummary";
+import Page from "../../components/Page";
+import styles from "./cartreview.module.scss";
 
 function CartReview() {
   return (
@@ -15,7 +14,7 @@ function CartReview() {
             <CartReviewContent />
           </section>
           <section className={`${styles.cartsummary}`}>
-            <Cartsummary />
+            <CartSummary />
           </section>
         </div>
         <section className={`${styles.recentlyviewed}`}>

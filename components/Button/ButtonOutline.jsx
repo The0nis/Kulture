@@ -1,18 +1,12 @@
 import Link from "next/link";
 import styles from "./ButtonOutline.module.css";
 
-const ButtonOutline = ({
-  onClick,
-  page,
-  children,
-  customStyles,
-  buttonType,
-}) => {
+const ButtonOutline = ({ onClick, page, children, style, buttonType }) => {
   // If page is provided, return a Link component
   if (page) {
     return (
       <div className={styles.btn_container}>
-        <Link href={`/${page}`} className={styles.btn} style={{ customStyles }}>
+        <Link href={`/${page}`} className={styles.btn}>
           {children}
         </Link>
       </div>
@@ -27,7 +21,7 @@ const ButtonOutline = ({
           onClick={onClick}
           className={styles.btn}
           type={buttonType}
-          style={{ customStyles }}
+          style={style}
         >
           {children}
         </button>

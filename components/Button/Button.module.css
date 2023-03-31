@@ -1,5 +1,7 @@
 .btn_container {
   display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .btn {
   padding: 1em 2em;
@@ -14,6 +16,7 @@
   overflow: hidden;
   white-space: nowrap;
   width: 100%;
+  margin: auto;
 }
 .btn:hover {
   transition: transform 0.3s;
@@ -38,7 +41,6 @@
   transition: transform 0.5s;
   border-bottom-right-radius: 100%;
 }
-
 .btn:hover:before {
   transform: rotate(0deg);
 }

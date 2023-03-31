@@ -1,5 +1,7 @@
 .btn_container {
   display: flex;
+  justify-content: center;
+  text-align: center;
 }
 .btn {
   padding: 1em 2em;
@@ -15,4 +17,8 @@
   white-space: nowrap;
   width: 100%;
   border: 1px solid #6600e8;
+}
+.continue_shopping:hover {
+  background-color: white;
+  color: black;
 }

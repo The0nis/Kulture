@@ -1,9 +1,10 @@
-import style from "./cartsummary.module.scss";
-import Link from "next/link";
+import style from "./CartSummary.module.scss";
 import ButtonLink from "../Button";
 import Button from "../Button";
+import ButtonOutline from "../Button/ButtonOutline";
+import Link from "next/link";
 
-function Cartsummary() {
+function CartSummary() {
   return (
     <div>
       {/* The overall container */}
@@ -50,24 +51,12 @@ function Cartsummary() {
           </div>
           {/* The starting of the button div */}
           <div className={style.btncheckout}>
-            {/* <button type='button' className={style.btncheckout1}>
-              <Link href='/checkout'>CHECKOUT</Link>
-            </button> */}
-            <ButtonLink page='checkout' title='CHECKOUT' />
+            <Button page='checkout'>CHECKOUT</Button>
           </div>
-          {/* The ending of the button div */}
-          {/* <span className={style.summarytext9}>
-            you are checking out as @andybanny, <br></br>
-            not you?{' '}
-          </span>{' '}
-          <a href="#" className={style.summarytext8}>
-            logout
-          </a> */}
-          <div className={style.continueBtn}>
-            {/* <button type='button'>
+          <div>
+            <button type='button' className={style.continueBtn}>
               <Link href='/'>Continue Shopping</Link>
-            </button> */}
-            <Button page='/'>Continue Shopping</Button>
+            </button>
           </div>
         </div>
       </div>
@@ -75,4 +64,4 @@ function Cartsummary() {
   );
 }
 
-export default Cartsummary;
+export default CartSummary;
