@@ -53,15 +53,8 @@ function Cartsummary() {
             </button>
           </div>
           {/* The ending of the button div */}
-          {/* <span className={style.summarytext9}>
-            you are checking out as @andybanny, <br></br>
-            not you?{' '}
-          </span>{' '}
-          <a href="#" className={style.summarytext8}>
-            logout
-          </a> */}
           <div className={style.continueBtn}>
-            <button type="button">
+            <button type="button" className={style.btncontinue}>
               <Link href="/">Continue Shopping</Link>
             </button>
           </div>
