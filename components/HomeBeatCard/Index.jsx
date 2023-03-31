@@ -2,18 +2,19 @@ import Image from "next/image";
 import Link from "next/link";
 import style from "./beatCard.module.scss";
 import { cardList } from "../Utils/Index";
+import Button from "../Button";
 
 function BeatCard() {
   return (
     <div className={style.containerbeatcard}>
       <div className={style.genre_header}>
         <div className={style.list_wrapper}>
-          <Link href="#/">All</Link>
-          <Link href="#/">Afro pop</Link>
-          <Link href="#/">R&B</Link>
-          <Link href="#/">world</Link>
+          <Link href='#/'>All</Link>
+          <Link href='#/'>Afro pop</Link>
+          <Link href='#/'>R&B</Link>
+          <Link href='#/'>world</Link>
           <div className={style.selectus}>
-            <select name="" id="" placeholder="Filter">
+            <select name='' id='' placeholder='Filter'>
               <option>Filter</option>
               <option>Afro pop</option>
               <option>Gospel</option>
@@ -37,7 +38,7 @@ function BeatCard() {
               <div>
                 <Image
                   src={card.personimg}
-                  alt="image"
+                  alt='image'
                   className={style.imagebeatcard}
                 />
               </div>
@@ -50,16 +51,16 @@ function BeatCard() {
             <div className={style.card_wrap}>
               <div className={style.wrap_image}>
                 <div className={style.image_snow}>
-                  <Image src={card.cardimg} alt="Snow" className={style.snow} />
+                  <Image src={card.cardimg} alt='Snow' className={style.snow} />
                 </div>
                 <div className={style.hideme}>
-                  <Image src={card.cardplay} alt="videocircle" />
+                  <Image src={card.cardplay} alt='videocircle' />
                 </div>
               </div>
               <div className={style.producer_content}>
                 <div className={style.producer_label}>
                   <div className={style.hidenow}>
-                    <Image src={card.cardplay} alt="videocircle" />
+                    <Image src={card.cardplay} alt='videocircle' />
                   </div>{" "}
                   <div>
                     <h4>{card.cardname}</h4>
@@ -75,9 +76,7 @@ function BeatCard() {
 
                 <div className={style.footerwrapper}>
                   <p className={style.footerwrappertext}>{card.amount} </p>{" "}
-                  <button className={style.btn_footer} type="submit">
-                    <Link href="/review">BUY NOW</Link>
-                  </button>
+                  <Button page='review'>BUY NOW</Button>
                 </div>
               </div>
             </div>
@@ -85,7 +84,7 @@ function BeatCard() {
             <div className={style.downicons}>
               <div className={style.footericontext1}>
                 <div className={style.footericon1}>
-                  <Image src={card.shares} alt="image" className={style.foot} />
+                  <Image src={card.shares} alt='image' className={style.foot} />
                 </div>
 
                 <div className={style.footertext1}>
@@ -95,7 +94,7 @@ function BeatCard() {
 
               <div className={style.footericontext1}>
                 <div className={style.footericon1}>
-                  <Image src={card.saves} alt="image" className={style.foot} />
+                  <Image src={card.saves} alt='image' className={style.foot} />
                 </div>
                 <div className={style.footertext1}>
                   <p>save for later</p>

@@ -6,6 +6,7 @@ import Page from "../Page";
 import { useState } from "react";
 import { navigateBack } from "../../util";
 import { motion } from "framer-motion";
+import Button from "../Button";
 
 function UploadBeatContent() {
   //declaring state for the input files
@@ -54,7 +55,7 @@ function UploadBeatContent() {
   };
 
   return (
-    <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+    <motion.div exit={{ opacity: 0 }} initial='initial' animate='animate'>
       <Page>
         <motion.div variants={stagger}>
           <motion.div variants={fadeInUp}>
@@ -67,7 +68,7 @@ function UploadBeatContent() {
                 {!valid && (
                   <div className={style.wrap}>
                     <div className={style.cloud_image}>
-                      <Image src={cloud} alt="musicapp" />
+                      <Image src={cloud} alt='musicapp' />
                     </div>
 
                     <div className={style.cloudtextdiv}>
@@ -111,7 +112,7 @@ function UploadBeatContent() {
                 )}
               </div>
               <div className={style.input_field}>
-                <input type="file" onChange={handleChange} accept="audio/*" />
+                <input type='file' onChange={handleChange} accept='audio/*' />
               </div>
             </label>
 
@@ -119,9 +120,8 @@ function UploadBeatContent() {
               <button className={style.back_btn} onClick={navigateBack}>
                 Back
               </button>
-              <button className={style.next_btn}>
-                <Link href="/new-upload/upload-form">Next</Link>
-              </button>
+              {/* <ButtonLink page='new-upload/upload-form' title='NEXT' /> */}
+              <Button page='new-upload/upload-form'>NEXT</Button>
             </div>
           </motion.div>
         </motion.div>

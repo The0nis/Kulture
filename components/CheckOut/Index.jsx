@@ -4,7 +4,7 @@ import Image from "next/image";
 import mastercard from "../../assets/mastercard.svg";
 import visa from "../../assets/visa.svg";
 import Page from "../Page";
-import ButtonLink from "../Button/ButtonLink";
+import ButtonLink from "../Button";
 
 function CheckOut() {
   return (
@@ -69,18 +69,11 @@ function CheckOut() {
             <div>
               <p className={style.charges}>Additional Bank charges may apply</p>
             </div>
-
-            {/* Button code */}
             <div>
-              {/* <button type="submit" className={style.checkout_btn}>
-                Continue
-              </button> */}
               <ButtonLink page='checkout/#' title='Continue' />
             </div>
           </div>
         </div>
-
-        {/* End of the code */}
       </div>
     </Page>
   );

@@ -1,5 +1,3 @@
-/* eslint-disable node/no-missing-import */
-import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
 import Page from "../components/Page";
 import styles from "../styles/Home.module.scss";
@@ -9,7 +7,7 @@ import TrendingSearch from "../components/Trendingsearch/Index";
 import PopularProducers from "../components/PopularProducer/Index";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import ButtonLink from "../components/Button/ButtonLink";
+import Button from "../components/Button";
 
 export default function Home() {
   const [searchInput, setSearchInput] = useState("");
@@ -30,7 +28,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Page type="home">
+      <Page type='home'>
         <div className={styles.home}>
           {/* Hero */}
           <div className={styles.hero}>
@@ -39,17 +37,18 @@ export default function Home() {
             <div className={styles.hero__search_group}>
               <div className={styles.hero__search}>
                 <input
-                  type="text"
-                  placeholder="Search"
+                  type='text'
+                  placeholder='Search'
                   value={searchInput}
                   onChange={handleSearchInput}
                   onKeyDown={handleKeyDown}
                 />
                 <div className={styles.icon}>
-                  <FiSearch size={20} color="#fff" />
+                  <FiSearch size={20} color='#fff' />
                 </div>
               </div>
-              <ButtonLink page='new-upload' title='UPLOAD YOUR BEATS' />
+              {/* <ButtonLink page='new-upload' title='UPLOAD YOUR BEATS' /> */}
+              <Button page='new-upload'>UPLOAD YOUR BEATS</Button>
             </div>
           </div>
 

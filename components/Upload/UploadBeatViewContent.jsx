@@ -6,6 +6,7 @@ import music from "../../assets/Music.svg";
 import musicfolder from "../../assets/musicfolder.svg";
 import Page from "../Page";
 import { animate, motion } from "framer-motion";
+import ButtonLink from "../Button";
 
 function UploadBeatViewContent() {
   // Animation declaration
@@ -35,7 +36,7 @@ function UploadBeatViewContent() {
   };
 
   return (
-    <motion.div exit={{ opacity: 0 }} initial="initial" animate="animate">
+    <motion.div exit={{ opacity: 0 }} initial='initial' animate='animate'>
       <Page>
         <motion.div variants={stagger}>
           <motion.div variants={fadeInUp}>
@@ -46,11 +47,10 @@ function UploadBeatViewContent() {
             </div>
 
             {/* First container */}
-
             <div className={style.maincontainer}>
               <div className={style.uploadcontainer}>
                 <div className={style.upload_image}>
-                  <Image src={musicapp} alt="musicapp" />
+                  <Image src={musicapp} alt='musicapp' />
                 </div>
                 <p className={style.uploadtext}>Single</p>
               </div>
@@ -58,7 +58,7 @@ function UploadBeatViewContent() {
               {/* Second container */}
               <div className={style.uploadcontainer1}>
                 <div className={style.upload_image}>
-                  <Image src={music} alt="musicfolder" />
+                  <Image src={music} alt='musicfolder' />
                 </div>
                 <p className={style.uploadtext1}>EP (Extended Plays)</p>
               </div>
@@ -66,7 +66,7 @@ function UploadBeatViewContent() {
               {/* Third container */}
               <div className={style.uploadcontainer2}>
                 <div className={style.upload_image}>
-                  <Image src={musicfolder} alt="musicfolder" />
+                  <Image src={musicfolder} alt='musicfolder' />
                 </div>
                 <p className={style.uploadtext2}>LP (Long Plays)</p>
               </div>
@@ -74,9 +74,10 @@ function UploadBeatViewContent() {
 
             {/* Button codes */}
             <div className={style.btn_container}>
-              <button className={style.uploadbeatbtn}>
+              {/* <button className={style.uploadbeatbtn}>
                 <Link href="/new-upload/upload-beat">NEXT</Link>
-              </button>
+              </button> */}
+              <ButtonLink page='new-upload/upload-beat' title='NEXT' />
             </div>
           </motion.div>
         </motion.div>

@@ -1,6 +1,7 @@
 import style from "./cartsummary.module.scss";
 import Link from "next/link";
-import ButtonLink from "../Button/ButtonLink";
+import ButtonLink from "../Button";
+import Button from "../Button";
 
 function Cartsummary() {
   return (
@@ -63,9 +64,10 @@ function Cartsummary() {
             logout
           </a> */}
           <div className={style.continueBtn}>
-            <button type='button'>
+            {/* <button type='button'>
               <Link href='/'>Continue Shopping</Link>
-            </button>
+            </button> */}
+            <Button page='/'>Continue Shopping</Button>
           </div>
         </div>
       </div>
