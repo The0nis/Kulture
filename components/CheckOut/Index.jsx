@@ -4,10 +4,11 @@ import Image from "next/image";
 import mastercard from "../../assets/mastercard.svg";
 import visa from "../../assets/visa.svg";
 import Page from "../Page";
+import ButtonLink from "../Button/ButtonLink";
 
 function CheckOut() {
   return (
-    <Page type="account">
+    <Page type='account'>
       <div className={style.checkout_container}>
         <div className={style.checkout_overall}>
           <div>
@@ -16,10 +17,10 @@ function CheckOut() {
 
           <div className={style.image_checkout}>
             <div className={style.visa_img}>
-              <Image src={visa} alt="visa" />
+              <Image src={visa} alt='visa' />
             </div>
             <div className={style.mastercard_img}>
-              <Image src={mastercard} alt="mastercard" />
+              <Image src={mastercard} alt='mastercard' />
             </div>
           </div>
 
@@ -29,8 +30,8 @@ function CheckOut() {
               <label> First Name </label>
               <input
                 className={style.input_name}
-                type="text"
-                placeholder=" Emmanuel "
+                type='text'
+                placeholder=' Emmanuel '
               ></input>
             </div>
 
@@ -38,8 +39,8 @@ function CheckOut() {
               <label> Last Name </label>
               <input
                 className={style.input_name}
-                type="text"
-                placeholder=" Abiodun "
+                type='text'
+                placeholder=' Abiodun '
               ></input>
             </div>
 
@@ -47,21 +48,21 @@ function CheckOut() {
               <label> Card Number </label>
               <input
                 className={style.input_number}
-                type="Number"
-                placeholder=" 5465 7875 4553 9697 "
+                type='Number'
+                placeholder=' 5465 7875 4553 9697 '
               ></input>
             </div>
 
             {/* Expiration and Cvv code */}
             <div className={style.cvvex}>
               <div className={style.ex}>
-                <label htmlFor="exp">expiration date (MM/YY)</label>
-                <input className={style.input_ex} type="number" id="exp" />
+                <label htmlFor='exp'>expiration date (MM/YY)</label>
+                <input className={style.input_ex} type='number' id='exp' />
               </div>
 
               <div className={style.cv}>
-                <label htmlFor="cvv">CVV</label>
-                <input className={style.input_cv} type="number" id="cvv" />
+                <label htmlFor='cvv'>CVV</label>
+                <input className={style.input_cv} type='number' id='cvv' />
               </div>
             </div>
 
@@ -71,9 +72,10 @@ function CheckOut() {
 
             {/* Button code */}
             <div>
-              <button type="submit" className={style.checkout_btn}>
+              {/* <button type="submit" className={style.checkout_btn}>
                 Continue
-              </button>
+              </button> */}
+              <ButtonLink page='checkout/#' title='Continue' />
             </div>
           </div>
         </div>
