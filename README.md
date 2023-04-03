@@ -4,6 +4,8 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 First, run the development server:
 
+####
+
 ##Follow suit as stated below
 
 ```bash
@@ -12,6 +14,7 @@ npm run dev
 yarn dev
 ----
 ```
+
 uu
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -37,8 +40,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
-
 Figma Design:
-
 
 https://www.figma.com/file/nNY7YGsFEANag8RwQgwVKT/Kulture-Design-File?node-id=101%3A1031&t=3r5N1KmEFtKGWv85-0
