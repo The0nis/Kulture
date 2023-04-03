@@ -1,5 +1,6 @@
 import style from "./cartsummary.module.scss";
 import Link from "next/link";
+import ButtonLink from "../Button/ButtonLink";
 
 function Cartsummary() {
   return (
@@ -39,30 +40,25 @@ function Cartsummary() {
         <div className={style.summarytextwrapper}>
           <div className={style.detail}>
             <span className={style.summarytext7}>
-              you are checking out as @andybanny, <br />
+              you are checking out as @iamdonemmy, <br />
               not you?{" "}
             </span>{" "}
             <span className={style.summarytext8}>
-              <a href='#/'>Logout</a>
+              <a href="#/">Logout</a>
             </span>
           </div>
           {/* The starting of the button div */}
           <div className={style.btncheckout}>
-            <button type='button' className={style.btncheckout1}>
-              <Link href='/checkout'>CHECKOUT</Link>
+
+            <button type="button" className={style.btncheckout1}>
+              <Link href="/checkout">Checkout</Link>
             </button>
+
           </div>
           {/* The ending of the button div */}
-          {/* <span className={style.summarytext9}>
-            you are checking out as @andybanny, <br></br>
-            not you?{' '}
-          </span>{' '}
-          <a href="#" className={style.summarytext8}>
-            logout
-          </a> */}
           <div className={style.continueBtn}>
-            <button type='button'>
-              <Link href='/'>Continue Shopping</Link>
+            <button type="button" className={style.btncontinue}>
+              <Link href="/">Continue Shopping</Link>
             </button>
           </div>
         </div>

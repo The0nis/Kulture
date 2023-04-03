@@ -8,6 +8,7 @@ import wintspread2 from "../../assets/wintspread2.svg";
 import videocircle from "../../assets/videocircle.svg";
 import share from "../../assets/share.svg";
 import save from "../../assets/save.svg";
+import ButtonLink from "../Button/ButtonLink";
 
 function BeatCard() {
   return (
@@ -75,9 +76,7 @@ function BeatCard() {
 
               <div className={style.footerwrapper}>
                 <p className={style.footerwrappertext}>NGN 90,0000 </p>{" "}
-                <button className={style.btn_footer} type="submit">
-                  <Link href="/review">BUY NOW</Link>
-                </button>
+                <ButtonLink page="review" title="BUY NOW" />
               </div>
             </div>
           </div>
@@ -156,9 +155,10 @@ function BeatCard() {
 
               <div className={style.footerwrapper}>
                 <p className={style.footerwrappertext}>NGN 90,0000 </p>{" "}
-                <button className={style.btn_footer} type="submit">
+                {/* <button className={style.btn_footer} type="submit">
                   <Link href="/review">BUY NOW</Link>
-                </button>
+                </button> */}
+                <ButtonLink page="review" title="BUY NOW" />
               </div>
             </div>
           </div>
