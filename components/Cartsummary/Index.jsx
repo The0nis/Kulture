@@ -40,20 +40,17 @@ function Cartsummary() {
         <div className={style.summarytextwrapper}>
           <div className={style.detail}>
             <span className={style.summarytext7}>
-              you are checking out as @iamdonemmy, <br />
-              not you?{" "}
+              you are checking out as @iamdonemmy,not you?{" "}
             </span>{" "}
             <span className={style.summarytext8}>
-              <a href="#/">Logout</a>
+              <a href="#/">switch account</a>
             </span>
           </div>
           {/* The starting of the button div */}
           <div className={style.btncheckout}>
-
             <button type="button" className={style.btncheckout1}>
               <Link href="/checkout">Checkout</Link>
             </button>
-
           </div>
           {/* The ending of the button div */}
           <div className={style.continueBtn}>
