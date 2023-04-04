@@ -46,7 +46,7 @@ function CartReviewContent() {
                 </div>
               </div>
             </div>
-            <div>
+            <div className={styles.review__wrapperdrive}>
               <div className={styles.review__identityText}>
                 <div className={styles.review__name}>
                   <p>{name}</p>
