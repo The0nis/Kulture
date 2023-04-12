@@ -3,6 +3,8 @@
   margin-left: 2rem;
   margin-top: 96px;
   text-align: center;
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .maincontainer {
@@ -28,7 +30,7 @@
 .uploadtext,
 .uploadtext1,
 .uploadtext2 {
-  font-family: 'Source Sans Pro';
+  font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
   font-size: 1.5rem;
@@ -62,9 +64,9 @@
 @media screen and (min-width: 750px) {
   .maincontainer {
     display: flex;
-    gap: 1.5rem;
+    gap: 1rem;
     margin: auto;
-    margin-top: 5rem;
+    margin-top: 3.5rem;
   }
 
   .btn_container {
@@ -78,6 +80,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 30px;
   }
 
   .uploadcontainer,

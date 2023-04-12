@@ -263,7 +263,7 @@ const UploadFormContent = () => {
                       {/* <img src={file} /> */}
                     </div>
                     <div>
-                      <p>Max. File Size: 500 MB</p>
+                      <p className={style.name}>Max. File Size: 500 MB</p>
                     </div>
                   </div>
 
