@@ -42,8 +42,8 @@ function Signin({ toggleModal }) {
       <div className={style.text_wrap}>
         <h3>Signin</h3>
         <p>
-          Signin Enter details to signin, dont have an account,{" "}
-          <Link href="/signup">Signup</Link>
+         Enter details to signin, dont have an account{" "}
+          <Link href="/signup">signup</Link>
         </p>
       </div>
       <div>
