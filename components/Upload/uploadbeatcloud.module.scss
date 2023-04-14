@@ -23,14 +23,14 @@
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  background: #434343;
+  background: #1d1a1a;
   border: 0.188rem dashed #ffffff;
   border-radius: 0.625rem;
   height: 16.813rem;
   align-items: center;
   @media screen and (min-width: 750px) {
     margin: 1rem auto;
-    width: 50%;
+    width: 40%;
   }
 }
 .wrap {
@@ -67,7 +67,7 @@
   line-height: 1.125rem;
   text-align: center;
   letter-spacing: 0.0015em;
-  margin-top: -4rem;
+  margin-top: -3rem;
 }
 
 .upload_btn {

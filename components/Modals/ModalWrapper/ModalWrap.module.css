@@ -3,3 +3,9 @@
   /* height: 100vh; */
   /* z-index: 99; */
 }
+@media (min-width: 768px) {
+ .wrapper{
+   margin: auto;
+   width: 60%;
+  }
+}
