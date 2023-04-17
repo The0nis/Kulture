@@ -188,7 +188,7 @@
     }
     .item_footersecond{
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
     }
 
     .btn_wrap{
