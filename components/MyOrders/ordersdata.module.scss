@@ -8,10 +8,24 @@
   &:not(:last-child) {
     margin-bottom: 24px;
   }
-
+&__prices{
+  @media (min-width: 780px) {
+    display: flex;
+    gap: 5rem;
+    flex-direction: column;
+  }
+}
   &__details {
-    > * {
-      font-family: 'Source Sans Pro';
+    @media (min-width: 780px) {
+      display: flex;
+      gap: 10rem;
+      h3{
+        margin-left: 3rem;
+      }
+    }
+
+    * {
+      font-family: "Source Sans Pro";
 
       &:not(:last-child) {
         margin-bottom: 15px;
