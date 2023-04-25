@@ -160,6 +160,7 @@
     }
     .first_wrapper{
         width: 100%;
+        align-items: flex-end;
     }
 
     .item_footer{
