@@ -160,6 +160,7 @@
     }
     .first_wrapper{
         width: 100%;
+        align-items: flex-end;
     }
 
     .item_footer{
@@ -188,7 +189,7 @@
     }
     .item_footersecond{
     display: flex;
-    justify-content: end;
+    justify-content:flex-end;
     }
 
     .btn_wrap{

@@ -6,7 +6,7 @@ export const OrdersData = [
     username: 'Kelvin Mark',
     license: 'Premium License',
     date: '24-12-2022',
-    price: 200000,
+    price: '200,000',
   },
   {
     name: 'Zepline starch beat',
@@ -15,7 +15,7 @@ export const OrdersData = [
     username: 'Kelvin Mark',
     license: 'Premium License',
     date: '24-12-2022',
-    price: 200000,
+    price: '200,000',
   },
   {
     name: 'Zepline starch beat',
@@ -24,6 +24,6 @@ export const OrdersData = [
     username: 'Kelvin Mark',
     license: 'Premium License',
     date: '24-12-2022',
-    price: 200000,
+    price: '200,000',
   },
 ];

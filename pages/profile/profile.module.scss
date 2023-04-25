@@ -55,12 +55,12 @@
       @media (min-width: 60.563em) {
         justify-content: flex-start;
         column-gap: 1.5rem;
+        margin-left: 15rem
       }
       .image {
         width: 153px;
         position: relative;
-        img {
-        }
+
 
         button {
           position: absolute;
@@ -203,8 +203,7 @@
 
 .stat {
   margin-bottom: 56px;
-  h2 {
-  }
+  
   .stats {
     display: grid;
     grid-template-columns: 100%;

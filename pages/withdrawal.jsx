@@ -7,7 +7,7 @@ export default function withdrawal() {
   return (
     <div className={styles.withdrawalaccount}>
       <div className={styles.withdrawinner}>
-        <h1>Widthdrwal</h1>
+        <h1>Withdrawal</h1>
         <WithdrawalAccount />
         <div className={styles.footer}>
           <Link href="/terms">Terms of policy</Link>
