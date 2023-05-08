@@ -3,6 +3,7 @@ import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { UserApi } from "../services/UserApi";
 import { PasswordResetApi } from "../services/PasswordResetApi"
 import { RegisterApi } from "../services/RegisterApi";
+import { StatusApi } from "../services/StatusApi";
 import { authApi } from "../services/authApi";
 import { ForgetPasswordApi } from "../services/ForgetPasswordApi";
 import globalReducer from "../../state";
@@ -15,11 +16,13 @@ export const store = configureStore({
     authStore: authReducer,
     [UserApi.reducerPath]: UserApi.reducer,
     [PasswordResetApi.reducerPath]: PasswordResetApi.reducer,
+    [StatusApi.reducerPath]: StatusApi.reducer,
     [ForgetPasswordApi.reducerPath]: ForgetPasswordApi.reducer,
     [RegisterApi.reducerPath]: RegisterApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
   },
   middleware: (getDefault) => getDefault().concat(UserApi.middleware),
+  middleware: (getDefault) => getDefault().concat(StatusApi.middleware),
   middleware: (getDefault) => getDefault().concat(RegisterApi.middleware),
   middleware: (getDefault) => getDefault().concat(PasswordResetApi.middleware),
   middleware: (getDefault) => getDefault().concat(ForgetPasswordApi.middleware),
