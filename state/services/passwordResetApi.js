@@ -11,7 +11,7 @@ export const PasswordResetApi = createApi({
         method: "post",
         body: data,
       }),
-      // invalidatesTags: ["passwordReset"],
+      invalidatesTags: ["passwordReset"],
     }),
   }),
 });
