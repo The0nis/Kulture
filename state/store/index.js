@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { UserApi } from "../services/UserApi";
-import { PasswordResetApi } from "../services/PasswordResetApi"
+import { PasswordResetApi } from "../services/passwordResetApi";
 import { RegisterApi } from "../services/RegisterApi";
 import { SearchApi } from "../services/SearchApi";
 import { PayStackApi } from "../services/PayStackApi";
