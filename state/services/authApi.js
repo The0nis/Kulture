@@ -9,7 +9,7 @@ export const authApi = createApi({
       query: (data) => {
         return {
           url: `login`,
-          method: "post",
+          method: "POST",
           body: data,
         };
       },
