@@ -10,7 +10,7 @@ export const UploadApi = createApi({
         formData.append("file", file);
         return {
           url: "upload",
-          method: "post",
+          method: "POST",
           body: formData,
           headers: {
             "content-type": "multipart/form-data",

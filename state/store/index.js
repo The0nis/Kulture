@@ -3,6 +3,8 @@ import { setupListeners } from "@reduxjs/toolkit/query/react";
 import { UserApi } from "../services/UserApi";
 import { PasswordResetApi } from "../services/PasswordResetApi"
 import { RegisterApi } from "../services/RegisterApi";
+import { SearchApi } from "../services/SearchApi";
+import { PayStackApi } from "../services/PayStackApi";
 import { StatusApi } from "../services/StatusApi";
 import { authApi } from "../services/authApi";
 import { ForgetPasswordApi } from "../services/ForgetPasswordApi";
@@ -20,6 +22,8 @@ export const store = configureStore({
     [ForgetPasswordApi.reducerPath]: ForgetPasswordApi.reducer,
     [RegisterApi.reducerPath]: RegisterApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
+    [PayStackApi.reducerPath]: PayStackApi.reducer,
+    [SearchApi.reducerPath]: SearchApi.reducer,
   },
   middleware: (getDefault) => getDefault().concat(UserApi.middleware),
   middleware: (getDefault) => getDefault().concat(StatusApi.middleware),
@@ -27,6 +31,8 @@ export const store = configureStore({
   middleware: (getDefault) => getDefault().concat(PasswordResetApi.middleware),
   middleware: (getDefault) => getDefault().concat(ForgetPasswordApi.middleware),
   middleware: (getDefault) => getDefault().concat(authApi.middleware),
+  middleware: (getDefault) => getDefault().concat(SearchApi.middleware),
+  middleware: (getDefault) => getDefault().concat(PayStackApi.middleware),
 });
 
 export const rootReducer = (state, action) => {

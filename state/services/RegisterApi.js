@@ -9,7 +9,7 @@ export const RegisterApi = createApi({
         query: (data) => {
           return {
             url: `register`,
-            method: "post",
+            method: "POST",
             body: data,
           };
         },

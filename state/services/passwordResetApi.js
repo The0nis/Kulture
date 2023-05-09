@@ -8,7 +8,7 @@ export const PasswordResetApi = createApi({
     passwordReset: builder.mutation({
       query: (data) => ({
         url: "passwordReset",
-        method: "post",
+        method: "POST",
         body: data,
       }),
       invalidatesTags: ["passwordReset"],
