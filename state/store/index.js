@@ -7,6 +7,7 @@ import { SearchApi } from "../services/SearchApi";
 import { PayStackApi } from "../services/PayStackApi";
 import { StatusApi } from "../services/StatusApi";
 import { authApi } from "../services/authApi";
+import { FilterApi } from "../services/FilterApi";
 import { ForgetPasswordApi } from "../services/ForgetPasswordApi";
 import globalReducer from "../../state";
 import { CreateApi } from "../services/CreateApi";
@@ -25,6 +26,7 @@ export const store = configureStore({
     [CreateApi.reducerPath]: CreateApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
     [PayStackApi.reducerPath]: PayStackApi.reducer,
+    [FilterApi.reducerPath]: FilterApi.reducer,
     [SearchApi.reducerPath]: SearchApi.reducer,
   },
   middleware: (getDefault) => getDefault().concat(UserApi.middleware),
@@ -34,6 +36,7 @@ export const store = configureStore({
   middleware: (getDefault) => getDefault().concat(ForgetPasswordApi.middleware),
   middleware: (getDefault) => getDefault().concat(authApi.middleware),
   middleware: (getDefault) => getDefault().concat(SearchApi.middleware),
+  middleware: (getDefault) => getDefault().concat(FilterApi.middleware),
   middleware: (getDefault) => getDefault().concat(PayStackApi.middleware),
   middleware: (getDefault) => getDefault().concat(CreateApi.middleware),
 });
