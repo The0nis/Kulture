@@ -9,6 +9,7 @@ import { StatusApi } from "../services/StatusApi";
 import { authApi } from "../services/authApi";
 import { ForgetPasswordApi } from "../services/ForgetPasswordApi";
 import globalReducer from "../../state";
+import { CreateApi } from "../services/CreateApi";
 import { persistStore } from "redux-persist";
 import authReducer from "../slices/auth";
 
@@ -21,6 +22,7 @@ export const store = configureStore({
     [StatusApi.reducerPath]: StatusApi.reducer,
     [ForgetPasswordApi.reducerPath]: ForgetPasswordApi.reducer,
     [RegisterApi.reducerPath]: RegisterApi.reducer,
+    [CreateApi.reducerPath]: CreateApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
     [PayStackApi.reducerPath]: PayStackApi.reducer,
     [SearchApi.reducerPath]: SearchApi.reducer,
@@ -33,6 +35,7 @@ export const store = configureStore({
   middleware: (getDefault) => getDefault().concat(authApi.middleware),
   middleware: (getDefault) => getDefault().concat(SearchApi.middleware),
   middleware: (getDefault) => getDefault().concat(PayStackApi.middleware),
+  middleware: (getDefault) => getDefault().concat(CreateApi.middleware),
 });
 
 export const rootReducer = (state, action) => {
