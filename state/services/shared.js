@@ -4,7 +4,7 @@ import { isEmpty } from "lodash";
 import { setLoginUser } from "../slices/auth";
 // import store from "../../redux/store";
 
-// const { REACT_APP_BACKEND_API } = process.env;
+const { REACT_APP_BACKEND_API } = process.env;
 
 const baseUrl = `http://54.236.30.189:9000/api/`;
 

@@ -8,7 +8,7 @@ import ButtonLink from "../Button/ButtonLink";
 
 function CheckOut() {
   return (
-    <Page type='account'>
+    <Page>
       <div className={style.checkout_container}>
         <div className={style.checkout_overall}>
           <div>
