@@ -7,8 +7,12 @@ import { SearchApi } from "../services/SearchApi";
 import { PayStackApi } from "../services/PayStackApi";
 import { StatusApi } from "../services/StatusApi";
 import { authApi } from "../services/authApi";
+import { PaymentApi } from "../services/PaymentApi";
+import { FilterApi } from "../services/FilterApi";
+import { UpdateApi } from "../services/UpdateApi";
 import { ForgetPasswordApi } from "../services/ForgetPasswordApi";
 import globalReducer from "../../state";
+import { CreateApi } from "../services/CreateApi";
 import { persistStore } from "redux-persist";
 import authReducer from "../slices/auth";
 
@@ -19,10 +23,14 @@ export const store = configureStore({
     [UserApi.reducerPath]: UserApi.reducer,
     [PasswordResetApi.reducerPath]: PasswordResetApi.reducer,
     [StatusApi.reducerPath]: StatusApi.reducer,
+    [UpdateApi.reducerPath]: UpdateApi.reducer,
     [ForgetPasswordApi.reducerPath]: ForgetPasswordApi.reducer,
     [RegisterApi.reducerPath]: RegisterApi.reducer,
+    [CreateApi.reducerPath]: CreateApi.reducer,
     [authApi.reducerPath]: authApi.reducer,
+    [PaymentApi.reducerPath]: PaymentApi.reducer,
     [PayStackApi.reducerPath]: PayStackApi.reducer,
+    [FilterApi.reducerPath]: FilterApi.reducer,
     [SearchApi.reducerPath]: SearchApi.reducer,
   },
   middleware: (getDefault) => getDefault().concat(UserApi.middleware),
@@ -31,8 +39,12 @@ export const store = configureStore({
   middleware: (getDefault) => getDefault().concat(PasswordResetApi.middleware),
   middleware: (getDefault) => getDefault().concat(ForgetPasswordApi.middleware),
   middleware: (getDefault) => getDefault().concat(authApi.middleware),
+  middleware: (getDefault) => getDefault().concat(UpdateApi.middleware),
   middleware: (getDefault) => getDefault().concat(SearchApi.middleware),
+  middleware: (getDefault) => getDefault().concat(PaymentApi.middleware),
+  middleware: (getDefault) => getDefault().concat(FilterApi.middleware),
   middleware: (getDefault) => getDefault().concat(PayStackApi.middleware),
+  middleware: (getDefault) => getDefault().concat(CreateApi.middleware),
 });
 
 export const rootReducer = (state, action) => {
